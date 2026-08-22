@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Game 9 Nilai Gusdur</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Poppins',sans-serif;background:linear-gradient(160deg,#0d7a3f 0%,#10b94e 30%,#34d058 60%,#e8f5e9 85%,#ffffff 100%);min-height:100vh;color:#1a2e1a;overflow-x:hidden;position:relative}
+
+/* FLOATING CIRCLES */
+.bg-circle{position:fixed;border-radius:50%;pointer-events:none;z-index:0;opacity:.12}
+.bg-circle-1{width:340px;height:340px;background:radial-gradient(circle,#34d058,transparent);top:-80px;left:-100px;animation:floatA 18s ease-in-out infinite}
+.bg-circle-2{width:260px;height:260px;background:radial-gradient(circle,#f5c518,transparent);bottom:-60px;right:-80px;animation:floatB 22s ease-in-out infinite}
+.bg-circle-3{width:180px;height:180px;background:radial-gradient(circle,#10b94e,transparent);top:40%;left:60%;animation:floatC 15s ease-in-out infinite}
+.bg-circle-4{width:120px;height:120px;background:radial-gradient(circle,#0d7a3f,transparent);top:20%;right:20%;animation:floatA 20s ease-in-out infinite reverse}
+.bg-circle-5{width:200px;height:200px;background:radial-gradient(circle,#f5c518,transparent);bottom:20%;left:10%;animation:floatB 17s ease-in-out infinite reverse}
+.bg-circle-6{width:90px;height:90px;background:radial-gradient(circle,#34d058,transparent);top:60%;left:30%;animation:floatC 13s ease-in-out infinite}
+@keyframes floatA{0%,100%{transform:translate(0,0) scale(1)}33%{transform:translate(40px,-30px) scale(1.08)}66%{transform:translate(-20px,20px) scale(.95)}}
+@keyframes floatB{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-30px,-40px) scale(1.1)}}
+@keyframes floatC{0%,100%{transform:translate(0,0)}50%{transform:translate(25px,35px)}}
+
+/* START SCREEN */
+#startScreen{position:fixed;inset:0;z-index:1000;background:linear-gradient(160deg,#0a5c30 0%,#0d7a3f 25%,#10b94e 55%,#34d058 80%,#b8e8c6 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity .8s,visibility .8s;overflow:hidden}
+#startScreen::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 20%,rgba(255,255,255,.15) 0%,transparent 60%);pointer-events:none}
+#startScreen.hidden{opacity:0;visibility:hidden;pointer-events:none}
+#startScreen .logo-wrap{position:relative;margin-bottom:24px}
+#startScreen .logo-ring{width:180px;height:180px;border-radius:50%;background:conic-gradient(from 0deg,#f5c518,#34d058,#0d7a3f,#f5c518);display:flex;align-items:center;justify-content:center;animation:logoSpin 8s linear infinite;box-shadow:0 0 50px rgba(245,197,24,.3)}
+#startScreen .logo-inner{width:150px;height:150px;border-radius:50%;background:#0d7a3f;display:flex;align-items:center;justify-content:center;animation:logoPulse 3s ease-in-out infinite}
+#startScreen .logo-inner img{width:100px;height:100px;object-fit:contain;filter:drop-shadow(0 2px 8px rgba(0,0,0,.3))}
+@keyframes logoSpin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@keyframes logoPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+#startScreen h1{font-size:clamp(1.8rem,5vw,3rem);text-align:center;color:#fff;text-shadow:0 2px 20px rgba(0,0,0,.25);margin-bottom:8px;font-weight:800;letter-spacing:-.5px}
+#startScreen .tagline{font-size:clamp(.85rem,2vw,1.15rem);color:rgba(255,255,255,.88);text-align:center;max-width:520px;margin-bottom:32px;line-height:1.6}
+.start-features{display:flex;gap:16px;margin-bottom:36px;flex-wrap:wrap;justify-content:center}
+.start-feature{background:rgba(255,255,255,.15);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.25);border-radius:16px;padding:18px 20px;text-align:center;color:#fff;min-width:140px;transition:transform .3s}
+.start-feature:hover{transform:translateY(-4px)}
+.start-feature .feat-text{font-size:.78rem;font-weight:600;line-height:1.4}
+#startBtn{padding:16px 56px;font-size:1.15rem;font-weight:800;border:none;border-radius:50px;background:linear-gradient(135deg,#f5c518,#e6a817);color:#0d4a20;cursor:pointer;transition:transform .3s,box-shadow .3s;box-shadow:0 6px 35px rgba(245,197,24,.4);letter-spacing:.5px;position:relative;overflow:hidden}
+#startBtn::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.3),transparent);border-radius:50px;pointer-events:none}
+#startBtn:hover{transform:scale(1.06) translateY(-2px);box-shadow:0 10px 45px rgba(245,197,24,.55)}
+#startBtn:active{transform:scale(1.02)}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+
+/* HEADER */
+.header{position:sticky;top:0;z-index:100;text-align:center;padding:12px 10px;background:rgba(255,255,255,.72);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(13,122,63,.12);box-shadow:0 2px 20px rgba(13,122,63,.08)}
+.header-inner{display:flex;align-items:center;justify-content:center;gap:12px;max-width:700px;margin:0 auto}
+.header img.logo{width:min(50px,10vw);filter:drop-shadow(0 1px 4px rgba(13,122,63,.3))}
+.header .title-group{text-align:left}
+.header h1{font-size:clamp(1rem,3vw,1.5rem);color:#0d7a3f;font-weight:800;line-height:1.2}
+.header .subtitle{font-size:.75rem;color:#5a8a6a;font-weight:500;margin-top:1px}
+
+/* GAME AREA */
+.game-container{max-width:900px;margin:0 auto;padding:18px 15px 40px;position:relative;z-index:1}
+.selected-info{text-align:center;margin-bottom:18px;font-size:.9rem;color:#2a5a3a;min-height:28px;background:rgba(255,255,255,.65);backdrop-filter:blur(8px);border-radius:12px;padding:10px 16px;border:1px solid rgba(13,122,63,.1)}
+.selected-info .val{color:#c8870a;font-weight:700}
+
+/* CARDS GRID */
+.cards-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;max-width:700px;margin:0 auto 22px}
+.cards-grid .card-wrapper{width:calc((100% - 64px) / 5);aspect-ratio:3/4}
+
+/* CARD */
+.card-wrapper{perspective:1000px;aspect-ratio:3/4;cursor:pointer;transition:transform .45s cubic-bezier(.4,0,.2,1),opacity .5s ease,filter .5s ease;position:relative;border-radius:16px}
+.card-wrapper:hover{transform:translateY(-6px) scale(1.03)}
+.card-wrapper.selected{transform:scale(1.06);z-index:2}
+.card-wrapper.selected::after{content:'';position:absolute;inset:-5px;border:3px solid #f5c518;border-radius:20px;z-index:5;animation:glow 1.5s infinite;pointer-events:none;box-shadow:0 0 18px rgba(245,197,24,.35)}
+@keyframes glow{0%,100%{box-shadow:0 0 12px rgba(245,197,24,.35)}50%{box-shadow:0 0 28px rgba(245,197,24,.7)}}
+
+.card{width:100%;height:100%;position:relative;transform-style:preserve-3d;transition:transform .7s cubic-bezier(.4,0,.2,1)}
+.card-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:16px;overflow:hidden}
+.card-face img{width:100%;height:100%;object-fit:contain;display:block}
+.card-front{transform:rotateY(180deg)}
+
+.card.show-front{transform:rotateY(180deg)}
+
+/* MERGE ANIMATION */
+.card-wrapper.fade-out{opacity:0;transform:scale(.7);pointer-events:none;transition:opacity .5s ease,transform .5s ease}
+
+/* MERGE FLASH */
+.merge-flash{position:fixed;inset:0;z-index:100;background:radial-gradient(circle,rgba(245,197,24,.5) 0%,rgba(16,185,78,.3) 40%,transparent 70%);opacity:0;pointer-events:none;animation:flashIn .6s .5s forwards}
+@keyframes flashIn{0%{opacity:0}40%{opacity:1}100%{opacity:0}}
+
+/* MODAL */
+.modal-overlay{position:fixed;inset:0;z-index:200;background:rgba(5,40,20,.55);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:opacity .4s,visibility .4s;padding:20px}
+.modal-overlay.show{opacity:1;visibility:visible}
+.modal{background:#fff;border-radius:22px;max-width:560px;width:100%;max-height:85vh;overflow:hidden;display:flex;flex-direction:column;transform:scale(.85);transition:transform .4s cubic-bezier(.4,0,.2,1);box-shadow:0 24px 70px rgba(5,40,20,.3);border:1px solid rgba(13,122,63,.1)}
+.modal-overlay.show .modal{transform:scale(1)}
+.modal-header{background:linear-gradient(135deg,#0d7a3f,#10b94e,#34d058);padding:22px 24px 18px;text-align:center;flex-shrink:0}
+.modal-header .values{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}
+.modal-header .val-badge{background:linear-gradient(135deg,#f5c518,#e6a817);color:#0d4a20;padding:7px 18px;border-radius:22px;font-weight:700;font-size:.88rem;box-shadow:0 3px 12px rgba(245,197,24,.3)}
+.modal-header .plus{font-size:1.3rem;font-weight:800;color:#fff;text-shadow:0 1px 4px rgba(0,0,0,.2)}
+.modal-header h2{font-size:1.05rem;margin-top:12px;color:rgba(255,255,255,.95);font-weight:700}
+.modal-body{padding:22px 24px;overflow-y:auto;flex:1;line-height:1.75}
+.modal-body .issue-label{font-size:.72rem;text-transform:uppercase;letter-spacing:1.2px;color:#0d7a3f;margin-bottom:8px;font-weight:700}
+.modal-body .issue-text{font-size:.92rem;color:#2a4a3a;background:linear-gradient(135deg,#e8f5e9,#f0faf2);border-radius:12px;padding:16px 18px;border-left:4px solid #10b94e}
+.modal-close{display:block;margin:18px auto 22px;padding:13px 44px;border:none;border-radius:30px;background:linear-gradient(135deg,#0d7a3f,#10b94e);color:#fff;font-weight:700;font-size:1rem;cursor:pointer;transition:transform .2s,box-shadow .2s;box-shadow:0 4px 18px rgba(13,122,63,.25);flex-shrink:0}
+.modal-close:hover{transform:scale(1.05);box-shadow:0 6px 24px rgba(13,122,63,.35)}
+
+/* COMBO COUNTER */
+.combo-info{text-align:center;font-size:.8rem;color:#5a8a6a;margin-top:12px;background:rgba(255,255,255,.5);backdrop-filter:blur(6px);padding:8px 16px;border-radius:10px;display:inline-block;margin-left:auto;margin-right:auto;width:fit-content}
+
+/* PARTICLES */
+.particle{position:fixed;width:8px;height:8px;border-radius:50%;pointer-events:none;z-index:150;animation:particleFly 1s forwards}
+@keyframes particleFly{0%{opacity:1;transform:translate(0,0) scale(1)}100%{opacity:0;transform:translate(var(--tx),var(--ty)) scale(0)}}
+
+/* MOBILE */
+@media(max-width:600px){
+  .cards-grid{gap:10px;max-width:380px}
+  .cards-grid .card-wrapper{width:calc((100% - 40px) / 5)}
+  .modal{border-radius:18px;max-height:90vh}
+  .modal-header{padding:18px 16px 14px}
+  .modal-body{padding:16px 18px}
+  .start-features{gap:10px}
+  .start-feature{min-width:120px;padding:14px 14px}
+  .start-feature .feat-text{font-size:.7rem}
+  .header h1{font-size:1.1rem}
+}
+@media(max-width:380px){
+  .cards-grid{max-width:300px;gap:8px}
+  .cards-grid .card-wrapper{width:calc((100% - 32px) / 5)}
+}
+</style>
+</head>
+<body>
+
+<!-- FLOATING CIRCLES -->
+<div class="bg-circle bg-circle-1"></div>
+<div class="bg-circle bg-circle-2"></div>
+<div class="bg-circle bg-circle-3"></div>
+<div class="bg-circle bg-circle-4"></div>
+<div class="bg-circle bg-circle-5"></div>
+<div class="bg-circle bg-circle-6"></div>
+
+<!-- START SCREEN -->
+<div id="startScreen">
+  <div class="logo-wrap">
+    <div class="logo-ring">
+      <div class="logo-inner">
+        <img src="gusdurian.webp" alt="Gusdurian">
+      </div>
+    </div>
+  </div>
+  <h1>Game 9 Nilai Gusdur</h1>
+  <p class="tagline">Pilih 2 kartu nilai untuk mengungkap isu sosial yang terkait. Temukan keterkaitan antar nilai Gusdurian!</p>
+  <div class="start-features">
+    <div class="start-feature">
+      <div class="feat-text">9 Kartu<br>Nilai Gusdur</div>
+    </div>
+    <div class="start-feature">
+      <div class="feat-text">36 Kombinasi<br>Isu Sosial</div>
+    </div>
+    <div class="start-feature">
+      <div class="feat-text">Analisis &amp;<br>Solusi</div>
+    </div>
+  </div>
+  <button id="startBtn">Mulai Bermain</button>
+</div>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-inner">
+    <img class="logo" src="gusdurian.webp" alt="Gusdurian">
+    <div class="title-group">
+      <h1>9 Nilai Gusdur</h1>
+      <div class="subtitle">Pilih 2 kartu untuk mengungkap isu</div>
+    </div>
+  </div>
+</div>
+
+<!-- GAME -->
+<div class="game-container">
+  <div class="selected-info" id="selectedInfo">Klik kartu untuk memilih nilai pertama</div>
+  <div class="cards-grid" id="cardsGrid"></div>
+  <div style="text-align:center"><div class="combo-info" id="comboInfo"></div></div>
+</div>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="values">
+        <span class="val-badge" id="val1"></span>
+        <span class="plus">+</span>
+        <span class="val-badge" id="val2"></span>
+      </div>
+      <h2>Isu yang Muncul</h2>
+    </div>
+    <div class="modal-body">
+      <div class="issue-label">Pernyataan Isu</div>
+      <div class="issue-text" id="issueText"></div>
+    </div>
+    <button class="modal-close" id="modalClose">Pilih Kartu Lagi</button>
+  </div>
+</div>
+
+<script>
+const VALUES = [
+  {name:'Ketauhidan', img:'ketauhidan.webp'},
+  {name:'Kemanusiaan', img:'kemanusiaan.webp'},
+  {name:'Keadilan', img:'keadilan.webp'},
+  {name:'Kesetaraan', img:'kesetaraan.webp'},
+  {name:'Persaudaraan', img:'persaudaraan.webp'},
+  {name:'Kesederhanaan', img:'kesederhanaan.webp'},
+  {name:'Kesatriaan', img:'kesatriaan.webp'},
+  {name:'Pembebasan', img:'pembebasan.webp'},
+  {name:'Kearifan Lokal', img:'kearifan lokal.webp'}
+];
+
+const ISSUES = [
+  {kombinasi:["Ketauhidan","Kemanusiaan"],pernyataan_isu:"Sebuah kelompok melakukan ujaran kebencian, perundungan, dan perusakan rumah ibadah kelompok lain dengan dalih sedang membela kesucian nama Tuhan dan agama."},
+  {kombinasi:["Ketauhidan","Keadilan"],pernyataan_isu:"Aparat penegak hukum memberikan vonis sangat ringan kepada koruptor miliaran rupiah, namun menghukum berat pencuri kecil demi memenuhi target kasus, mengabaikan prinsip tanggung jawab di hadapan Tuhan."},
+  {kombinasi:["Ketauhidan","Kesetaraan"],pernyataan_isu:"Di sebuah tempat ibadah, tempat duduk dan perlakuan khusus di baris depan hanya disediakan untuk orang-orang kaya dan bangsawan, sementara jemaah biasa diminta minggir."},
+  {kombinasi:["Ketauhidan","Pembebasan"],pernyataan_isu:"Tokoh agama lokal menyuruh warga miskin untuk sekadar pasrah menerima perampasan tanah mereka oleh pengembang karena menganggap penindasan tersebut adalah takdir yang tak boleh dilawan."},
+  {kombinasi:["Ketauhidan","Persaudaraan"],pernyataan_isu:"Terjadi aksi saling mengafirkan, memboikot acara keluarga, dan memutus hubungan silaturahmi antarwarga hanya karena perbedaan pilihan mazhab atau tata cara ibadah."},
+  {kombinasi:["Ketauhidan","Kesederhanaan"],pernyataan_isu:"Pengurus yayasan keagamaan menggunakan dana sedekah dan zakat umat untuk merenovasi kantor yayasan secara mewah dan membeli fasilitas pribadi yang berlebihan."},
+  {kombinasi:["Ketauhidan","Kesatriaan"],pernyataan_isu:"Seorang pemuka masyarakat memilih diam dan tidak membela warga tertindas di wilayahnya karena takut kehilangan panggung dan dana hibah dari penguasa setempat."},
+  {kombinasi:["Ketauhidan","Kearifan Lokal"],pernyataan_isu:"Tradisi sedekah laut dan ruwatan desa yang sudah ada ratusan tahun dihakimi serta dibubarkan paksa oleh sekelompok ormas karena dituduh merusak kemurnian ajaran agama."},
+  {kombinasi:["Kemanusiaan","Keadilan"],pernyataan_isu:"Penggusuran paksa permukiman warga miskin kota di bantaran sungai dilakukan tanpa musyawarah dan tanpa ganti rugi yang layak demi mempercepat proyek kawasan bisnis komersial."},
+  {kombinasi:["Kemanusiaan","Kesetaraan"],pernyataan_isu:"Kantor pelayanan publik di tingkat kecamatan tidak menyediakan jalur landai (ramp), toilet khusus, maupun layanan ramah disabilitas bagi warga berkebutuhan khusus."},
+  {kombinasi:["Kemanusiaan","Pembebasan"],pernyataan_isu:"Sejumlah anak di bawah umur dari keluarga miskin dipekerjakan sebagai buruh kasar di perkebunan terpencil tanpa akses pendidikan formal dan layanan kesehatan."},
+  {kombinasi:["Kemanusiaan","Persaudaraan"],pernyataan_isu:"Warga di sebuah komplek perumahan menolak kedatangan para pengungsi korban bencana alam yang berasal dari suku minoritas karena adanya prasangka etnis yang kuat."},
+  {kombinasi:["Kemanusiaan","Kesederhanaan"],pernyataan_isu:"Budaya pamer barang mewah di media sosial membuat sebagian remaja merasa minder dan terasing dari pergaulan hanya karena status ekonomi keluarganya."},
+  {kombinasi:["Kemanusiaan","Kesatriaan"],pernyataan_isu:"Seorang siswa menjadi korban perundungan (bullying) secara terus-menerus di kelas, namun teman-teman sekelasnya memilih diam dan tidak berani membela karena takut ikut disasar."},
+  {kombinasi:["Kemanusiaan","Kearifan Lokal"],pernyataan_isu:"Budaya lumbung pangan dan tradisi saling mengantarkan makanan saat tetangga sakit di perkampungan mulai punah dan digantikan oleh sikap apatis individualistis."},
+  {kombinasi:["Keadilan","Kesetaraan"],pernyataan_isu:"Di sebuah sekolah, siswa dari keluarga kurang mampu tidak dilibatkan dalam kegiatan studi lapangan/ekstrakurikuler karena dianggap tidak mampu membayar biaya kegiatan."},
+  {kombinasi:["Keadilan","Pembebasan"],pernyataan_isu:"Buruh harian lepas di sebuah pabrik bekerja lebih dari 12 jam per hari dengan upah di bawah standar UMR tanpa jaminan keselamatan kerja dan dilarang membentuk serikat pekerja."},
+  {kombinasi:["Keadilan","Persaudaraan"],pernyataan_isu:"Kepala desa membagikan seluruh kuota bantuan pangan pemerintah hanya kepada keluarga dan tim suksesnya, sementara warga lansia sebatang kara di desa tersebut terlewatkan."},
+  {kombinasi:["Keadilan","Kesederhanaan"],pernyataan_isu:"Pimpinan lembaga memangkas anggaran beasiswa mahasiswa berprestasi dari keluarga miskin demi mendanai perjalanan dinas mewah dan fasilitas pejabat kampus."},
+  {kombinasi:["Keadilan","Kesatriaan"],pernyataan_isu:"Panitia penerimaan pegawai meloloskan titipan keluarga pejabat dengan memanipulasi nilai, sementara saksi yang mengetahui kecurangan diancam akan disingkirkan jika melapor."},
+  {kombinasi:["Keadilan","Kearifan Lokal"],pernyataan_isu:"Sistem irigasi desa yang seharusnya dibagi bergilir secara adil sesuai aturan adat dialihkan salurannya secara ilegal oleh pemilik lahan paling luas di hulu."},
+  {kombinasi:["Kesetaraan","Pembebasan"],pernyataan_isu:"Dalam struktur organisasi kepemudaan, anggota perempuan selalu dialokasikan hanya untuk divisi konsumsi atau administrasi karena dianggap tidak mampu memimpin divisi strategis."},
+  {kombinasi:["Kesetaraan","Persaudaraan"],pernyataan_isu:"Siswa di lingkungan sekolah terkotak-kotak dalam kelompok pertemanan eksklusif berdasarkan latar belakang tingkat kekayaan orang tua dan suku asal."},
+  {kombinasi:["Kesetaraan","Kesederhanaan"],pernyataan_isu:"Tamu undangan pada forum musyawarah warga dipilah ruang duduk dan jamuan makannya berdasarkan merk kendaraan dan kemewahan pakaian yang mereka gunakan saat datang."},
+  {kombinasi:["Kesetaraan","Kesatriaan"],pernyataan_isu:"Manajer proyek enggan mengakui bahwa ide cemerlang penyelesaian krisis berasal dari staf magang, dan justru mengklaim ide tersebut sebagai hasil pemikirannya sendiri demi gengsi."},
+  {kombinasi:["Kesetaraan","Kearifan Lokal"],pernyataan_isu:"Forum rembuk desa secara sepihak melarang kelompok perempuan dan pemuda untuk berbicara dalam musyawarah penentuan arah pembangunan desa dengan dalih tradisi masa lalu."},
+  {kombinasi:["Pembebasan","Persaudaraan"],pernyataan_isu:"Warga yang menuntut hak ganti rugi tanah diadu domba oleh oknum pihak ketiga sehingga terjadi perpecahan dan konflik horizontal antartetangga sendiri."},
+  {kombinasi:["Pembebasan","Kesederhanaan"],pernyataan_isu:"Puluhan anak muda di sebuah desa terjerat rentenir dan pinjaman online ilegal berbunga tinggi akibat dorongan gengsi ingin membeli gawai terbaru dan gaya hidup konsumtif."},
+  {kombinasi:["Pembebasan","Kesatriaan"],pernyataan_isu:"Seorang pegawai honorer memilih mengambil risiko dipecat demi membongkar dan melaporkan bukti pemotongan dana bantuan sosial yang dilakukan oleh atasannya."},
+  {kombinasi:["Pembebasan","Kearifan Lokal"],pernyataan_isu:"Petani lokal dipaksa bergantung sepenuhnya pada bibit dan pupuk kimia impor yang mahal, sementara metode penanaman organik warisan leluhur ditinggalkan hingga tanah menjadi tandus."},
+  {kombinasi:["Persaudaraan","Kesederhanaan"],pernyataan_isu:"Acara kumpul keluarga besar menjadi ajang saling pamer harta dan capaian material, yang membuat anggota keluarga berekonomi lemah merasa malu dan memilih tidak hadir."},
+  {kombinasi:["Persaudaraan","Kesatriaan"],pernyataan_isu:"Terjadi tawuran antarpemuda desa tetangga karena saling ejek di medsos, dan tokoh pemuda dari kedua desa justru melindungi pelaku tawuran dengan alasan solidaritas kelompok."},
+  {kombinasi:["Persaudaraan","Kearifan Lokal"],pernyataan_isu:"Tradisi kerja bakti dan gotong royong antarwarga di desa mulai ditinggalkan karena generasi muda lebih memilih mengisolasi diri dengan gawai masing-masing."},
+  {kombinasi:["Kesederhanaan","Kesatriaan"],pernyataan_isu:"Seorang pejabat publik kerap memamerkan koleksi mobil mewah di media sosial saat rakyat sedang krisis ekonomi, lalu memilih memblokir akun-akun yang mengkritiknya alih-alih berani memberikan klarifikasi."},
+  {kombinasi:["Kesederhanaan","Kearifan Lokal"],pernyataan_isu:"Masyarakat di sekitar kawasan hutan adat mulai tergiur menjual tanah warisan leluhur kepada pengembang demi membeli barang-barang konsumtif sesaat."},
+  {kombinasi:["Kesatriaan","Kearifan Lokal"],pernyataan_isu:"Ketika terjadi sengketa batas pekarangan antartetangga, kedua pihak menolak saran damai dari tetua adat dan justru memilih membawa massa untuk saling mengancam secara fisik."}
+];
+
+let selected = [];
+let locked = false;
+let usedCombos = new Set();
+
+const grid = document.getElementById('cardsGrid');
+const info = document.getElementById('selectedInfo');
+const modal = document.getElementById('modal');
+const comboInfo = document.getElementById('comboInfo');
+
+function shuffle(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+function findIssue(a, b) {
+  const nameA = VALUES[a].name;
+  const nameB = VALUES[b].name;
+  return ISSUES.find(isu => {
+    const k = isu.kombinasi;
+    return (k[0]===nameA && k[1]===nameB) || (k[0]===nameB && k[1]===nameA);
+  });
+}
+
+function spawnParticles(x, y) {
+  const colors = ['#f5c518','#0d7a3f','#10b94e','#34d058','#e6a817'];
+  for (let i = 0; i < 20; i++) {
+    const p = document.createElement('div');
+    p.className = 'particle';
+    p.style.left = x + 'px';
+    p.style.top = y + 'px';
+    p.style.background = colors[Math.floor(Math.random()*colors.length)];
+    p.style.setProperty('--tx', (Math.random()-0.5)*300 + 'px');
+    p.style.setProperty('--ty', (Math.random()-0.5)*300 + 'px');
+    document.body.appendChild(p);
+    setTimeout(() => p.remove(), 1000);
+  }
+}
+
+function renderCards() {
+  grid.innerHTML = '';
+  const indices = shuffle([...Array(9).keys()]);
+  indices.forEach((idx, i) => {
+    const wrapper = document.createElement('div');
+    wrapper.className = 'card-wrapper';
+    wrapper.dataset.idx = idx;
+    wrapper.innerHTML = `
+      <div class="card">
+        <div class="card-face card-back"><img src="back.webp" alt="Back"></div>
+        <div class="card-face card-front"><img src="${VALUES[idx].img}" alt="${VALUES[idx].name}"></div>
+      </div>`;
+    wrapper.addEventListener('click', () => onCardClick(wrapper, idx));
+    grid.appendChild(wrapper);
+
+    // Staggered entrance: flip from back to front
+    setTimeout(() => {
+      wrapper.querySelector('.card').classList.add('show-front');
+    }, 200 + i * 120);
+  });
+}
+
+function onCardClick(wrapper, idx) {
+  if (locked) return;
+  if (wrapper.classList.contains('selected')) {
+    wrapper.classList.remove('selected');
+    selected = selected.filter(s => s.wrapper !== wrapper);
+    if (selected.length === 0) {
+      info.textContent = 'Klik kartu untuk memilih nilai pertama';
+    } else {
+      info.innerHTML = `Nilai pertama: <span class="val">${VALUES[selected[0].idx].name}</span> — pilih nilai kedua`;
+    }
+    return;
+  }
+
+  wrapper.classList.add('selected');
+  selected.push({wrapper, idx});
+
+  if (selected.length === 1) {
+    info.innerHTML = `Nilai pertama: <span class="val">${VALUES[idx].name}</span> — pilih nilai kedua`;
+  } else if (selected.length === 2) {
+    locked = true;
+    const [a, b] = selected;
+    info.innerHTML = `<span class="val">${VALUES[a.idx].name}</span> + <span class="val">${VALUES[b.idx].name}</span> — mengungkap isu...`;
+
+    // Phase 1: fade out all unselected cards
+    document.querySelectorAll('.card-wrapper').forEach(w => {
+      if (w !== a.wrapper && w !== b.wrapper) {
+        w.classList.add('fade-out');
+      }
+    });
+
+    // Phase 2: after others disappear, merge the 2 selected
+    setTimeout(() => {
+      const rA = a.wrapper.getBoundingClientRect();
+      const rB = b.wrapper.getBoundingClientRect();
+
+      // Calculate midpoint between the two cards
+      const midX = (rA.left + rA.right + rB.left + rB.right) / 4;
+      const midY = (rA.top + rA.bottom + rB.top + rB.bottom) / 4;
+
+      // Calculate offset each card needs to move to meet at midpoint
+      const offAx = midX - (rA.left + rA.width / 2);
+      const offAy = midY - (rA.top + rA.height / 2);
+      const offBx = midX - (rB.left + rB.width / 2);
+      const offBy = midY - (rB.top + rB.height / 2);
+
+      // Apply merge transform via JS
+      a.wrapper.style.transition = 'transform .8s cubic-bezier(.4,0,.2,1), opacity .8s ease, filter .8s ease';
+      b.wrapper.style.transition = 'transform .8s cubic-bezier(.4,0,.2,1), opacity .8s ease, filter .8s ease';
+
+      a.wrapper.style.filter = 'brightness(1.5)';
+      b.wrapper.style.filter = 'brightness(1.5)';
+
+      requestAnimationFrame(() => {
+        a.wrapper.style.transform = `translate(${offAx}px, ${offAy}px) scale(.3) rotate(-10deg)`;
+        a.wrapper.style.opacity = '0';
+        b.wrapper.style.transform = `translate(${offBx}px, ${offBy}px) scale(.3) rotate(10deg)`;
+        b.wrapper.style.opacity = '0';
+      });
+
+      spawnParticles(midX, midY);
+
+      const flash = document.createElement('div');
+      flash.className = 'merge-flash';
+      document.body.appendChild(flash);
+      setTimeout(() => flash.remove(), 1200);
+
+      setTimeout(() => showIssue(a.idx, b.idx), 900);
+    }, 600);
+  }
+}
+
+function showIssue(idxA, idxB) {
+  const issue = findIssue(idxA, idxB);
+  document.getElementById('val1').textContent = VALUES[idxA].name;
+  document.getElementById('val2').textContent = VALUES[idxB].name;
+  document.getElementById('issueText').textContent = issue ? issue.pernyataan_isu : 'Isu tidak ditemukan.';
+
+  const key = [VALUES[idxA].name, VALUES[idxB].name].sort().join('+');
+  usedCombos.add(key);
+  comboInfo.textContent = `Kombinasi sudah digunakan: ${usedCombos.size} / 36`;
+
+  modal.classList.add('show');
+}
+
+function resetGame() {
+  modal.classList.remove('show');
+  selected = [];
+  locked = false;
+  info.textContent = 'Klik kartu untuk memilih nilai pertama';
+
+  document.querySelectorAll('.card-wrapper').forEach(w => {
+    w.classList.remove('selected', 'fade-out');
+    w.style.cssText = 'transition:none';
+    const card = w.querySelector('.card');
+    card.classList.remove('show-front');
+    card.style.transition = 'none';
+  });
+
+  // Force reflow then re-render
+  void document.body.offsetHeight;
+  setTimeout(() => renderCards(), 50);
+}
+
+document.getElementById('startBtn').addEventListener('click', () => {
+  document.getElementById('startScreen').classList.add('hidden');
+  renderCards();
+  comboInfo.textContent = `Kombinasi sudah digunakan: ${usedCombos.size} / 36`;
+});
+
+document.getElementById('modalClose').addEventListener('click', resetGame);
+modal.addEventListener('click', e => { if (e.target === modal) resetGame(); });
+</script>
+</body>
+</html>
