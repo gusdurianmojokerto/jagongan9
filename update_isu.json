@@ -1,0 +1,702 @@
+{
+  "metadata": {
+    "judul": "Bank Isu Studi Kasus 9 Nilai Gus Dur (Versi Ringan)",
+    "deskripsi": "36 kombinasi unik 9 Nilai Gusdurian dengan masing-masing memuat 3 studi kasus ringan untuk pelajar, mahasiswa, dan masyarakat umum",
+    "total_kombinasi": 36,
+    "total_isu": 108,
+    "tema_utama": [
+      "Toleransi Beragama",
+      "Krisis Ekologi & Lingkungan Hidup",
+      "Kehidupan Sosial Keseharian"
+    ],
+    "format_penugasan": {
+      "rumus": "2 KARTU NILAI -> PILIH 1 ISU -> TENTUKAN SIKAP (SETUJU / TIDAK SETUJU) -> ANALISIS KETERKAITAN NILAI -> 1 SOLUSI KONKRET"
+    }
+  },
+  "daftar_kombinasi": [
+    {
+      "id": 1,
+      "pasangan": "Ketauhidan + Kemanusiaan",
+      "kombinasi_nilai": ["Ketauhidan", "Kemanusiaan"],
+      "daftar_isu": [
+        {
+          "kode": "1A",
+          "isu": "Sekelompok siswa menolak mengajak bicara dan melarang teman yang berbeda agama untuk ikut belajar kelompok dengan dalih menjaga kemurnian pergaulan."
+        },
+        {
+          "kode": "1B",
+          "isu": "Warga merusak dan mencoret-coret bangunan tempat ibadah minoritas di lingkungannya atas nama membela kesucian agama."
+        },
+        {
+          "kode": "1C",
+          "isu": "Saat terjadi kebakaran di asrama mahasiswa, beberapa penghuni enggan menolong tetangga kamarnya karena berbeda latar belakang keyakinan."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "pasangan": "Ketauhidan + Keadilan",
+      "kombinasi_nilai": ["Ketauhidan", "Keadilan"],
+      "daftar_isu": [
+        {
+          "kode": "2A",
+          "isu": "Sebuah pabrik mencemari sungai desa hingga bau dan ikan mati, lalu juru bicaranya meminta warga sabar karena musibah ini dianggap ujian takdir dari Tuhan."
+        },
+        {
+          "kode": "2B",
+          "isu": "Guru di sekolah negeri memberikan nilai tugas agama yang sangat rendah kepada siswa minoritas tanpa alasan dan bukti penilaian yang jelas."
+        },
+        {
+          "kode": "2C",
+          "isu": "Petani kecil yang mengambil ranting kering di hutan dihukum berat, sementara pengusaha perusak bukit resapan air dibebaskan aparat."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "pasangan": "Ketauhidan + Kesetaraan",
+      "kombinasi_nilai": ["Ketauhidan", "Kesetaraan"],
+      "daftar_isu": [
+        {
+          "kode": "3A",
+          "isu": "Siswa penganut kepercayaan lokal dilarang mencalonkan diri menjadi ketua OSIS di sekolah negeri karena dianggap bukan pemeluk agama resmi."
+        },
+        {
+          "kode": "3B",
+          "isu": "Di sebuah tempat ibadah, saf/kursi barisan paling depan hanya dikhususkan untuk pejabat dan orang kaya, sedangkan warga biasa diminta pindah ke belakang."
+        },
+        {
+          "kode": "3C",
+          "isu": "Fasilitas ruang ibadah bagi karyawan di kantor pusat dibuat sangat sempit di bawah tangga, sementara ruang rapat pimpinan dibuat sangat mewah."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "pasangan": "Ketauhidan + Pembebasan",
+      "kombinasi_nilai": ["Ketauhidan", "Pembebasan"],
+      "daftar_isu": [
+        {
+          "kode": "4A",
+          "isu": "Ketika pantai penuh sampah kiriman, warga dinasihati agar pasrah saja dan cukup berdoa tanpa perlu repot-repot mengadakan aksi bersih pantai."
+        },
+        {
+          "kode": "4B",
+          "isu": "Jemaah dilarang bersikap kritis saat pengurus tempat ibadah menjual tanah resapan air wakaf kepada pengembang komersial."
+        },
+        {
+          "kode": "4C",
+          "isu": "Warga miskin dilarang memprotes kenaikan tarif air bersih yang dikuasai swasta karena dianggap melawan ketetapan Ilahi."
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "pasangan": "Ketauhidan + Persaudaraan",
+      "kombinasi_nilai": ["Ketauhidan", "Persaudaraan"],
+      "daftar_isu": [
+        {
+          "kode": "5A",
+          "isu": "Warga komplek memasang spanduk larangan menyapa dan larangan membagikan hantaran makanan kepada tetangga yang merayakan hari raya agama berbeda."
+        },
+        {
+          "kode": "5B",
+          "isu": "Sekelompok mahasiswa memboikot acara bakti sosial kampus hanya karena ketua panitianya berbeda agama."
+        },
+        {
+          "kode": "5C",
+          "isu": "Dua keluarga bertetangga bermusuhan dan tidak mau saling melayat saat ada yang meninggal dunia karena berbeda pilihan aliran pengajian."
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "pasangan": "Ketauhidan + Kesederhanaan",
+      "kombinasi_nilai": ["Ketauhidan", "Kesederhanaan"],
+      "daftar_isu": [
+        {
+          "kode": "6A",
+          "isu": "Panitia perayaan keagamaan menghabiskan puluhan juta untuk kembang api dan panggung megah, namun menyisakan gunungan sampah plastik berserakan."
+        },
+        {
+          "kode": "6B",
+          "isu": "Tempat ibadah menyalakan belasan pendingin ruangan berdaya besar sepanjang hari padahal ruangan kosong, mengabaikan borosnya listrik."
+        },
+        {
+          "kode": "6C",
+          "isu": "Tokoh agama memamerkan gaya hidup mewah di media sosial dari hasil uang sumbangan sosial umat yang sedang kesusahan."
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "pasangan": "Ketauhidan + Kesatriaan",
+      "kombinasi_nilai": ["Ketauhidan", "Kesatriaan"],
+      "daftar_isu": [
+        {
+          "kode": "7A",
+          "isu": "Seorang pemuda melihat temannya mencoret dinding rumah ibadah tetangga, namun ia memilih diam dan berbohong karena takut dimusuhi gengnya."
+        },
+        {
+          "kode": "7B",
+          "isu": "Pengurus pengajian menolak meminta maaf secara terbuka setelah terbukti menyebarkan kabar bohong yang memfitnah komunitas agama lain."
+        },
+        {
+          "kode": "7C",
+          "isu": "Petugas patroli hutan membiarkan penebangan pohon lindung di sekitar mata air karena disuap oleh pelaku penebangan."
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "pasangan": "Ketauhidan + Kearifan Tradisi",
+      "kombinasi_nilai": ["Ketauhidan", "Kearifan Tradisi"],
+      "daftar_isu": [
+        {
+          "kode": "8A",
+          "isu": "Tradisi kerja bakti membersihkan mata air desa dilarang sekelompok orang karena dituduh amalan syirik, sehingga saluran air tersumbat lumpur."
+        },
+        {
+          "kode": "8B",
+          "isu": "Upacara sedekah bumi yang bertujuan menjaga kelestarian sawah dibubarkan paksa tanpa ruang dialog dengan tetua adat."
+        },
+        {
+          "kode": "8C",
+          "isu": "Kebiasaan menanam pohon beringin di area pemakaman desa ditebangi karena dianggap tempat mistis, memicu erosi tanah makam."
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "pasangan": "Kemanusiaan + Keadilan",
+      "kombinasi_nilai": ["Kemanusiaan", "Keadilan"],
+      "daftar_isu": [
+        {
+          "kode": "9A",
+          "isu": "Tempat pembuangan akhir (TPA) sampah diletakkan di samping pemukiman warga miskin hingga anak-anak sesak napas, sementara komplek elite bebas polusi."
+        },
+        {
+          "kode": "9B",
+          "isu": "Bantuan paket sembako bencana alam dibagikan tidak merata dan mendahulukan keluarga panitia daripada korban lansia yang kelaparan."
+        },
+        {
+          "kode": "9C",
+          "isu": "Anak pemulung dilarang masuk ke taman kota dan perpustakaan umum karena pakaiannya kotor, padahal taman tersebut fasilitas umum gratis."
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "pasangan": "Kemanusiaan + Kesetaraan",
+      "kombinasi_nilai": ["Kemanusiaan", "Kesetaraan"],
+      "daftar_isu": [
+        {
+          "kode": "10A",
+          "isu": "Saat sekolah kehabisan air bersih karena kemarau, galon air minum yang tersisa hanya boleh diminum oleh guru dan siswa kelas unggulan."
+        },
+        {
+          "kode": "10B",
+          "isu": "Bangunan sekolah dan puskesmas tidak menyediakan jalan landai (ramp) untuk kursi roda, sehingga penyandang disabilitas kesulitan masuk."
+        },
+        {
+          "kode": "10C",
+          "isu": "Pasien rumah sakit dari keluarga kurang mampu dibiarkan menunggu di lorong tanpa tempat tidur saat terkena dampak polusi asap."
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "pasangan": "Kemanusiaan + Pembebasan",
+      "kombinasi_nilai": ["Kemanusiaan", "Pembebasan"],
+      "daftar_isu": [
+        {
+          "kode": "11A",
+          "isu": "Anak-anak putus sekolah dipekerjakan sebagai buruh angkut sampah tanpa masker dan sarung tangan pelindung demi upah murah."
+        },
+        {
+          "kode": "11B",
+          "isu": "Korban perundungan (bullying) di sekolah dipaksa menandatangani surat damai tanpa adanya pendampingan pemulihan trauma."
+        },
+        {
+          "kode": "11C",
+          "isu": "Petani miskin diancam disita rumahnya oleh rentenir setelah gagal panen akibat serangan hama dan kekeringan."
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "pasangan": "Kemanusiaan + Persaudaraan",
+      "kombinasi_nilai": ["Kemanusiaan", "Persaudaraan"],
+      "daftar_isu": [
+        {
+          "kode": "12A",
+          "isu": "Siswa pindahan dari daerah terpencil diejek dan tidak ada yang mau menemani makan di kantin karena warna kulit dan logat bicaranya berbeda."
+        },
+        {
+          "kode": "12B",
+          "isu": "Warga menolak menerima jenazah tetangganya dimakamkan di pemakaman desa karena almarhum menganut keyakinan minoritas."
+        },
+        {
+          "kode": "12C",
+          "isu": "Sekelompok pemuda menertawakan dan merekam tetangga yang terpeleset ke parit kotor alih-alih langsung menolongnya."
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "pasangan": "Kemanusiaan + Kesederhanaan",
+      "kombinasi_nilai": ["Kemanusiaan", "Kesederhanaan"],
+      "daftar_isu": [
+        {
+          "kode": "13A",
+          "isu": "Remaja sering membeli baju murah baru setiap minggu demi konten media sosial, lalu baju lama dibuang hingga menumpuk di saluran air."
+        },
+        {
+          "kode": "13B",
+          "isu": "Makanan prasmanan di pesta pernikahan terbuang sia-sia dalam jumlah banyak ke tempat sampah, padahal pemulung di depan gedung kelaparan."
+        },
+        {
+          "kode": "13C",
+          "isu": "Siswa merasa malu dan menolak masuk sekolah karena orang tuanya tidak sanggup membelikan sepatu bermerek mahal."
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "pasangan": "Kemanusiaan + Kesatriaan",
+      "kombinasi_nilai": ["Kemanusiaan", "Kesatriaan"],
+      "daftar_isu": [
+        {
+          "kode": "14A",
+          "isu": "Penjual makanan kantin membuang minyak jelantah sisa ke selokan sekolah, lalu menyalahkan orang lain saat selokan mampet dan bau."
+        },
+        {
+          "kode": "14B",
+          "isu": "Saksi mata perundungan di kelas tidak berani melapor ke guru karena diancam akan dikucilkan oleh pelaku."
+        },
+        {
+          "kode": "14C",
+          "isu": "Pengendara motor yang menabrak kucing liar dan merusak tanaman pembatas jalan langsung kabur tanpa merapikannya kembali."
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "pasangan": "Kemanusiaan + Kearifan Tradisi",
+      "kombinasi_nilai": ["Kemanusiaan", "Kearifan Tradisi"],
+      "daftar_isu": [
+        {
+          "kode": "15A",
+          "isu": "Kebiasaan warga desa berbagi hasil panen sayur ke tetangga mulai hilang, dan sisa sayuran lebih memilih dibuang ke tong sampah."
+        },
+        {
+          "kode": "15B",
+          "isu": "Tradisi jenguk tetangga yang sakit sambil membawa makanan sehat alami digantikan sekadar mengirim pesan singkat tanpa kepedulian nyata."
+        },
+        {
+          "kode": "15C",
+          "isu": "Nilai gotong royong merawat pos ronda dan kebun toga desa ditinggalkan karena warga lebih memilih bersikap acuh tak acuh."
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "pasangan": "Keadilan + Kesetaraan",
+      "kombinasi_nilai": ["Keadilan", "Kesetaraan"],
+      "daftar_isu": [
+        {
+          "kode": "16A",
+          "isu": "Izin peminjaman aula kampus untuk acara keagamaan mahasiswa mayoritas selesai 1 hari, sedangkan pengajuan mahasiswa minoritas dipersulit berminggu-minggu."
+        },
+        {
+          "kode": "16B",
+          "isu": "Siswa perempuan di sekolah tidak diberikan kesempatan menjadi ketua panitia kemah penghijauan dengan alasan tugas fisik hanya untuk laki-laki."
+        },
+        {
+          "kode": "16C",
+          "isu": "Anggaran perbaikan fasilitas kelas unggulan dibuat ber-AC, sementara ruang kelas biasa dibiarkan dengan atap bocor dan ventilasi rusak."
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "pasangan": "Keadilan + Pembebasan",
+      "kombinasi_nilai": ["Keadilan", "Pembebasan"],
+      "daftar_isu": [
+        {
+          "kode": "17A",
+          "isu": "Nelayan tradisional dengan perahu kecil dilarang melaut di pesisir sendiri karena area laut dipatok sepihak oleh kapal wisata komersial."
+        },
+        {
+          "kode": "17B",
+          "isu": "Siswa yang berani memprotes transparansi uang kas kelas yang hilang diancam diturunkan nilai perilakunya oleh ketua kelas."
+        },
+        {
+          "kode": "17C",
+          "isu": "Pedagang kaki lima di trotoar digusur tanpa disediakan lapak relokasi yang layak demi estetika taman kota semata."
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "pasangan": "Keadilan + Persaudaraan",
+      "kombinasi_nilai": ["Keadilan", "Persaudaraan"],
+      "daftar_isu": [
+        {
+          "kode": "18A",
+          "isu": "Pembagian bibit pohon gratis dari kelurahan hanya diberikan ketua RT kepada keluarga dan teman dekatnya sendiri."
+        },
+        {
+          "kode": "18B",
+          "isu": "Terjadi pertengkaran lapangan futsal antar-pemuda beda kampung karena wasit dinilai memihak tim dari kampungnya sendiri."
+        },
+        {
+          "kode": "18C",
+          "isu": "Panitia kerja bakti kampung membebankan area parit terberat hanya kepada warga pendatang baru, sementara warga lama memilih santai."
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "pasangan": "Keadilan + Kesederhanaan",
+      "kombinasi_nilai": ["Keadilan", "Kesederhanaan"],
+      "daftar_isu": [
+        {
+          "kode": "19A",
+          "isu": "Kafe mewah menyedot air tanah dalam jumlah besar untuk kolam hiasan, mengakibatkan sumur warga perkampungan sekitar kering dan keruh."
+        },
+        {
+          "kode": "19B",
+          "isu": "Pengurus OSIS menggunakan sisa dana bakti lingkungan untuk pesta makan mewah panitia alih-alih membeli bibit pohon tambahan."
+        },
+        {
+          "kode": "19C",
+          "isu": "Pejabat desa membeli mobil dinas baru berbahan bakar boros saat jalanan utama desa tempat petani mengangkut hasil panen rusak parah."
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "pasangan": "Keadilan + Kesatriaan",
+      "kombinasi_nilai": ["Keadilan", "Kesatriaan"],
+      "daftar_isu": [
+        {
+          "kode": "20A",
+          "isu": "Panitia pentas seni sekolah memanipulasi nota sewa alat musik untuk keuntungan pribadi dan mengancam adik kelas agar tutup mulut."
+        },
+        {
+          "kode": "20B",
+          "isu": "Wasit pertandingan olahraga antarsekolah mengakui salah mengambil keputusan di luar lapangan, namun menolak meralat skor resmi di papan nilai."
+        },
+        {
+          "kode": "20C",
+          "isu": "Mahasiswa yang tidak sengaja merusak alat laboratorium lingkungan kampus melarikan diri dan membiarkan teman satu kelompoknya menanggung ganti rugi."
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "pasangan": "Keadilan + Kearifan Tradisi",
+      "kombinasi_nilai": ["Keadilan", "Kearifan Tradisi"],
+      "daftar_isu": [
+        {
+          "kode": "21A",
+          "isu": "Saluran parit irigasi sawah desa yang biasanya dialirkan bergantian ditutup sepihak oleh pemilik tanah luas agar sawahnya terairi penuh sendiri."
+        },
+        {
+          "kode": "21B",
+          "isu": "Aturan adat tentang larangan menangkap ikan dengan racun dilanggar oleh sekelompok pemuda kota, namun aparat desa membiarkannya karena kenalan."
+        },
+        {
+          "kode": "21C",
+          "isu": "Lahan pemakaman umum leluhur desa digusur sepihak untuk ruko komersial tanpa musyawarah bersama warga asli."
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "pasangan": "Kesetaraan + Pembebasan",
+      "kombinasi_nilai": ["Kesetaraan", "Pembebasan"],
+      "daftar_isu": [
+        {
+          "kode": "22A",
+          "isu": "Siswi pecinta alam dilarang ikut susur sungai dan hanya ditugaskan memasak di tenda karena dianggap lemah fisiknya."
+        },
+        {
+          "kode": "22B",
+          "isu": "Mahasiswa dari daerah pelosok dipandang remeh kemampuannya dalam forum diskusi lingkungan dan sering dipotong saat mengemukakan pendapat."
+        },
+        {
+          "kode": "22C",
+          "isu": "Anak-anak dari panti asuhan tidak diberikan hak meminjam buku di perpustakaan daerah karena tidak memiliki jaminan kartu keluarga setempat."
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "pasangan": "Kesetaraan + Persaudaraan",
+      "kombinasi_nilai": ["Kesetaraan", "Persaudaraan"],
+      "daftar_isu": [
+        {
+          "kode": "23A",
+          "isu": "Ruang kelas terbelah menjadi dua kubu pertemanan berdasarkan latar belakang agama dan saling menolak duduk sebangku."
+        },
+        {
+          "kode": "23B",
+          "isu": "Pemuda komplek menolak bergabung kerja bakti membersihkan selokan jika dipimpin oleh ketua karang taruna yang berbeda keyakinan."
+        },
+        {
+          "kode": "23C",
+          "isu": "Kelompok mahasiswa senior melarang mahasiswa baru beda suku untuk nongkrong di kantin utama fakultas."
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "pasangan": "Kesetaraan + Kesederhanaan",
+      "kombinasi_nilai": ["Kesetaraan", "Kesederhanaan"],
+      "daftar_isu": [
+        {
+          "kode": "24A",
+          "isu": "Anggota komunitas yang membawa tumbler air minum isi ulang dan naik sepeda diejek miskin oleh temannya yang gemar pamer kopi cup plastik mahal."
+        },
+        {
+          "kode": "24B",
+          "isu": "Tamu undangan rapat warga desa dipisahkan ruang duduknya; yang bermobil di ruang utama ber-AC dan yang berjalan kaki di teras luar."
+        },
+        {
+          "kode": "24C",
+          "isu": "Mahasiswa merasa minder bergaul di kampus karena tidak mampu mengikuti tren pakaian bermerek teman-teman sekelasnya."
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "pasangan": "Kesetaraan + Kesatriaan",
+      "kombinasi_nilai": ["Kesetaraan", "Kesatriaan"],
+      "daftar_isu": [
+        {
+          "kode": "25A",
+          "isu": "Ketua organisasi menolak ide lomba daur ulang sampah yang diusulkan siswa kelas 10 karena gengsi menerima saran dari adik kelas."
+        },
+        {
+          "kode": "25B",
+          "isu": "Seorang guru enggan meralat kekeliruan materi ajar biologi di depan kelas saat dikoreksi dengan sopan oleh siswanya."
+        },
+        {
+          "kode": "25C",
+          "isu": "Kapten tim basket menyalahkan pemain cadangan atas kekalahan tim saat bertanding melawan sekolah tetangga."
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "pasangan": "Kesetaraan + Kearifan Tradisi",
+      "kombinasi_nilai": ["Kesetaraan", "Kearifan Tradisi"],
+      "daftar_isu": [
+        {
+          "kode": "26A",
+          "isu": "Siswa yang memakai tas anyaman bambu buatan perajin desa ditertawakan karena dianggap kampungan dibanding tas plastik impor."
+        },
+        {
+          "kode": "26B",
+          "isu": "Forum musyawarah desa melarang kelompok pemuda dan remaja untuk berbicara menentukan tema perayaan bersih desa."
+        },
+        {
+          "kode": "26C",
+          "isu": "Makanan tradisional berbahan singkong lokal dilarang disajikan di acara resmi sekolah karena dianggap tidak berkelas."
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "pasangan": "Pembebasan + Persaudaraan",
+      "kombinasi_nilai": ["Pembebasan", "Persaudaraan"],
+      "daftar_isu": [
+        {
+          "kode": "27A",
+          "isu": "Aksi gotong royong warga dua desa membersihkan tumpukan sampah liar di perbatasan batal karena tersebar pesan fitnah isu SARA di grup WhatsApp."
+        },
+        {
+          "kode": "27B",
+          "isu": "Siswa yang berniat membela temannya yang dirundung diancam akan dikeluarkan dari kelompok pertemanan angkatan."
+        },
+        {
+          "kode": "27C",
+          "isu": "Petani beda agama yang sedang memperjuangkan harga pupuk murah diadu domba oleh tengkulak nakal agar gerakannya pecah."
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "pasangan": "Pembebasan + Kesederhanaan",
+      "kombinasi_nilai": ["Pembebasan", "Kesederhanaan"],
+      "daftar_isu": [
+        {
+          "kode": "28A",
+          "isu": "Mahasiswa terjerat pinjol ilegal demi membeli gawai keluaran terbaru dan nongkrong di kafe mahal setiap hari agar terlihat keren."
+        },
+        {
+          "kode": "28B",
+          "isu": "Warga desa rela berutang bunga tinggi demi menggelar pesta ulang tahun anak yang mewah di gedung pertemuan kota."
+        },
+        {
+          "kode": "28C",
+          "isu": "Pelajar memborong jajanan kemasan plastik sekali pakai secara berlebihan saat jam istirahat sekolah hingga uang sakunya habis tak tersisa."
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "pasangan": "Pembebasan + Kesatriaan",
+      "kombinasi_nilai": ["Pembebasan", "Kesatriaan"],
+      "daftar_isu": [
+        {
+          "kode": "29A",
+          "isu": "Siswa berani memotret dan melaporkan temannya yang membuang sampah plastik ke sungai belakang sekolah meski diancam akan dipukuli."
+        },
+        {
+          "kode": "29B",
+          "isu": "Pegawai honorer kantin melaporkan penggunaan bahan pengawet berbahaya pada makanan sekolah meski berisiko dipecat."
+        },
+        {
+          "kode": "29C",
+          "isu": "Mahasiswa berani mengakui bahwa poster kampanye lingkungan yang ia buat salah mencantumkan data sumber ilmiah."
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "pasangan": "Pembebasan + Kearifan Tradisi",
+      "kombinasi_nilai": ["Pembebasan", "Kearifan Tradisi"],
+      "daftar_isu": [
+        {
+          "kode": "30A",
+          "isu": "Petani desa dilarang membuat pupuk kompos daun kering sendiri dan dipaksa oknum toko tani membeli pupuk kimia mahal yang merusak tanah."
+        },
+        {
+          "kode": "30B",
+          "isu": "Tradisi pengobatan herbal alami keluarga dilarang total tanpa penjelasan yang masuk akal oleh pengurus kesehatan sekolah."
+        },
+        {
+          "kode": "30C",
+          "isu": "Warga dipaksa menebang pohon peneduh lokal di depan rumah untuk diganti dengan pagar beton buatan pabrik."
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "pasangan": "Persaudaraan + Kesederhanaan",
+      "kombinasi_nilai": ["Persaudaraan", "Kesederhanaan"],
+      "daftar_isu": [
+        {
+          "kode": "31A",
+          "isu": "Acara perpisahan sekolah disepakati di hotel berbintang dengan biaya mahal, sehingga siswa dari keluarga kurang mampu terpaksa tidak hadir."
+        },
+        {
+          "kode": "31B",
+          "isu": "Reuni alumni sekolah menjadi ajang pamer kekayaan materi, membuat teman yang ekonominya sederhana merasa terasing."
+        },
+        {
+          "kode": "31C",
+          "isu": "Tradisi buka puasa bersama atau silaturahmi hari raya menyisakan banyak makanan mubazir terbuang ke tempat sampah."
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "pasangan": "Persaudaraan + Kesatriaan",
+      "kombinasi_nilai": ["Persaudaraan", "Kesatriaan"],
+      "daftar_isu": [
+        {
+          "kode": "32A",
+          "isu": "Pemuda beda keyakinan bergotong royong menjaga keamanan rumah ibadah tetangga saat perayaan hari besar tanpa rasa takut."
+        },
+        {
+          "kode": "32B",
+          "isu": "Seorang remaja berani meminta maaf secara terbuka kepada temannya setelah menyadari ejekannya tentang lingkungan rumah temannya itu salah."
+        },
+        {
+          "kode": "32C",
+          "isu": "Dua kelompok suporter sekolah yang berselisih sepakat berdamai dan bersama-sama membersihkan sampah tribun stadion setelah pertandingan."
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "pasangan": "Persaudaraan + Kearifan Tradisi",
+      "kombinasi_nilai": ["Persaudaraan", "Kearifan Tradisi"],
+      "daftar_isu": [
+        {
+          "kode": "33A",
+          "isu": "Tradisi makan bersama beralaskan daun pisang saat kerja bakti digantikan makanan kotak styrofoam, membuat sampah menumpuk dan suasana obrolan sepi."
+        },
+        {
+          "kode": "33B",
+          "isu": "Gotong royong mendirikan tenda pernikahan tetangga mulai ditinggalkan karena warga lebih memilih menyewa jasa pihak ketiga secara individual."
+        },
+        {
+          "kode": "33C",
+          "isu": "Permainan tradisional gobak sodor di halaman kampung yang merekatkan anak-anak digantikan dengan bermain gawai sendiri-sendiri di kamar."
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "pasangan": "Kesederhanaan + Kesatriaan",
+      "kombinasi_nilai": ["Kesederhanaan", "Kesatriaan"],
+      "daftar_isu": [
+        {
+          "kode": "34A",
+          "isu": "Pemilik warung membuang sampah sisa makanan ke parit umum saat malam agar hemat iuran sampah, lalu pura-pura tidak tahu saat parit meluap banjir."
+        },
+        {
+          "kode": "34B",
+          "isu": "Siswa yang menumpahkan minuman manis di lantai perpustakaan langsung pergi meninggalkan ruangan tanpa membersihkannya."
+        },
+        {
+          "kode": "34C",
+          "isu": "Pengendara mobil mewah membuang puntung rokok menyala ke semak kering pinggir jalan dan menolak ditegur oleh pejalan kaki."
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "pasangan": "Kesederhanaan + Kearifan Tradisi",
+      "kombinasi_nilai": ["Kesederhanaan", "Kearifan Tradisi"],
+      "daftar_isu": [
+        {
+          "kode": "35A",
+          "isu": "Pedagang pasar mengganti bungkus daun pisang tradisional dengan kantong kresek hitam, membuat sampah plastik di pasar menggunung."
+        },
+        {
+          "kode": "35B",
+          "isu": "Kebiasaan membawa rantang susun saat membeli makanan berkuah ditinggalkan dan beralih ke kantong plastik tipis sekali pakai."
+        },
+        {
+          "kode": "35C",
+          "isu": "Minuman herbal tradisi seperti wedang jahe dan beras kencur ditinggalkan generasi muda demi minuman serbuk instan berpemanis buatan."
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "pasangan": "Kesatriaan + Kearifan Tradisi",
+      "kombinasi_nilai": ["Kesatriaan", "Kearifan Tradisi"],
+      "daftar_isu": [
+        {
+          "kode": "36A",
+          "isu": "Dua kelompok pemuda yang berselisih soal batas lapangan olahraga menolak musyawarah bersama tetua desa dan memilih saling tantang di media sosial."
+        },
+        {
+          "kode": "36B",
+          "isu": "Warga yang mematahkan dahan pohon pelindung mata air adat menolak mengakui perbuatannya saat musyawarah desa berlangsung."
+        },
+        {
+          "kode": "36C",
+          "isu": "Nelayan yang melanggar kesepakatan adat tentang area larangan memancing ikan menolak membayar sanksi sosial pembersihan pantai yang telah disepakati."
+        }
+      ]
+    }
+  ]
+}

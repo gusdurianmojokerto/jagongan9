@@ -1,0 +1,347 @@
+{
+  "metadata": {
+    "judul": "Bank Isu Studi Kasus 9 Nilai Gus Dur: Toleransi Beragama & Ekologi",
+    "tema": ["Toleransi Beragama", "Krisis Ekologi dan Lingkungan Hidup"],
+    "total_kombinasi_nilai": 36,
+    "total_pernyataan_isu": 108,
+    "format_penugasan": {
+      "rumus": "2 KARTU NILAI -> 1 PERNYATAAN ISU -> ANALISIS KETERKAITAN -> 1 SOLUSI KONKRET",
+      "tahap_1": "Pilih/Dapatkan salah satu pernyataan isu dari pasangan 2 nilai yang diperoleh",
+      "tahap_2": "Analisis akar masalah dan jelaskan bagaimana absennya kedua nilai tersebut memperparah masalah",
+      "tahap_3": "Rumuskan solusi aksi yang konkret, berkeadilan, dan berkelanjutan"
+    }
+  },
+  "data_kombinasi": [
+    {
+      "id_kombinasi": 1,
+      "pasangan_nilai": ["Ketauhidan", "Kemanusiaan"],
+      "daftar_isu": [
+        "Sebuah rumah ibadah minoritas disegel paksa dan jemaahnya diintimidasi secara fisik dengan dalih pembelaan agama.",
+        "Tempat penampungan korban bencana alam menolak warga non-muslim dengan alasan bantuan hanya untuk sesama seiman.",
+        "Satwa langka yang dilindungi dibantai dan diperdagangkan secara ilegal demi keuntungan materi tanpa memedulikan statusnya sebagai sesama ciptaan Tuhan."
+      ]
+    },
+    {
+      "id_kombinasi": 2,
+      "pasangan_nilai": ["Ketauhidan", "Keadilan"],
+      "daftar_isu": [
+        "Limbah tambang mencemari sumber air minum warga, sementara korporasi berdalih perusakan alam ini legal demi pendapatan negara.",
+        "Regulasi pendirian rumah ibadah dipermudah bagi kelompok mayoritas namun dipersulit bagi kelompok minoritas di tingkat birokrasi daerah.",
+        "Hukuman ringan diberikan kepada korporasi pembakar hutan gambut, sementara petani tradisional pembakar lahan satu petak dihukum penjara maksimal."
+      ]
+    },
+    {
+      "id_kombinasi": 3,
+      "pasangan_nilai": ["Ketauhidan", "Kesetaraan"],
+      "daftar_isu": [
+        "Warga penganut agama leluhur/penghayat kepercayaan dipersulit dalam pendataan administrasi kependudukan dan pencatatan sipil.",
+        "Ruang terbuka hijau publik hanya dibangun di pemukiman elite, sedangkan perkampungan padat dibiarkan terpapar polusi udara tanpa proteksi lingkungan.",
+        "Siswa penganut agama minoritas dipaksa mengenakan atribut seragam keagamaan tertentu di sekolah negeri."
+      ]
+    },
+    {
+      "id_kombinasi": 4,
+      "pasangan_nilai": ["Ketauhidan", "Pembebasan"],
+      "daftar_isu": [
+        "Doktrin pasrah disebarkan agar masyarakat pesisir tidak melawan proyek reklamasi teluk yang merusak ekosistem terumbu karang.",
+        "Umat beragama dilarang bersikap kritis terhadap tokoh agama yang merestui perusakan hutan demi dana sumbangan.",
+        "Petani dilarang menolak alih fungsi lahan sawah menjadi kawasan industri karena diklaim sebagai bentuk takdir yang tak boleh digugat."
+      ]
+    },
+    {
+      "id_kombinasi": 5,
+      "pasangan_nilai": ["Ketauhidan", "Persaudaraan"],
+      "daftar_isu": [
+        "Spanduk larangan mengucapkan selamat hari raya kepada pemeluk agama lain dipasang di ruang publik hingga merusak keharmonisan warga.",
+        "Komunitas lintas iman dilarang bergotong royong menanam pohon bakau bersama di pesisir pantai karena dianggap mencampuradukkan aqidah.",
+        "Pemboikotan sosial dan ekonomi dilakukan terhadap warga yang berpindah keyakinan atau berbeda madzhab."
+      ]
+    },
+    {
+      "id_kombinasi": 6,
+      "pasangan_nilai": ["Ketauhidan", "Kesederhanaan"],
+      "daftar_isu": [
+        "Rumah ibadah dibangun dengan fasilitas pendingin ruangan raksasa yang boros listrik di tengah perkampungan yang krisis air dan ruang hijau.",
+        "Kegiatan keagamaan akbar menyisakan berton-ton sampah plastik sekali pakai tanpa ada upaya pemilahan dan daur ulang.",
+        "Perayaan hari besar keagamaan dirayakan secara glamor dan hedonis, mengabaikan kondisi warga sekitar yang miskin dan lapar."
+      ]
+    },
+    {
+      "id_kombinasi": 7,
+      "pasangan_nilai": ["Ketauhidan", "Kesatriaan"],
+      "daftar_isu": [
+        "Pemuka agama bungkam saat ada perusakan hutan lindung karena yayasannya menerima dana CSR dari korporasi perusak alam.",
+        "Tokoh masyarakat tidak berani membela tetangga minoritas yang difitnah menodai agama karena takut kehilangan popularitas.",
+        "Penyelenggara wisata alam enggan mengakui kerusakan karang laut akibat kelalaian operasional perahu wisata mereka."
+      ]
+    },
+    {
+      "id_kombinasi": 8,
+      "pasangan_nilai": ["Ketauhidan", "Kearifan Tradisi"],
+      "daftar_isu": [
+        "Tradisi adat menjaga hutan larangan dan sumber mata air dihakimi sebagai praktik syirik oleh kelompok pendatang.",
+        "Ritual tolak bala dan sedekah bumi yang menjaga ekosistem desa dilarang secara sepihak tanpa dialog kultural.",
+        "Kearifan lokal suku pedalaman dalam memelihara hutan adat digusur demi proyek perkebunan monokultur modern."
+      ]
+    },
+    {
+      "id_kombinasi": 9,
+      "pasangan_nilai": ["Kemanusiaan", "Keadilan"],
+      "daftar_isu": [
+        "Warga di sekitar Tempat Pembuangan Akhir (TPA) sampah menderita penyakit pernapasan kronis tanpa kompensasi layanan kesehatan.",
+        "Bantuan logistik bencana alam didistribusikan secara diskriminatif berdasarkan kedekatan etnis dan agama korban.",
+        "Komunitas adat pengelola mata air dipidanakan saat menolak pengeboran air tanah komersial oleh pabrik minuman kemasan."
+      ]
+    },
+    {
+      "id_kombinasi": 10,
+      "pasangan_nilai": ["Kemanusiaan", "Kesetaraan"],
+      "daftar_isu": [
+        "Saat kekeringan ekstrem melanda, pasokan tangki air bersih pemerintah didahulukan untuk pemukiman mayoritas dibanding pemukiman minoritas.",
+        "Pasien korban kabut asap kebakaran hutan dari kalangan miskin tidak mendapatkan ruang perawatan beroksigen di rumah sakit daerah.",
+        "Fasilitas tempat ibadah ramah lansia dan difabel diabaikan karena dianggap membutuhkan biaya renovasi tambahan."
+      ]
+    },
+    {
+      "id_kombinasi": 11,
+      "pasangan_nilai": ["Kemanusiaan", "Pembebasan"],
+      "daftar_isu": [
+        "Anak-anak buruh kebun sawit terpapar pestisida beracun tanpa alat pelindung dan tidak memiliki akses fasilitas pendidikan dasar.",
+        "Korban intimidasi ormas berbasis agama disandera secara psikologis dan dilarang mencari bantuan perlindungan hukum.",
+        "Masyarakat nelayan miskin terjerat utang juragan kapal sehingga dipaksa menggunakan bom ikan yang merusak laut demi kejar setoran."
+      ]
+    },
+    {
+      "id_kombinasi": 12,
+      "pasangan_nilai": ["Kemanusiaan", "Persaudaraan"],
+      "daftar_isu": [
+        "Pemakaman jenazah warga ditolak di TPU umum desa setempat hanya karena almarhum menganut aliran keagamaan minoritas.",
+        "Warga enggan membantu memadamkan kebakaran rumah tetangga karena perbedaan latar belakang identitas agama.",
+        "Relawan kemanusiaan lintas iman dicurigai dan ditolak masuk ke lokasi terdampak bencana banjir bandang."
+      ]
+    },
+    {
+      "id_kombinasi": 13,
+      "pasangan_nilai": ["Kemanusiaan", "Kesederhanaan"],
+      "daftar_isu": [
+        "Gaya hidup konsumsi berlebihan di kota besar menghasilkan gunungan sampah plastik yang hanyut dan mencemari pulau nelayan tradisional.",
+        "Pembangunan vila peristirahatan mewah memicu longsor lereng bukit yang menimbun pemukiman petani miskin di bawahnya.",
+        "Budaya berbusana serba instan (fast fashion) memicu polusi limbah pewarna kimia beracun di sungai pemandian warga pedesaan."
+      ]
+    },
+    {
+      "id_kombinasi": 14,
+      "pasangan_nilai": ["Kemanusiaan", "Kesatriaan"],
+      "daftar_isu": [
+        "Warga memilih diam saat tetangga yang beragama minoritas diusir paksa oleh sekelompok orang karena takut ikut dipersekusi.",
+        "Kapten kapal tanker minyak enggan melapor dan menutupi kebocoran minyak di perairan pesisir demi menghindari ganti rugi.",
+        "Saksi mata perusakan hutan bakau menolak memberi kesaksian di pengadilan karena mendapat ancaman teror fisik."
+      ]
+    },
+    {
+      "id_kombinasi": 15,
+      "pasangan_nilai": ["Kemanusiaan", "Kearifan Tradisi"],
+      "daftar_isu": [
+        "Budaya gotong royong membersihkan sedimentasi sungai desa mulai luntur digantikan sikap abai membuang sampah ke aliran air.",
+        "Tradisi silaturahmi antarwarga beda keyakinan saat peringatan adat kampung dihentikan karena dianggap bid'ah.",
+        "Pantangan adat menebang pohon penahan longsor diabaikan warga modern demi membuka kedai kopi tepi tebing."
+      ]
+    },
+    {
+      "id_kombinasi": 16,
+      "pasangan_nilai": ["Keadilan", "Kesetaraan"],
+      "daftar_isu": [
+        "Izin pembangunan rumah ibadah minoritas dihambat belasan tahun lewat birokrasi, sementara rumah ibadah mayoritas terbit tanpa syarat.",
+        "Nelayan tradisional dengan perahu kecil dikenakan pajak izin tangkap ketat, sementara kapal industri perusak karang mendapat subsidi BBM.",
+        "Kuota beasiswa pendidikan daerah dipotong untuk anak-anak penganut aliran kepercayaan minoritas."
+      ]
+    },
+    {
+      "id_kombinasi": 17,
+      "pasangan_nilai": ["Keadilan", "Pembebasan"],
+      "daftar_isu": [
+        "Nelayan lokal dilarang melaut di pesisir sendiri karena zona tangkap diprivatisasi untuk kapal pukat harimau milik korporasi.",
+        "Warga yang memprotes polusi debu batu bara dijerat UU ITE atas laporan pencemaran nama baik oleh pihak perusahaan pembangkit.",
+        "Guru agama minoritas di sekolah negeri tidak diberikan status kepegawaian setara dan dipersulit ruang kenaikan pangkatnya."
+      ]
+    },
+    {
+      "id_kombinasi": 18,
+      "pasangan_nilai": ["Keadilan", "Persaudaraan"],
+      "daftar_isu": [
+        "Bantuan sembako dan genset saat krisis bencana alam dimonopoli panitia hanya untuk warga yang satu perkumpulan jamaah.",
+        "Konflik sengketa sempadan mata air antardua desa tetangga dimanfaatkan provokator untuk memicu bentrokan antarwarga.",
+        "Akses jalan desa menuju tempat ibadah agama lain ditutup sepihak oleh pengurus komplek perumahan."
+      ]
+    },
+    {
+      "id_kombinasi": 19,
+      "pasangan_nilai": ["Keadilan", "Kesederhanaan"],
+      "daftar_isu": [
+        "Mata air pegunungan disedot habis untuk kolam renang kawasan wisata resor mewah, menyebabkan sawah petani mengalami kekeringan ekstrem.",
+        "Pejabat dinas lingkungan hidup menggunakan anggaran pemulihan ekosistem hutan untuk membeli kendaraan operasional mewah.",
+        "Warga miskin membayar tarif air tangki sangat mahal saat kemarau, sementara pabrik industri mendapat tarif air tanah murah."
+      ]
+    },
+    {
+      "id_kombinasi": 20,
+      "pasangan_nilai": ["Keadilan", "Kesatriaan"],
+      "daftar_isu": [
+        "Aparat penegak hukum membiarkan aksi penyegelan paksa tempat ibadah oleh ormas anarkis demi menjaga stabilitas politik lokal.",
+        "Pejabat pengawas AMDAL menerima suap untuk meloloskan analisis dampak lingkungan proyek pabrik kimia di hulu sungai.",
+        "Hakim memvonis bebas pelaku penyelundupan satwa langka karena adanya intervensi dari oknum pejabat tinggi."
+      ]
+    },
+    {
+      "id_kombinasi": 21,
+      "pasangan_nilai": ["Keadilan", "Kearifan Tradisi"],
+      "daftar_isu": [
+        "Pembagian air irigasi sawah berbasis adat disabotase oleh pemilik lapangan golf komersial demi menjaga rumput tetap hijau.",
+        "Hutan adat yang telah dikelola turun-temurun diserahkan izinnya kepada investor kelapa sawit tanpa persetujuan warga adat.",
+        "Aturan adat sanksi denda bagi perusak karang laut diabaikan oleh aparat penegak hukum formal demi membela kapal wisata luar daerah."
+      ]
+    },
+    {
+      "id_kombinasi": 22,
+      "pasangan_nilai": ["Kesetaraan", "Pembebasan"],
+      "daftar_isu": [
+        "Kelompok perempuan penjaga mata air ditolak bersuara dalam forum AMDAL proyek tambang semen yang mengancam sumber air desa.",
+        "Buruh perempuan di perkebunan monokultur tidak diberikan cuti haid/melahirkan dan terpapar zat kimia tanpa jaminan medis.",
+        "Pemuda dari suku adat terpencil dipersulit memperoleh akses pendidikan tinggi di universitas negeri."
+      ]
+    },
+    {
+      "id_kombinasi": 23,
+      "pasangan_nilai": ["Kesetaraan", "Persaudaraan"],
+      "daftar_isu": [
+        "Siswa di sekolah negeri dipisahkan kantin dan ruang pergaulannya berdasarkan atribut agama oleh kebijakan sepihak kepala sekolah.",
+        "Organisasi pemuda desa menolak menerima anggota baru yang memiliki latar belakang keyakinan non-mayoritas.",
+        "Warga menolak kerja bakti membersihkan lingkungan jika kegiatan dipimpin oleh ketua RT yang berasal dari agama minoritas."
+      ]
+    },
+    {
+      "id_kombinasi": 24,
+      "pasangan_nilai": ["Kesetaraan", "Kesederhanaan"],
+      "daftar_isu": [
+        "Polusi udara beracun dari kawasan industri menumpuk di perkampungan padat, sementara kantor direksi memasang filter udara eksklusif.",
+        "Penikmat wisata alam eksklusif meninggalkan sampah plastik di puncak gunung yang harus dibersihkan oleh porter lokal bergaji rendah.",
+        "Pelanggan listrik subsidi diputus sepihak saat krisis daya, sementara kawasan perbelanjaan mewah tetap menyala benderang tanpa hemat energi."
+      ]
+    },
+    {
+      "id_kombinasi": 25,
+      "pasangan_nilai": ["Kesetaraan", "Kesatriaan"],
+      "daftar_isu": [
+        "Kepala dinas menolak mempromosikan staf berprestasi ke jabatan strategis hanya karena staf tersebut menganut agama minoritas.",
+        "Penyelenggara forum dialog ekologi tidak berani mengundang narasumber dari kelompok masyarakat adat yang vokal mengkritik pemerintah.",
+        "Pengurus organisasi keagamaan menolak mengakui kesalahan data diskriminasi gender di lingkungan internal lembaganya."
+      ]
+    },
+    {
+      "id_kombinasi": 26,
+      "pasangan_nilai": ["Kesetaraan", "Kearifan Tradisi"],
+      "daftar_isu": [
+        "Masyarakat adat pelindung mangrove dilarang mengelola pesisirnya karena dianggap tidak produktif dibanding pengembang tambak udang intensif.",
+        "Musyawarah adat pengelolaan hutan desa melarang partisipasi kaum perempuan dan anak muda untuk bersuara.",
+        "Praktik pengobatan herbal tradisional warisan leluhur didiskriminasi dan dilarang tanpa ada riset ilmiah yang transparan."
+      ]
+    },
+    {
+      "id_kombinasi": 27,
+      "pasangan_nilai": ["Pembebasan", "Persaudaraan"],
+      "daftar_isu": [
+        "Warga lintas iman yang bersama-sama menolak penambangan pasir laut dipecah belah dengan isu SARA oleh oknum calo proyek.",
+        "Petani yang menolak penggusuran lahan sumber air diintimidasi oleh kelompok preman bayaran yang merupakan warga desa tetangga.",
+        "Komunitas lintas agama yang mendampingi korban perusakan lingkungan dilabeli sebagai kelompok penyebar keresahan masyarakat."
+      ]
+    },
+    {
+      "id_kombinasi": 28,
+      "pasangan_nilai": ["Pembebasan", "Kesederhanaan"],
+      "daftar_isu": [
+        "Petani pesisir terjerat utang pupuk kimia sintetis yang merusak tanah karena tergoda iming-iming hasil panen kilat.",
+        "Generasi muda terlilit pinjaman konsumtif untuk membeli kendaraan bermotor emisi tinggi daripada memanfaatkan transportasi publik ramah lingkungan.",
+        "Warga desa menjual tanah resapan air produktif demi membeli barang elektronik konsumtif yang cepat rusak."
+      ]
+    },
+    {
+      "id_kombinasi": 29,
+      "pasangan_nilai": ["Pembebasan", "Kesatriaan"],
+      "daftar_isu": [
+        "Pejuang lingkungan yang menolak aktivitas tambang ilegal di kawasan resapan air dikriminalisasi menggunakan pasal karet.",
+        "Warga yang melaporkan pembuangan limbah beracun di sungai pasar diancam teror fisik oleh komplotan pelaku industri gelap.",
+        "Pegawai dinas kehutanan dipecat karena menolak menandatangani izin pembalakan liar di hutan suaka margasatwa."
+      ]
+    },
+    {
+      "id_kombinasi": 30,
+      "pasangan_nilai": ["Pembebasan", "Kearifan Tradisi"],
+      "daftar_isu": [
+        "Petani mandiri dipidana karena menanam dan membagikan benih padi lokal organik tanpa sertifikasi izin edar korporasi.",
+        "Praktik pertanian tumpangsari ramah lingkungan warisan nenek moyang dipaksa diganti dengan benih monokultur rekayasa genetika yang boros pestisida.",
+        "Hak ulayat masyarakat hukum adat atas hutan mangrove dirampas atas nama proyek strategis tanpa persetujuan bebas tanpa paksaan (FPIC)."
+      ]
+    },
+    {
+      "id_kombinasi": 31,
+      "pasangan_nilai": ["Persaudaraan", "Kesederhanaan"],
+      "daftar_isu": [
+        "Tradisi silaturahmi open house hari raya keagamaan menghasilkan tumpukan sampah sisa makanan (food waste) terbuang secara masif.",
+        "Acara bakti sosial lingkungan dikemas secara mewah dan menghabiskan dana miliaran untuk seremoni panggung dibanding aksi tanam pohon riil.",
+        "Komunitas keagamaan berlomba-lomba mempercantik dekorasi tempat ibadah dengan material impor yang merusak jejak karbon."
+      ]
+    },
+    {
+      "id_kombinasi": 32,
+      "pasangan_nilai": ["Persaudaraan", "Kesatriaan"],
+      "daftar_isu": [
+        "Pemuda lintas iman berani pasang badan mengamankan gereja yang diancam dibakar massa intoleran tanpa membalas dengan kekerasan fisik.",
+        "Warga berani menegur anggota kelompok sukunya sendiri yang membuang limbah bengkel motor ke selokan saluran air bersama.",
+        "Tokoh antaragama bersatu membuat petisi bersama mendesak penutupan pabrik pencemar udara meski mendapat tekanan penguasa daerah."
+      ]
+    },
+    {
+      "id_kombinasi": 33,
+      "pasangan_nilai": ["Persaudaraan", "Kearifan Tradisi"],
+      "daftar_isu": [
+        "Tradisi bersih sumber mata air bersama lintas komunitas agama (Nyadran / Bersih Desa) ditinggalkan akibat masuknya paham eksklusif agama.",
+        "Gotong royong menanam pohon bakau di pesisir desa mulai punah digantikan oleh proyek berbayar pihak ketiga.",
+        "Seni tari tradisi yang mengajarkan harmoni manusia dengan alam ditolak pentas di balai desa karena dituduh mengandung kemusyrikan."
+      ]
+    },
+    {
+      "id_kombinasi": 34,
+      "pasangan_nilai": ["Kesederhanaan", "Kesatriaan"],
+      "daftar_isu": [
+        "Pimpinan industri tekstil membuang limbah kimia berbahaya ke sungai umum di malam hari dan menyuap petugas pemeriksa lingkungan.",
+        "Pejabat pengadaan kendaraan dinas menolak beralih ke armada ramah lingkungan karena gengsi terhadap fasilitas mobil mewah berbahan bakar boros.",
+        "Pemilik restoran membuang minyak jelantah sisa ke saluran drainase kota dan menolak membayar retribusi pengolahan limbah khusus."
+      ]
+    },
+    {
+      "id_kombinasi": 35,
+      "pasangan_nilai": ["Kesederhanaan", "Kearifan Tradisi"],
+      "daftar_isu": [
+        "Tradisi pemanfaatan pembungkus daun pisang/jati alami di pasar tradisional digantikan total oleh kantong plastik sekali pakai.",
+        "Arsitektur rumah adat yang sejuk alami ramah gempa ditinggalkan demi membangun rumah beton kaca yang boros pendingin udara elektrik.",
+        "Pola makan pangan lokal umbi-umbian yang tahan krisis iklim ditinggalkan demi mengonsumsi gandum impor serba cepat saji."
+      ]
+    },
+    {
+      "id_kombinasi": 36,
+      "pasangan_nilai": ["Kesatriaan", "Kearifan Tradisi"],
+      "daftar_isu": [
+        "Sengketa pemanfaatan sumber mata air adat diselesaikan lewat aksi kekerasan fisik, alih-alih duduk bersama bermusyawarah di balai desa.",
+        "Nelayan modern melanggar kesepakatan zonasi adat penangkapan ikan dan enggan membayar denda sanksi sosial adat yang telah disepakati bersama.",
+        "Warga yang menebang pohon keramat di area resapan air menolak mengakui perbuatannya dan menyalahkan bencana longsor pada pihak lain."
+      ]
+    }
+  ],
+  "rubrik_penilaian": [
+    {"no": 1, "aspek": "Kesesuaian Isu dengan 2 Nilai yang didapat", "bobot": 25},
+    {"no": 2, "aspek": "Kedalaman Analisis Keterkaitan (Akar masalah & pelanggaran nilai)", "bobot": 20},
+    {"no": 3, "aspek": "Kualitas, Kelogisan, dan Kebermaknaan Solusi yang dirumuskan", "bobot": 25},
+    {"no": 4, "aspek": "Kreativitas gagasan & relevansi kontekstual isu", "bobot": 20},
+    {"no": 5, "aspek": "Kekompakan & Cara Presentasi Kelompok (Maks. 2 Menit)", "bobot": 10}
+  ]
+}
