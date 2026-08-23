@@ -1,0 +1,334 @@
+{
+  "metadata": {
+    "judul": "Bank Isu Nyata 36 Kombinasi 9 Nilai Gus Dur",
+    "deskripsi": "Daftar 36 studi kasus isu nyata faktual di masyarakat (ekologi, toleransi, sosial kemasyarakatan) dengan kearifan tradisi berbasis budaya takbenda (intangible heritage)",
+    "total_kombinasi": 36,
+    "metode_analisis": "Rumus 3 Langkah (1. Identifikasi Masalah -> 2. Analisis 2 Nilai Gus Dur -> 3. Solusi Konkret)"
+  },
+  "daftar_isu": [
+    {
+      "id": 1,
+      "kombinasi_nilai": [
+        "Ketauhidan",
+        "Kemanusiaan"
+      ],
+      "pasangan": "Ketauhidan + Kemanusiaan",
+      "isu": "Sekelompok warga menolak pemakaman jenazah warga yang terpapar wabah penyakit atau warga beda aliran di TPU desa setempat karena alasan takut tertular dan beda keyakinan."
+    },
+    {
+      "id": 2,
+      "kombinasi_nilai": [
+        "Ketauhidan",
+        "Keadilan"
+      ],
+      "pasangan": "Ketauhidan + Keadilan",
+      "isu": "Seorang guru honorer yang sudah mengabdi belasan tahun hanya digaji Rp300.000 per bulan, lalu diminta oleh pengurus yayasan untuk ikhlas karena mengajar adalah ladang pahala akhirat."
+    },
+    {
+      "id": 3,
+      "kombinasi_nilai": [
+        "Ketauhidan",
+        "Kesetaraan"
+      ],
+      "pasangan": "Ketauhidan + Kesetaraan",
+      "isu": "Siswa penganut kepercayaan adat (penghayat) dipaksa memilih salah satu nilai ujian agama resmi di rapor sekolah negeri karena sistem administrasi belum menyediakan kolom khusus."
+    },
+    {
+      "id": 4,
+      "kombinasi_nilai": [
+        "Ketauhidan",
+        "Pembebasan"
+      ],
+      "pasangan": "Ketauhidan + Pembebasan",
+      "isu": "Warga di sekitar pabrik semen diminta tidak ikut aksi protes pencemaran debu dan air oleh tokoh masyarakat karena dianggap melawan takdir dan memicu kegaduhan kampung."
+    },
+    {
+      "id": 5,
+      "kombinasi_nilai": [
+        "Ketauhidan",
+        "Persaudaraan"
+      ],
+      "pasangan": "Ketauhidan + Persaudaraan",
+      "isu": "Beredar pesan berantai di grup WhatsApp warga komplek yang melarang warganya membeli dagangan di warung tetangga sebelah hanya karena pemilik warung berbeda pilihan calon kepala desa dan beda pengajian."
+    },
+    {
+      "id": 6,
+      "kombinasi_nilai": [
+        "Ketauhidan",
+        "Kesederhanaan"
+      ],
+      "pasangan": "Ketauhidan + Kesederhanaan",
+      "isu": "Pengurus tempat ibadah membangun pagar dan menara megah senilai ratusan juta rupiah, padahal jalanan depan tempat ibadah becek berlubang dan tetangga sampingnya hidup kekurangan."
+    },
+    {
+      "id": 7,
+      "kombinasi_nilai": [
+        "Ketauhidan",
+        "Kesatriaan"
+      ],
+      "pasangan": "Ketauhidan + Kesatriaan",
+      "isu": "Guru di sekolah melihat kepala sekolah memotong dana Program Indonesia Pintar (PIP) milik siswa miskin, namun guru tersebut memilih diam karena takut dipindahkan ke pelosok."
+    },
+    {
+      "id": 8,
+      "kombinasi_nilai": [
+        "Ketauhidan",
+        "Kearifan Tradisi"
+      ],
+      "pasangan": "Ketauhidan + Kearifan Tradisi",
+      "isu": "Tradisi seni tutur kidung doa dan ritual sedekah bumi yang memuat nilai syukur kepada Tuhan dituduh syirik serta dibubarkan paksa oleh sekelompok pendatang tanpa dialog kultural."
+    },
+    {
+      "id": 9,
+      "kombinasi_nilai": [
+        "Kemanusiaan",
+        "Keadilan"
+      ],
+      "pasangan": "Kemanusiaan + Keadilan",
+      "isu": "Warga bantaran sungai digusur paksa oleh aparat satpol PP menggunakan alat berat tanpa diberikan uang ganti rugi atau tempat relokasi yang layak huni."
+    },
+    {
+      "id": 10,
+      "kombinasi_nilai": [
+        "Kemanusiaan",
+        "Kesetaraan"
+      ],
+      "pasangan": "Kemanusiaan + Kesetaraan",
+      "isu": "Di sebuah puskesmas daerah, pasien pengguna BPJS Kesehatan kelas bawah sering diabaikan dan disuruh menunggu seharian, sedangkan pasien umum berbayar langsung dilayani di ruang dokter."
+    },
+    {
+      "id": 11,
+      "kombinasi_nilai": [
+        "Kemanusiaan",
+        "Pembebasan"
+      ],
+      "pasangan": "Kemanusiaan + Pembebasan",
+      "isu": "Remaja dari keluarga miskin putus sekolah dan dipaksa menjadi pengamen atau manusia perak di lampu merah oleh sindikat demi menyetor uang setiap hari."
+    },
+    {
+      "id": 12,
+      "kombinasi_nilai": [
+        "Kemanusiaan",
+        "Persaudaraan"
+      ],
+      "pasangan": "Kemanusiaan + Persaudaraan",
+      "isu": "Seorang mahasiswa dari luar pulau sulit mendapatkan kamar indekos karena pemilik kos secara terang-terangan menulis aturan menolak suku tertentu akibat stereotip negatif."
+    },
+    {
+      "id": 13,
+      "kombinasi_nilai": [
+        "Kemanusiaan",
+        "Kesederhanaan"
+      ],
+      "pasangan": "Kemanusiaan + Kesederhanaan",
+      "isu": "Dalam acara hajatan pernikahan mewah di desa, makanan katering tersisa sangat banyak dan dibuang langsung ke tong sampah, sementara banyak buruh tani di sekitar gedung kelaparan karena paceklik."
+    },
+    {
+      "id": 14,
+      "kombinasi_nilai": [
+        "Kemanusiaan",
+        "Kesatriaan"
+      ],
+      "pasangan": "Kemanusiaan + Kesatriaan",
+      "isu": "Seorang siswa kelas 7 dipalak dan diancam di toilet sekolah setiap jam istirahat oleh seniornya, namun teman-teman sekelas yang mengetahui kejadian itu memilih bungkam karena takut dipukuli."
+    },
+    {
+      "id": 15,
+      "kombinasi_nilai": [
+        "Kemanusiaan",
+        "Kearifan Tradisi"
+      ],
+      "pasangan": "Kemanusiaan + Kearifan Tradisi",
+      "isu": "Tata krama bertutur kata sopan (unggah-ungguh), etika lisan, dan nilai empati (tepa salira) mulai hilang, digantikan oleh budaya saling merundung serta memaki dengan kata-kata kasar di media sosial."
+    },
+    {
+      "id": 16,
+      "kombinasi_nilai": [
+        "Keadilan",
+        "Kesetaraan"
+      ],
+      "pasangan": "Keadilan + Kesetaraan",
+      "isu": "Penerimaan pegawai honorer di kantor dinas kelurahan diisi oleh anak dan keponakan kepala desa tanpa seleksi terbuka, mengabaikan pelamar lain yang lebih berkompeten."
+    },
+    {
+      "id": 17,
+      "kombinasi_nilai": [
+        "Keadilan",
+        "Pembebasan"
+      ],
+      "pasangan": "Keadilan + Pembebasan",
+      "isu": "Petani kecil penyewa lahan terlilit utang ijon dengan tengkulak karena harga pupuk dimainkan, sehingga hasil panen habis disita tanpa sisa untuk makan keluarga."
+    },
+    {
+      "id": 18,
+      "kombinasi_nilai": [
+        "Keadilan",
+        "Persaudaraan"
+      ],
+      "pasangan": "Keadilan + Persaudaraan",
+      "isu": "Penyaluran bantuan beras dari pemerintah (Bansos) dibagikan ketua RT hanya kepada tetangga yang mendukungnya saat pemilihan RT, sementara warga miskin lain yang tidak memilihnya dicoret dari daftar penerima."
+    },
+    {
+      "id": 19,
+      "kombinasi_nilai": [
+        "Keadilan",
+        "Kesederhanaan"
+      ],
+      "pasangan": "Keadilan + Kesederhanaan",
+      "isu": "Anggaran desa yang seharusnya dipakai untuk menambal jalan rusak penghubung sawah justru dihabiskan kades untuk membeli mobil dinas baru dan merenovasi ruang kerjanya."
+    },
+    {
+      "id": 20,
+      "kombinasi_nilai": [
+        "Keadilan",
+        "Kesatriaan"
+      ],
+      "pasangan": "Keadilan + Kesatriaan",
+      "isu": "Pengendara motor menabrak gerobak pedagang bakso hingga kuah panas tumpah dan gerobak rusak, lalu pelaku langsung tancap gas melarikan diri tanpa mengganti rugi."
+    },
+    {
+      "id": 21,
+      "kombinasi_nilai": [
+        "Keadilan",
+        "Kearifan Tradisi"
+      ],
+      "pasangan": "Keadilan + Kearifan Tradisi",
+      "isu": "Aturan adat takbenda tentang hukum giliran pembagian air sawah (ulu-ulu/mitra cai) dilanggar secara sepihak oleh pemilik tanah luas dengan menjebol pintu air pada malam hari."
+    },
+    {
+      "id": 22,
+      "kombinasi_nilai": [
+        "Kesetaraan",
+        "Pembebasan"
+      ],
+      "pasangan": "Kesetaraan + Pembebasan",
+      "isu": "Di sebuah desa, anak perempuan dilarang melanjutkan sekolah ke jenjang SMA/kuliah oleh orang tuanya karena dianggap ujung-ujungnya hanya akan bekerja di dapur."
+    },
+    {
+      "id": 23,
+      "kombinasi_nilai": [
+        "Kesetaraan",
+        "Persaudaraan"
+      ],
+      "pasangan": "Kesetaraan + Persaudaraan",
+      "isu": "Siswa di sekolah mengelompokkan diri dalam geng-geng tertentu; anak yang memakai sepatu murah dan membawa bekal nasi tidak diajak mengobrol oleh anak-anak yang jajan di kafe mahal."
+    },
+    {
+      "id": 24,
+      "kombinasi_nilai": [
+        "Kesetaraan",
+        "Kesederhanaan"
+      ],
+      "pasangan": "Kesetaraan + Kesederhanaan",
+      "isu": "Tamu undangan hajatan kampung yang datang naik sepeda motor ditempatkan di teras luar dan disajikan snack biasa, sedangkan tamu yang naik mobil pejabat dipersilakan duduk di sofa dalam dan dilayani prasmanan khusus."
+    },
+    {
+      "id": 25,
+      "kombinasi_nilai": [
+        "Kesetaraan",
+        "Kesatriaan"
+      ],
+      "pasangan": "Kesetaraan + Kesatriaan",
+      "isu": "Ketua organisasi siswa menolak saran perbaikan teknis dari adik kelas saat acara pensi mengalami kendala kelistrikan hanya karena gengsi dianggap kalah pintar oleh junior."
+    },
+    {
+      "id": 26,
+      "kombinasi_nilai": [
+        "Kesetaraan",
+        "Kearifan Tradisi"
+      ],
+      "pasangan": "Kesetaraan + Kearifan Tradisi",
+      "isu": "Forum musyawarah rembuk warga desa melarang kaum perempuan dan pemuda menyampaikan pendapat karena dianggap menyalahi kebiasaan lama yang hanya memberi panggung kepada laki-laki tua."
+    },
+    {
+      "id": 27,
+      "kombinasi_nilai": [
+        "Pembebasan",
+        "Persaudaraan"
+      ],
+      "pasangan": "Pembebasan + Persaudaraan",
+      "isu": "Menjelang pemilihan kades, beredar selebaran fitnah isu SARA bahwa calon nomor urut 1 bersekutu dengan kelompok agama lain untuk menggusur pasar tradisional, hingga warga dua kubu saling melempar batu."
+    },
+    {
+      "id": 28,
+      "kombinasi_nilai": [
+        "Pembebasan",
+        "Kesederhanaan"
+      ],
+      "pasangan": "Pembebasan + Kesederhanaan",
+      "isu": "Seorang mahasiswa terjerat 5 aplikasi pinjaman online (pinjol) ilegal dengan bunga mencekik karena memaksakan diri membeli ponsel pintar terbaru dan sering nongkrong di kafe mahal demi konten media sosial."
+    },
+    {
+      "id": 29,
+      "kombinasi_nilai": [
+        "Pembebasan",
+        "Kesatriaan"
+      ],
+      "pasangan": "Pembebasan + Kesatriaan",
+      "isu": "Seorang bendahara panitia pembangunan tempat ibadah berani menegur dan menolak perintah ketua panitia yang ingin memakai uang infak kas warga untuk keperluan dana kampanye pribadi."
+    },
+    {
+      "id": 30,
+      "kombinasi_nilai": [
+        "Pembebasan",
+        "Kearifan Tradisi"
+      ],
+      "pasangan": "Pembebasan + Kearifan Tradisi",
+      "isu": "Falsafah leluhur memayu hayuning bawana (kewajiban etis menjaga keharmonisan alam) ditinggalkan demi keserakahan ekonomi, mengakibatkan bukit resapan air ditebang liar hingga memicu longsor."
+    },
+    {
+      "id": 31,
+      "kombinasi_nilai": [
+        "Persaudaraan",
+        "Kesederhanaan"
+      ],
+      "pasangan": "Persaudaraan + Kesederhanaan",
+      "isu": "Pertemuan arisan keluarga besar atau reuni sekolah berubah menjadi ajang saling pamer tas bermerek, jabatan pasangan, dan capaian materi, sehingga saudara yang miskin merasa malu dan memilih tidak pernah datang lagi."
+    },
+    {
+      "id": 32,
+      "kombinasi_nilai": [
+        "Persaudaraan",
+        "Kesatriaan"
+      ],
+      "pasangan": "Persaudaraan + Kesatriaan",
+      "isu": "Terjadi saling ejek antarsuporter futsal antarsekolah di Instagram hingga berujung tawuran di jalan raya, lalu kapten kedua tim berani saling bersalaman dan memimpin suporternya meminta maaf kepada warga yang terganggu."
+    },
+    {
+      "id": 33,
+      "kombinasi_nilai": [
+        "Persaudaraan",
+        "Kearifan Tradisi"
+      ],
+      "pasangan": "Persaudaraan + Kearifan Tradisi",
+      "isu": "Budaya tolong-menolong takbenda saat hajatan warga (sinoman/sambatan) dan tembang dolanan anak yang merekatkan empati ditinggalkan, digantikan oleh pola hidup individualis yang acuh tak acuh."
+    },
+    {
+      "id": 34,
+      "kombinasi_nilai": [
+        "Kesederhanaan",
+        "Kesatriaan"
+      ],
+      "pasangan": "Kesederhanaan + Kesatriaan",
+      "isu": "Pemilik bengkel motor membuang puluhan liter oli bekas ke saluran selokan umum tengah malam agar tidak membayar retribusi limbah B3, lalu mengelak dan marah saat warga menegurnya karena sumur mereka tercemar bau oli."
+    },
+    {
+      "id": 35,
+      "kombinasi_nilai": [
+        "Kesederhanaan",
+        "Kearifan Tradisi"
+      ],
+      "pasangan": "Kesederhanaan + Kearifan Tradisi",
+      "isu": "Falsafah hidup bersahaja nrimo ing pandum (keikhlasan batin dan rasa cukup) ditinggalkan, sehingga warga memaksakan diri berutang ke rentenir demi gengsi menggelar pesta hajatan mewah berhari-hari."
+    },
+    {
+      "id": 36,
+      "kombinasi_nilai": [
+        "Kesatriaan",
+        "Kearifan Tradisi"
+      ],
+      "pasangan": "Kesatriaan + Kearifan Tradisi",
+      "isu": "Terjadi sengketa batas tanah pekarangan antardua keluarga; salah satu pihak menolak jalur musyawarah mufakat adat dan justru mengerahkan preman bersenjata tajam untuk mengancam pihak lawan."
+    }
+  ]
+}

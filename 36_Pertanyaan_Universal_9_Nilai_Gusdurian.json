@@ -1,0 +1,367 @@
+{
+  "metadata": {
+    "judul": "Bank Pertanyaan Universal 36 Kombinasi 9 Nilai Gus Dur",
+    "deskripsi": "36 pertanyaan studi kasus/pemantik universal dengan penekanan kearifan tradisi takbenda (intangible culture) untuk permainan 'Dua Nilai, Satu Isu, Satu Solusi'",
+    "fokus_kearifan_tradisi": "Budaya Takbenda (Falsafah, Seni Pertunjukan, Tutur Lisan, Tata Krama/Unggah-Ungguh, Tradisi Musyawarah, Petuah Leluhur)",
+    "total_kombinasi": 36,
+    "format_penugasan": {
+      "rumus": "2 KARTU NILAI -> 1 PERTANYAAN STUDI KASUS -> ANALISIS NILAI -> 1 SOLUSI KONKRET",
+      "langkah_1": "Ambil 2 kartu nilai dan identifikasi pertanyaan terkait",
+      "langkah_2": "Diskusikan analisis keterkaitan isu dengan kedua nilai yang didapat",
+      "langkah_3": "Rumuskan solusi nyata, logis, dan inklusif"
+    }
+  },
+  "daftar_pertanyaan": [
+    {
+      "id": 1,
+      "kombinasi_nilai": [
+        "Ketauhidan",
+        "Kemanusiaan"
+      ],
+      "pasangan": "Ketauhidan + Kemanusiaan",
+      "pertanyaan": "Mengapa menolak menolong korban kecelakaan hanya karena perbedaan latar belakang identitas bertentangan dengan esensi keimanan kepada Tuhan dan martabat kemanusiaan?"
+    },
+    {
+      "id": 2,
+      "kombinasi_nilai": [
+        "Ketauhidan",
+        "Keadilan"
+      ],
+      "pasangan": "Ketauhidan + Keadilan",
+      "pertanyaan": "Tepatkah jika seorang pemimpin membenarkan pemotongan upah pekerja kecil dengan dalih bahwa kemiskinan adalah takdir nasib hidup yang harus diterima?"
+    },
+    {
+      "id": 3,
+      "kombinasi_nilai": [
+        "Ketauhidan",
+        "Kesetaraan"
+      ],
+      "pasangan": "Ketauhidan + Kesetaraan",
+      "pertanyaan": "Bagaimana nilai ketauhidan dan kesetaraan memandang perlakuan istimewa di forum publik yang hanya diberikan kepada orang berharta, sementara warga biasa diminta mengalah?"
+    },
+    {
+      "id": 4,
+      "kombinasi_nilai": [
+        "Ketauhidan",
+        "Pembebasan"
+      ],
+      "pasangan": "Ketauhidan + Pembebasan",
+      "pertanyaan": "Mengapa doktrin kepasrahan semu yang melarang masyarakat memperjuangkan hak-hak dasarnya bertentangan dengan ajaran tauhid yang membebaskan manusia dari penindasan?"
+    },
+    {
+      "id": 5,
+      "kombinasi_nilai": [
+        "Ketauhidan",
+        "Persaudaraan"
+      ],
+      "pasangan": "Ketauhidan + Persaudaraan",
+      "pertanyaan": "Solusi apa yang dapat diambil untuk memulihkan kerukunan warga saat hubungan bertetangga merenggang akibat paham eksklusif yang melarang bertegur sapa dengan pihak yang berbeda pandangan?"
+    },
+    {
+      "id": 6,
+      "kombinasi_nilai": [
+        "Ketauhidan",
+        "Kesederhanaan"
+      ],
+      "pasangan": "Ketauhidan + Kesederhanaan",
+      "pertanyaan": "Mengapa penggunaan dana sumbangan sosial untuk membiayai fasilitas pribadi yang mewah di tengah lingkungan yang serba kekurangan mencederai nilai ketauhidan dan kesederhanaan?"
+    },
+    {
+      "id": 7,
+      "kombinasi_nilai": [
+        "Ketauhidan",
+        "Kesatriaan"
+      ],
+      "pasangan": "Ketauhidan + Kesatriaan",
+      "pertanyaan": "Sikap kesatria apa yang seharusnya diambil oleh seorang tokoh masyarakat saat melihat ketidakadilan di lingkungannya, meski ia berisiko kehilangan jabatan dari pihak berkuasa?"
+    },
+    {
+      "id": 8,
+      "kombinasi_nilai": [
+        "Ketauhidan",
+        "Kearifan Tradisi"
+      ],
+      "pasangan": "Ketauhidan + Kearifan Tradisi",
+      "pertanyaan": "Bagaimana cara mendamaikan pandangan keagamaan dengan tradisi lisan, kidung doa, dan ritual sedekah bumi yang sarat nilai syukur kepada Sang Pencipta agar tidak mudah dituduh menyimpang?"
+    },
+    {
+      "id": 9,
+      "kombinasi_nilai": [
+        "Kemanusiaan",
+        "Keadilan"
+      ],
+      "pasangan": "Kemanusiaan + Keadilan",
+      "pertanyaan": "Apakah adil jika kawasan permukiman masyarakat berpenghasilan rendah dijadikan lokasi pembuangan limbah tanpa kompensasi kesehatan, sementara kawasan elite bebas dari pencemaran?"
+    },
+    {
+      "id": 10,
+      "kombinasi_nilai": [
+        "Kemanusiaan",
+        "Kesetaraan"
+      ],
+      "pasangan": "Kemanusiaan + Kesetaraan",
+      "pertanyaan": "Langkah konkret apa yang wajib diambil pengelola gedung dan fasilitas publik agar ramah serta mudah diakses oleh penyandang disabilitas dan lansia?"
+    },
+    {
+      "id": 11,
+      "kombinasi_nilai": [
+        "Kemanusiaan",
+        "Pembebasan"
+      ],
+      "pasangan": "Kemanusiaan + Pembebasan",
+      "pertanyaan": "Aksi advokasi bersama apa yang harus digulirkan untuk membebaskan anak-anak dari eksploitasi kerja berbahaya dan mengembalikan hak mereka atas pendidikan dasar?"
+    },
+    {
+      "id": 12,
+      "kombinasi_nilai": [
+        "Kemanusiaan",
+        "Persaudaraan"
+      ],
+      "pasangan": "Kemanusiaan + Persaudaraan",
+      "pertanyaan": "Bagaimana meruntuhkan prasangka kelompok dan stereotip identitas yang menyebabkan korban bencana ditolak masuk ke penampungan darurat oleh warga lokal?"
+    },
+    {
+      "id": 13,
+      "kombinasi_nilai": [
+        "Kemanusiaan",
+        "Kesederhanaan"
+      ],
+      "pasangan": "Kemanusiaan + Kesederhanaan",
+      "pertanyaan": "Sejauh mana pola konsumsi berlebih dan gaya hidup boros yang menghasilkan gunungan sampah merugikan hak hidup sehat masyarakat lain?"
+    },
+    {
+      "id": 14,
+      "kombinasi_nilai": [
+        "Kemanusiaan",
+        "Kesatriaan"
+      ],
+      "pasangan": "Kemanusiaan + Kesatriaan",
+      "pertanyaan": "Bagaimana membangun keberanian moral (kesatriaan) bagi saksi mata perundungan (bullying) agar tidak memilih diam saat melihat korban disiksa secara psikologis?"
+    },
+    {
+      "id": 15,
+      "kombinasi_nilai": [
+        "Kemanusiaan",
+        "Kearifan Tradisi"
+      ],
+      "pasangan": "Kemanusiaan + Kearifan Tradisi",
+      "pertanyaan": "Bagaimana etika tutur lisan, tata krama (unggah-ungguh), dan nilai tepa salira warisan leluhur dapat dihidupkan kembali untuk membendung maraknya ujaran kebencian di ruang digital?"
+    },
+    {
+      "id": 16,
+      "kombinasi_nilai": [
+        "Keadilan",
+        "Kesetaraan"
+      ],
+      "pasangan": "Keadilan + Kesetaraan",
+      "pertanyaan": "Kebijakan transparansi seperti apa yang harus ditegakkan untuk menghapus praktik 'orang dalam' pada seleksi kerja atau beasiswa demi memberi kesempatan setara bagi semua orang?"
+    },
+    {
+      "id": 17,
+      "kombinasi_nilai": [
+        "Keadilan",
+        "Pembebasan"
+      ],
+      "pasangan": "Keadilan + Pembebasan",
+      "pertanyaan": "Bagaimana sistem bantuan hukum dapat diperkuat agar masyarakat kecil tidak selalu kalah saat bersengketa hak ruang hidup dengan pemilik modal besar?"
+    },
+    {
+      "id": 18,
+      "kombinasi_nilai": [
+        "Keadilan",
+        "Persaudaraan"
+      ],
+      "pasangan": "Keadilan + Persaudaraan",
+      "pertanyaan": "Bagaimana merancang sistem penyaluran bantuan sosial bencana yang transparan agar tidak dimonopoli oleh kerabat panitia dan tetap menjaga persaudaraan warga?"
+    },
+    {
+      "id": 19,
+      "kombinasi_nilai": [
+        "Keadilan",
+        "Kesederhanaan"
+      ],
+      "pasangan": "Keadilan + Kesederhanaan",
+      "pertanyaan": "Bolehkah sumber air bersih publik disedot secara berlebihan untuk fasilitas hiburan mewah komersial jika dampaknya membuat sumur warga sekitar mengering?"
+    },
+    {
+      "id": 20,
+      "kombinasi_nilai": [
+        "Keadilan",
+        "Kesatriaan"
+      ],
+      "pasangan": "Keadilan + Kesatriaan",
+      "pertanyaan": "Sikap apa yang seharusnya ditunjukkan oleh pembuat kebijakan ketika mendapati program publiknya gagal, alih-alih menyalahkan masyarakat bawah?"
+    },
+    {
+      "id": 21,
+      "kombinasi_nilai": [
+        "Keadilan",
+        "Kearifan Tradisi"
+      ],
+      "pasangan": "Keadilan + Kearifan Tradisi",
+      "pertanyaan": "Mengapa aturan adat takbenda tentang pantangan perusakan alam (hutan larangan / sasi) harus dihormati oleh korporasi modern demi menegakkan keadilan ruang hidup bersama?"
+    },
+    {
+      "id": 22,
+      "kombinasi_nilai": [
+        "Kesetaraan",
+        "Pembebasan"
+      ],
+      "pasangan": "Kesetaraan + Pembebasan",
+      "pertanyaan": "Mengapa pelibatan aktif kelompok perempuan dan minoritas dalam musyawarah pengambilan keputusan mutlak diperlukan demi kemajuan bersama?"
+    },
+    {
+      "id": 23,
+      "kombinasi_nilai": [
+        "Kesetaraan",
+        "Persaudaraan"
+      ],
+      "pasangan": "Kesetaraan + Persaudaraan",
+      "pertanyaan": "Kegiatan kolaboratif apa yang dapat meruntuhkan sekat-sekat eksklusivitas dalam lingkungan kerja atau sekolah yang terkotak-kotak berdasarkan tingkat kekayaan materi?"
+    },
+    {
+      "id": 24,
+      "kombinasi_nilai": [
+        "Kesetaraan",
+        "Kesederhanaan"
+      ],
+      "pasangan": "Kesetaraan + Kesederhanaan",
+      "pertanyaan": "Mengapa menilai derajat kemanusiaan seseorang semata-mata dari merek pakaian, gawai, dan kendaraannya merupakan cerminan pola pikir yang salah?"
+    },
+    {
+      "id": 25,
+      "kombinasi_nilai": [
+        "Kesetaraan",
+        "Kesatriaan"
+      ],
+      "pasangan": "Kesetaraan + Kesatriaan",
+      "pertanyaan": "Mengapa seorang pemimpin harus berjiwa kesatria dan rendah hati untuk menerima saran serta kritik konstruktif dari anggota yang lebih muda?"
+    },
+    {
+      "id": 26,
+      "kombinasi_nilai": [
+        "Kesetaraan",
+        "Kearifan Tradisi"
+      ],
+      "pasangan": "Kesetaraan + Kearifan Tradisi",
+      "pertanyaan": "Bagaimana cara memperbarui forum rembuk adat masa lalu agar tidak lagi membatasi hak suara perempuan dan generasi muda, sehingga musyawarah menjadi setara dan inklusif?"
+    },
+    {
+      "id": 27,
+      "kombinasi_nilai": [
+        "Pembebasan",
+        "Persaudaraan"
+      ],
+      "pasangan": "Pembebasan + Persaudaraan",
+      "pertanyaan": "Langkah verifikasi dan edukasi apa yang harus dibangun warga agar aksi persatuan menuntut perbaikan fasilitas umum tidak dipecah belah oleh penyebar hoaks?"
+    },
+    {
+      "id": 28,
+      "kombinasi_nilai": [
+        "Pembebasan",
+        "Kesederhanaan"
+      ],
+      "pasangan": "Pembebasan + Kesederhanaan",
+      "pertanyaan": "Edukasi keuangan dan gaya hidup seperti apa yang efektif untuk membebaskan generasi muda dari jeratan pinjaman konsumtif akibat dorongan gengsi media sosial?"
+    },
+    {
+      "id": 29,
+      "kombinasi_nilai": [
+        "Pembebasan",
+        "Kesatriaan"
+      ],
+      "pasangan": "Pembebasan + Kesatriaan",
+      "pertanyaan": "Perlindungan sistemik seperti apa yang harus diberikan kepada pegawai berintegritas yang berani membongkar kecurangan anggaran dana publik di institusinya?"
+    },
+    {
+      "id": 30,
+      "kombinasi_nilai": [
+        "Pembebasan",
+        "Kearifan Tradisi"
+      ],
+      "pasangan": "Pembebasan + Kearifan Tradisi",
+      "pertanyaan": "Bagaimana ajaran filosofi luhur seperti 'memayu hayuning bawana' (memperindah keharmonisan semesta) mampu membebaskan masyarakat modern dari gaya hidup serakah dan eksploitatif?"
+    },
+    {
+      "id": 31,
+      "kombinasi_nilai": [
+        "Persaudaraan",
+        "Kesederhanaan"
+      ],
+      "pasangan": "Persaudaraan + Kesederhanaan",
+      "pertanyaan": "Bagaimana etika perkumpulan keluarga atau komunitas agar fokus merajut kehangatan silaturahmi dan tidak menjadi ajang pamer harta yang membuat anggota lain minder?"
+    },
+    {
+      "id": 32,
+      "kombinasi_nilai": [
+        "Persaudaraan",
+        "Kesatriaan"
+      ],
+      "pasangan": "Persaudaraan + Kesatriaan",
+      "pertanyaan": "Mengapa keberanian untuk mengakui kesalahan, meminta maaf secara terbuka, dan memaafkan merupakan kunci utama dalam merajut persaudaraan jangka panjang?"
+    },
+    {
+      "id": 33,
+      "kombinasi_nilai": [
+        "Persaudaraan",
+        "Kearifan Tradisi"
+      ],
+      "pasangan": "Persaudaraan + Kearifan Tradisi",
+      "pertanyaan": "Inovasi apa yang bisa dibuat agar seni tutur rakyat, dongeng keteladanan, dan tembang dolanan kembali dimainkan untuk merekatkan kebersamaan anak-anak dari ketergantungan gawai?"
+    },
+    {
+      "id": 34,
+      "kombinasi_nilai": [
+        "Kesederhanaan",
+        "Kesatriaan"
+      ],
+      "pasangan": "Kesederhanaan + Kesatriaan",
+      "pertanyaan": "Tindakan hukum dan etika bisnis apa yang harus dipaksakan kepada pelaku usaha yang membuang limbah ke saluran umum demi menekan biaya produksi?"
+    },
+    {
+      "id": 35,
+      "kombinasi_nilai": [
+        "Kesederhanaan",
+        "Kearifan Tradisi"
+      ],
+      "pasangan": "Kesederhanaan + Kearifan Tradisi",
+      "pertanyaan": "Bagaimana menghidupkan kembali falsafah hidup bersahaja seperti konsep 'nrimo ing pandum' (rasa cukup dan syukur batiniah) untuk menahan laju konsumerisme yang merusak lingkungan?"
+    },
+    {
+      "id": 36,
+      "kombinasi_nilai": [
+        "Kesatriaan",
+        "Kearifan Tradisi"
+      ],
+      "pasangan": "Kesatriaan + Kearifan Tradisi",
+      "pertanyaan": "Mengapa memilih jalan musyawarah mufakat dan tradisi islah damai saat berselisih jauh lebih kesatria daripada mengandalkan kekerasan fisik dan arogansi kelompok?"
+    }
+  ],
+  "rubrik_penilaian": [
+    {
+      "no": 1,
+      "aspek": "Kesesuaian Isu/Jawaban dengan 2 Nilai yang didapat",
+      "bobot": 25
+    },
+    {
+      "no": 2,
+      "aspek": "Kedalaman Analisis Keterkaitan Nilai",
+      "bobot": 20
+    },
+    {
+      "no": 3,
+      "aspek": "Kualitas, Kelogisan, dan Kebermaknaan Solusi",
+      "bobot": 25
+    },
+    {
+      "no": 4,
+      "aspek": "Kreativitas gagasan & relevansi kontekstual",
+      "bobot": 20
+    },
+    {
+      "no": 5,
+      "aspek": "Kekompakan & Cara Presentasi Kelompok (Maks. 2 Menit)",
+      "bobot": 10
+    }
+  ]
+}
