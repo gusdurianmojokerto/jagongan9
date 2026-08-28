@@ -55,19 +55,19 @@ body{font-family:'Poppins',sans-serif;background:linear-gradient(160deg,#0d7a3f 
 .game-view.hidden-left{opacity:0;transform:translateX(-60px);pointer-events:none;position:absolute;top:0;left:0}
 .game-view.hidden-right{opacity:0;transform:translateX(60px);pointer-events:none;position:absolute;top:0;left:0}
 
-.issue-panel{background:rgba(255,255,255,.85);backdrop-filter:blur(12px);border-radius:24px;padding:32px 36px;border:1px solid rgba(13,122,63,.1);box-shadow:0 6px 30px rgba(13,122,63,.08)}
+.issue-panel{background:rgba(255,255,255,.85);backdrop-filter:blur(12px);border-radius:24px;padding:clamp(18px,5vw,32px) clamp(16px,4vw,36px);border:1px solid rgba(13,122,63,.1);box-shadow:0 6px 30px rgba(13,122,63,.08)}
 .issue-panel.show{animation:slideUp .5s cubic-bezier(.4,0,.2,1)}
 @keyframes slideUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-.issue-kategori{font-size:.82rem;text-transform:uppercase;letter-spacing:1.8px;color:#0d7a3f;font-weight:700;margin-bottom:8px}
-.issue-kasus{font-size:1.15rem;color:#2a4a3a;line-height:1.9;background:linear-gradient(135deg,#e8f5e9,#f0faf2);border-radius:14px;padding:22px 24px;border-left:5px solid #10b94e}
-.issue-judul{font-size:1.45rem;font-weight:800;color:#0d7a3f;margin-bottom:12px}
-.timer-wrap{display:flex;align-items:center;gap:14px;margin-top:18px}
-.timer-bar-bg{flex:1;height:14px;background:rgba(13,122,63,.1);border-radius:14px;overflow:hidden}
+.issue-kategori{font-size:clamp(.68rem,2.5vw,.82rem);text-transform:uppercase;letter-spacing:1.5px;color:#0d7a3f;font-weight:700;margin-bottom:8px;word-wrap:break-word}
+.issue-kasus{font-size:clamp(.92rem,3.6vw,1.15rem);color:#2a4a3a;line-height:1.8;background:linear-gradient(135deg,#e8f5e9,#f0faf2);border-radius:14px;padding:clamp(14px,3.5vw,22px) clamp(14px,3.5vw,24px);border-left:5px solid #10b94e;word-wrap:break-word;overflow-wrap:break-word}
+.issue-judul{font-size:clamp(1.1rem,4.5vw,1.45rem);font-weight:800;color:#0d7a3f;margin-bottom:10px;line-height:1.3;word-wrap:break-word}
+.timer-wrap{display:flex;align-items:center;gap:clamp(8px,2vw,14px);margin-top:clamp(14px,3vw,18px);flex-wrap:nowrap}
+.timer-bar-bg{flex:1;height:clamp(10px,2.5vw,14px);background:rgba(13,122,63,.1);border-radius:14px;overflow:hidden;min-width:0}
 .timer-bar{height:100%;background:linear-gradient(90deg,#10b94e,#34d058);border-radius:14px;transition:width 1s linear;width:100%}
 .timer-bar.urgent{background:linear-gradient(90deg,#e53935,#f5c518)}
-.timer-text{font-size:1.6rem;font-weight:800;color:#0d7a3f;min-width:56px;text-align:center;font-variant-numeric:tabular-nums}
+.timer-text{font-size:clamp(1.15rem,4vw,1.6rem);font-weight:800;color:#0d7a3f;min-width:48px;text-align:center;font-variant-numeric:tabular-nums;flex-shrink:0}
 
-.reveal-btn{display:none;margin:20px auto 0;padding:16px 48px;font-size:1.1rem;font-weight:700;border:none;border-radius:30px;background:linear-gradient(135deg,#f5c518,#e6a817);color:#0d4a20;cursor:pointer;box-shadow:0 4px 20px rgba(245,197,24,.4);transition:transform .2s,box-shadow .2s}
+.reveal-btn{display:none;margin:clamp(16px,3vw,20px) auto 0;padding:clamp(12px,3vw,16px) clamp(28px,6vw,48px);font-size:clamp(.95rem,3.5vw,1.1rem);font-weight:700;border:none;border-radius:30px;background:linear-gradient(135deg,#f5c518,#e6a817);color:#0d4a20;cursor:pointer;box-shadow:0 4px 20px rgba(245,197,24,.4);transition:transform .2s,box-shadow .2s;max-width:100%;white-space:nowrap}
 .reveal-btn.show{display:block;animation:popIn .4s cubic-bezier(.4,0,.2,1)}
 .reveal-btn:hover{transform:scale(1.05);box-shadow:0 6px 28px rgba(245,197,24,.55)}
 @keyframes popIn{from{opacity:0;transform:scale(.7)}to{opacity:1;transform:scale(1)}}
@@ -153,25 +153,62 @@ body{font-family:'Poppins',sans-serif;background:linear-gradient(160deg,#0d7a3f 
 .counter-info{text-align:center;font-size:.8rem;color:#5a8a6a;margin-top:12px;background:rgba(255,255,255,.5);backdrop-filter:blur(6px);padding:8px 16px;border-radius:10px;display:inline-block;width:fit-content}
 
 @media(max-width:600px){
-  .cards-grid{gap:10px;max-width:380px}
+  body{overflow-x:hidden}
+  .game-container{padding:14px 12px 28px;overflow:visible}
+  .game-view{width:100%}
+  .game-view.hidden-left,.game-view.hidden-right{position:absolute;width:calc(100% - 24px);left:12px;right:12px}
+  .issue-panel{border-radius:18px}
+  .cards-grid{gap:10px;max-width:360px;margin:0 auto 16px}
   .cards-grid .card-wrapper{width:calc((100% - 20px) / 3)}
-  .modal{border-radius:18px;max-height:90vh}
-  .modal-header{padding:18px 16px 14px}
-  .modal-body{padding:16px 18px}
-  .start-features{gap:10px}
-  .start-feature{min-width:120px;padding:14px 14px}
-  .start-feature .feat-text{font-size:.7rem}
-  .header h1{font-size:1.1rem}
-  .issue-panel{padding:22px 24px}
-  .issue-judul{font-size:1.25rem}
-  .issue-kasus{font-size:1.05rem;padding:18px 20px}
-  .timer-text{font-size:1.4rem}
-  .modal-buttons{padding:14px 16px 18px}
-  .game-view.hidden-left,.game-view.hidden-right{position:absolute;width:100%}
+  .card-wrapper{border-radius:12px}
+  .card-face{border-radius:12px}
+  .status-info{font-size:.82rem;padding:8px 12px;margin-bottom:12px;line-height:1.5}
+  .counter-info{font-size:.75rem;padding:6px 12px}
+  .modal{border-radius:18px;max-height:88vh;margin:0 8px}
+  .modal-overlay{padding:12px}
+  .modal-header{padding:16px 14px 12px}
+  .modal-header .val-badge{font-size:.78rem;padding:6px 12px}
+  .modal-header h2{font-size:.95rem;margin-top:8px}
+  .modal-body{padding:14px 16px}
+  .modal-body .issue-text{padding:12px 14px;font-size:.88rem}
+  .modal-body .penjelasan-text{font-size:.88rem}
+  .modal-buttons{padding:12px 14px 16px;gap:10px}
+  .modal-btn{padding:11px 20px;font-size:.88rem;min-width:120px}
+  .header{padding:10px 10px}
+  .header-inner{gap:8px}
+  .header img.logo{width:38px}
+  .header h1{font-size:1rem}
+  .header .subtitle{font-size:.68rem}
+  .header-nilai-btn{padding:6px 12px;font-size:.7rem}
+  #startScreen{padding:16px}
+  #startScreen .logo-flipper{width:140px;height:140px}
+  #startScreen .logo-flip-face img{width:110px;height:110px}
+  #startScreen h1{font-size:1.7rem}
+  #startScreen .tagline{font-size:.82rem;margin-bottom:20px;padding:0 12px}
+  .start-features{gap:8px;margin-bottom:24px}
+  .start-feature{min-width:96px;padding:12px 10px;flex:1;max-width:110px}
+  .start-feature .feat-text{font-size:.68rem;line-height:1.35}
+  #startBtn{padding:14px 40px;font-size:1rem}
+  .nilai-page-header{padding:12px 14px}
+  .nilai-card{padding:18px 16px}
+  .nilai-card h3{font-size:1rem}
+  .nilai-card p{font-size:.84rem}
 }
 @media(max-width:380px){
+  .game-container{padding:12px 10px 24px}
+  .game-view.hidden-left,.game-view.hidden-right{width:calc(100% - 20px);left:10px;right:10px}
   .cards-grid{max-width:300px;gap:8px}
   .cards-grid .card-wrapper{width:calc((100% - 16px) / 3)}
+  .header h1{font-size:.9rem}
+  .header .subtitle{font-size:.62rem}
+  .start-features{flex-direction:row;gap:6px}
+  .start-feature{min-width:88px;padding:10px 8px}
+  .modal-buttons{flex-direction:column}
+  .modal-btn{max-width:100%;width:100%}
+}
+@media(max-width:320px){
+  .cards-grid{max-width:280px}
+  #startScreen h1{font-size:1.5rem}
 }
 </style>
 </head>
