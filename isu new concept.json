@@ -1,0 +1,370 @@
+[
+  {
+    "id": 1,
+    "kategori": "Kehidupan Kelas & Pertemanan",
+    "judul": "Memilih Anggota Kelompok",
+    "kasus": "Saat pembagian kelompok belajar bebas, seorang anak yang pendiam dan kurang populer dibiarkan duduk sendirian tanpa ada kelompok yang mau menerimanya.",
+    "jawaban": ["Persaudaraan", "Kesetaraan"],
+    "penjelasan": "Setiap murid memiliki hak yang sama untuk belajar bersama tanpa dikotak-kotakkan berdasarkan tingkat popularitas."
+  },
+  {
+    "id": 2,
+    "kategori": "Kehidupan Kelas & Pertemanan",
+    "judul": "Pot Bunga Pecah",
+    "kasus": "Kamu tidak sengaja menendang bola hingga memecahkan pot bunga di depan kantor guru saat jam istirahat. Temanmu mengajak langsung lari ke kantin.",
+    "jawaban": ["Ksatriaan"],
+    "penjelasan": "Berani mengakui kesalahan, meminta maaf, dan bertanggung jawab atas kelalaian sendiri."
+  },
+  {
+    "id": 3,
+    "kategori": "Kehidupan Kelas & Pertemanan",
+    "judul": "Pamer Sepatu Roda & Gadget Baru",
+    "kasus": "Sekelompok anak membuat aturan tidak tertulis bahwa yang boleh ikut bermain di teras kelas hanya anak yang membawa sepatu roda atau gawai model terbaru.",
+    "jawaban": ["Kesederhanaan", "Kesetaraan"],
+    "penjelasan": "Hubungan pertemanan tidak boleh dinilai dari kepemilikan materi dan gaya hidup konsumtif."
+  },
+  {
+    "id": 4,
+    "kategori": "Kehidupan Kelas & Pertemanan",
+    "judul": "Suara Adzan di Tengah Latihan Futsal",
+    "kasus": "Tim sekolah sedang asyik berlatih tanding menjelang sore. Ketika suara adzan berkumandang, sebagian anggota meminta istirahat sejenak untuk beribadah namun kapten ingin terus bermain.",
+    "jawaban": ["Ketauhidan", "Persaudaraan"],
+    "penjelasan": "Menghormati kewajiban beribadah kepada Tuhan dan saling bertoleransi antaranggota tim."
+  },
+  {
+    "id": 5,
+    "kategori": "Kehidupan Kelas & Pertemanan",
+    "judul": "Ejekan Logat Bahasa Daerah Asal",
+    "kasus": "Murid pindahan dari luar pulau berbicara dengan intonasi dan kosakata daerah asalnya, lalu beberapa anak menirukannya dengan nada mengejek di depan kelas.",
+    "jawaban": ["Kearifan Tradisi", "Kemanusiaan"],
+    "penjelasan": "Menghargai keragaman bahasa ibu/lisan daerah dan menjaga martabat sesama teman."
+  },
+  {
+    "id": 6,
+    "kategori": "Kehidupan Kelas & Pertemanan",
+    "judul": "Jadwal Piket Tidak Merata",
+    "kasus": "Ketua kelas hanya menyuruh siswa laki-laki mengangkat bangku dan siswa perempuan menyapu lantai setiap hari, sementara anak-anak pengurus kelas tidak pernah diberi tugas piket.",
+    "jawaban": ["Keadilan", "Kesetaraan"],
+    "penjelasan": "Tugas kebersihan harus dibagi secara adil dan merata kepada seluruh murid tanpa diskriminasi peran atau jabatan."
+  },
+  {
+    "id": 7,
+    "kategori": "Kehidupan Kelas & Pertemanan",
+    "judul": "Teman yang Kesulitan Membaca",
+    "kasus": "Seorang murid kelas bawah sering diejek lambat saat membaca nyaring di depan kelas, membuatnya menangis dan takut masuk sekolah.",
+    "jawaban": ["Pembebasan", "Kemanusiaan"],
+    "penjelasan": "Memberikan pendampingan dan bimbingan agar teman tersebut lepas dari rasa minder dan ketertinggalan belajar."
+  },
+  {
+    "id": 8,
+    "kategori": "Kehidupan Kelas & Pertemanan",
+    "judul": "Uang Kembalian Koperasi Berlebih",
+    "kasus": "Petugas koperasi sekolah salah memberikan uang kembalian yang jumlahnya jauh lebih besar dari yang seharusnya kamu terima saat belanja ATK.",
+    "jawaban": ["Ksatriaan", "Ketauhidan"],
+    "penjelasan": "Memegang teguh kejujuran moral sebagai bentuk pertanggungjawaban kepada Tuhan."
+  },
+  {
+    "id": 9,
+    "kategori": "Kehidupan Kelas & Pertemanan",
+    "judul": "Larangan Murid Perempuan Menjadi Ketua Kelas",
+    "kasus": "Dalam pemilihan ketua kelas, beberapa anak melarang calon perempuan dengan alasan bahwa pemimpin regu atau kelas harus selalu anak laki-laki.",
+    "jawaban": ["Kesetaraan"],
+    "penjelasan": "Memberikan kesempatan memimpin yang setara kepada siapa pun berdasarkan kemampuan dan integritas."
+  },
+  {
+    "id": 10,
+    "kategori": "Lingkungan Sekolah, Adab & Kejujuran",
+    "judul": "Menyontek Massal Saat Ulangan",
+    "kasus": "Satu kelas membuat grup obrolan rahasia untuk membagikan kunci jawaban ujian agar semua murid mendapat nilai di atas standar kelulusan.",
+    "jawaban": ["Ksatriaan"],
+    "penjelasan": "Menolak jalan pintas curang dan berani bersaing secara jujur dengan mengandalkan kemampuan sendiri."
+  },
+  {
+    "id": 11,
+    "kategori": "Lingkungan Sekolah, Adab & Kejujuran",
+    "judul": "Memotong Pembicaraan Orang Tua/Guru",
+    "kasus": "Saat guru sedang menjelaskan nasihat di depan kelas, seorang murid menyela dengan nada ketus dan membantah tanpa menggunakan tata krama bicara yang santun.",
+    "jawaban": ["Kearifan Tradisi", "Ksatriaan"],
+    "penjelasan": "Merawat adab sopan santun berbicara (unggah-ungguh) kepada orang yang lebih tua serta berani menyampaikan pendapat secara beretika."
+  },
+  {
+    "id": 12,
+    "kategori": "Lingkungan Sekolah, Adab & Kejujuran",
+    "judul": "Menyisihkan Teman Beda Suku",
+    "kasus": "Ada tugas diskusi kelompok, namun satu regu menolak mengajak anggota baru yang berasal dari etnis minoritas karena menganggap cara komunikasinya tidak sefrekuensi.",
+    "jawaban": ["Persaudaraan", "Kesetaraan"],
+    "penjelasan": "Merangkul perbedaan latar belakang suku bangsa dalam bingkai persatuan kelompok."
+  },
+  {
+    "id": 13,
+    "kategori": "Lingkungan Sekolah, Adab & Kejujuran",
+    "judul": "Menertawakan Tembang Macapat / Pantun Tradisional",
+    "kasus": "Saat pelajaran muatan lokal, seorang siswa membawakan tembang daerah/pantun nasihat leluhur, namun barisan belakang justru menertawakan dan menyebutnya tradisi kampungan.",
+    "jawaban": ["Kearifan Tradisi", "Kemanusiaan"],
+    "penjelasan": "Menghormati sastra lisan warisan leluhur yang sarat pesan budi pekerti serta tidak merendahkan penampilnya."
+  },
+  {
+    "id": 14,
+    "kategori": "Lingkungan Sekolah, Adab & Kejujuran",
+    "judul": "Pelanggaran Garis Out Futsal",
+    "kasus": "Wasit pertandingan antar-kelas salah melihat bola yang seharusnya sudah keluar garis lapangan (out) dan menguntungkan timmu mencetak gol.",
+    "jawaban": ["Ksatriaan", "Keadilan"],
+    "penjelasan": "Menjunjung tinggi sportivitas dan kejujuran di atas ambisi kemenangan semata."
+  },
+  {
+    "id": 15,
+    "kategori": "Lingkungan Sekolah, Adab & Kejujuran",
+    "judul": "Penolakan Bermain Bersama Siswa Difabel",
+    "kasus": "Seorang teman yang menggunakan kruk tongkat jalan ingin ikut bermain lempar bola tangkap di lapangan, namun ditolak oleh kapten karena dianggap memperlambat tempo permainan.",
+    "jawaban": ["Kesetaraan", "Kemanusiaan"],
+    "penjelasan": "Menjamin inklusivitas dan ruang ramah partisipasi bagi semua anak tanpa diskriminasi kondisi fisik."
+  },
+  {
+    "id": 16,
+    "kategori": "Lingkungan Sekolah, Adab & Kejujuran",
+    "judul": "Uang Kas Kelas untuk Traktir Pribadi",
+    "kasus": "Bendahara kelas memakai uang kas iuran bersama secara diam-diam untuk membeli camilan favoritnya dan berencana menggantinya minggu depan.",
+    "jawaban": ["Keadilan", "Ksatriaan"],
+    "penjelasan": "Menjaga amanah dana bersama dan tidak menyalahgunakan wewenang untuk keuntungan pribadi."
+  },
+  {
+    "id": 17,
+    "kategori": "Lingkungan Sekolah, Adab & Kejujuran",
+    "judul": "Mengajak Teman Bolos Pelajaran Tambahan",
+    "kasus": "Murid yang sudah paham materi mengajak teman yang masih butuh pelajaran tambahan untuk kabur dari kelas bimbingan belajar demi bermain game online.",
+    "jawaban": ["Pembebasan", "Persaudaraan"],
+    "penjelasan": "Membantu sesama teman agar tidak tertinggal materi dan saling mendukung kemajuan belajar."
+  },
+  {
+    "id": 18,
+    "kategori": "Lingkungan Sekolah, Adab & Kejujuran",
+    "judul": "Pesta Ulang Tahun Mewah",
+    "kasus": "Seorang murid merayakan ulang tahun di sekolah dengan membagikan suvenir mahal hanya kepada anak-anak orang kaya di kelasnya.",
+    "jawaban": ["Kesederhanaan", "Kemanusiaan"],
+    "penjelasan": "Menghindari perilaku eksklusif yang memicu kecemburuan sosial dan merendahkan perasaan murid lain."
+  },
+  {
+    "id": 19,
+    "kategori": "Ruang Digital & Etika Komunikasi",
+    "judul": "Akun Palsu untuk Menghujat Teman",
+    "kasus": "Sekelompok murid membuat akun medsos anonim khusus untuk mengunggah aib teman sekelas dan mengejek bentuk fisiknya di kolom komentar.",
+    "jawaban": ["Kemanusiaan", "Ksatriaan"],
+    "penjelasan": "Menjaga kehormatan harkat manusia di dunia maya dan berani menghentikan tindakan perundungan."
+  },
+  {
+    "id": 20,
+    "kategori": "Ruang Digital & Etika Komunikasi",
+    "judul": "Berita Palsu (Hoaks) tentang Guru",
+    "kasus": "Beredar pesan berantai di grup obrolan yang menuduh seorang guru telah menjual soal ujian demi uang, padahal info tersebut tidak benar.",
+    "jawaban": ["Keadilan", "Ketauhidan"],
+    "penjelasan": "Memeriksa kebenaran fakta (tabayyun), menolak fitnah, dan menjaga nama baik orang lain."
+  },
+  {
+    "id": 21,
+    "kategori": "Ruang Digital & Etika Komunikasi",
+    "judul": "Mengambil Karya Digital Orang Lain",
+    "kasus": "Seorang siswa mengunduh karya tulis/desain teman dari internet, menghapus identitas pembuatnya, dan mengumpulkannya sebagai tugas mandiri.",
+    "jawaban": ["Ksatriaan", "Keadilan"],
+    "penjelasan": "Menghargai hak cipta dan keringat karya orang lain serta menolak plagiarisme."
+  },
+  {
+    "id": 22,
+    "kategori": "Ruang Digital & Etika Komunikasi",
+    "judul": "Flexing Pakaian Bermerek di TikTok",
+    "kasus": "Beberapa anak membuat video media sosial yang merendahkan murid sekolah lain yang memakai sepatu tanpa merek atau seragam lungsuran.",
+    "jawaban": ["Kesederhanaan", "Kemanusiaan"],
+    "penjelasan": "Mengedepankan sikap rendah hati dan tidak meremehkan martabat sesama hanya dari tampilan luar."
+  },
+  {
+    "id": 23,
+    "kategori": "Ruang Digital & Etika Komunikasi",
+    "judul": "Memaksa Teman Memberikan Akun Game",
+    "kasus": "Siswa senior mengancam siswa junior agar menyerahkan akun game miliknya yang sudah level tinggi secara cuma-cuma.",
+    "jawaban": ["Pembebasan", "Keadilan"],
+    "penjelasan": "Melindungi pihak yang lemah dari tindakan pemerasan serta menolak kesewenang-wenangan senioritas."
+  },
+  {
+    "id": 24,
+    "kategori": "Ruang Digital & Etika Komunikasi",
+    "judul": "Komentar Rasial di Obrolan Game Online",
+    "kasus": "Saat tim kalah dalam pertandingan game online, salah satu anggota mulai melontarkan kata-kata makian berbau rasis terhadap suku rekan setimnya.",
+    "jawaban": ["Persaudaraan", "Kemanusiaan"],
+    "penjelasan": "Merawat persaudaraan tanpa ujaran kebencian berbasis latar belakang SARA."
+  },
+  {
+    "id": 25,
+    "kategori": "Ruang Digital & Etika Komunikasi",
+    "judul": "Merekam Teman yang Terjatuh demi Konten",
+    "kasus": "Bukannya menolong murid yang terpeleset membawa mangkok kuah di kantin, seorang siswa justru merekamnya untuk diunggah agar menjadi video viral.",
+    "jawaban": ["Kemanusiaan"],
+    "penjelasan": "Menomorsatukan empati dan pertolongan langsung dibanding mencari popularitas instan."
+  },
+  {
+    "id": 26,
+    "kategori": "Ruang Digital & Etika Komunikasi",
+    "judul": "Memutus Akses Internet Belajar Teman",
+    "kasus": "Siswa yang menguasai kata sandi Wi-Fi sekolah sengaja memblokir gawai teman yang tidak ia sukai saat sedang ujian daring.",
+    "jawaban": ["Keadilan", "Kesetaraan"],
+    "penjelasan": "Menjamin hak setiap anak mendapatkan akses fasilitas belajar yang adil dan setara."
+  },
+  {
+    "id": 27,
+    "kategori": "Ruang Digital & Etika Komunikasi",
+    "judul": "Memplesetkan Ungkapan Sakral Adat",
+    "kasus": "Membuat video parodi media sosial yang sengaja membelokkan pepatah bijak/sapaan adat daerah lain menjadi lelucon bermakna jorok.",
+    "jawaban": ["Kearifan Tradisi", "Persaudaraan"],
+    "penjelasan": "Menghormati nilai kesakralan falsafah lisan budaya Nusantara dan menjaga kerukunan antardaerah."
+  },
+  {
+    "id": 28,
+    "kategori": "Isu Sosial & Komunitas Warga",
+    "judul": "Membantu Korban Bencana Tanpa Pilih Kasih",
+    "kasus": "Saat menggalang dana donasi di posko desa, salah satu relawan menyarankan agar bantuan sembako hanya dibagikan kepada warga yang satu golongan saja.",
+    "jawaban": ["Kemanusiaan", "Persaudaraan"],
+    "penjelasan": "Bantuan kemanusiaan bersifat universal dan wajib disalurkan kepada siapa pun yang membutuhkan tanpa sekat golongan."
+  },
+  {
+    "id": 29,
+    "kategori": "Isu Sosial & Komunitas Warga",
+    "judul": "Menolak Tradisi Rembug Desa",
+    "kasus": "Dalam penentuan panitia karang taruna, seorang pemuda memaksakan kehendaknya sendiri dan menolak musyawarah bersama warga karena merasa idenya paling hebat.",
+    "jawaban": ["Kearifan Tradisi", "Kesetaraan"],
+    "penjelasan": "Mengutamakan tradisi musyawarah mufakat (rembugan) yang menghargai setiap suara warga secara setara."
+  },
+  {
+    "id": 30,
+    "kategori": "Isu Sosial & Komunitas Warga",
+    "judul": "Penolakan Doa Bersama Tetangga Beda Keyakinan",
+    "kasus": "Sekelompok warga memprotes tetangga baru yang sedang melaksanakan doa syukuran di dalam rumahnya secara tertib dan tenang.",
+    "jawaban": ["Ketauhidan", "Persaudaraan"],
+    "penjelasan": "Memberikan kebebasan beribadah dan menjaga kerukunan antarumat beragama di lingkungan masyarakat."
+  },
+  {
+    "id": 31,
+    "kategori": "Isu Sosial & Komunitas Warga",
+    "judul": "Anak Putus Sekolah Menjadi Pengamen",
+    "kasus": "Melihat anak seusia kalian terpaksa mengamen di lampu merah karena tidak mampu membayar biaya sekolah, sementara warga sekitar hanya mengusirnya.",
+    "jawaban": ["Pembebasan", "Kemanusiaan"],
+    "penjelasan": "Memperjuangkan hak pendidikan anak agar terbebas dari jerat kebodohan dan kemiskinan."
+  },
+  {
+    "id": 32,
+    "kategori": "Isu Sosial & Komunitas Warga",
+    "judul": "Menolak Tradisi Gotong Royong",
+    "kasus": "Seorang warga menolak ikut serta maupun berkontribusi dalam kegiatan gotong royong membetulkan rumah tetangga yang roboh karena merasa urusan orang lain bukan tanggung jawabnya.",
+    "jawaban": ["Kearifan Tradisi", "Persaudaraan"],
+    "penjelasan": "Menghidupkan kembali falsafah gotong royong (sambatan/gugur gunung) sebagai budaya luhur tolong-menolong non-benda masyarakat Nusantara."
+  },
+  {
+    "id": 33,
+    "kategori": "Isu Sosial & Komunitas Warga",
+    "judul": "Penahanan Upah Pekerja Kebersihan",
+    "kasus": "Pengurus rukun warga menunda pemberian upah petugas kebersihan selama dua bulan, namun tetap mengeluarkan anggaran besar untuk menyewa hiburan musik pesta pribadi.",
+    "jawaban": ["Keadilan", "Kemanusiaan"],
+    "penjelasan": "Memenuhi hak dasar pekerja secara adil sebelum mendahulukan pengeluaran hiburan pribadi."
+  },
+  {
+    "id": 34,
+    "kategori": "Isu Sosial & Komunitas Warga",
+    "judul": "Nepotisme Seleksi Beasiswa Desa",
+    "kasus": "Dalam seleksi penerima beasiswa prestasi tingkat desa, keluarga pengurus langsung diloloskan tanpa melalui ujian penilaian yang transparan.",
+    "jawaban": ["Keadilan", "Kesetaraan"],
+    "penjelasan": "Menolak praktik nepotisme dan memberikan peluang beasiswa secara jujur dan setara bagi seluruh anak berprestasi."
+  },
+  {
+    "id": 35,
+    "kategori": "Isu Sosial & Komunitas Warga",
+    "judul": "Membela Korban Salah Tuduh",
+    "kasus": "Seorang teman dituduh mengambil dompet guru dan diancam diskors dari sekolah, padahal kamu melihat langsung bahwa dompet tersebut terjatuh di kolong lemari guru.",
+    "jawaban": ["Ksatriaan", "Pembebasan"],
+    "penjelasan": "Berani bersuara menyampaikan fakta untuk membebaskan teman dari tuduhan yang tidak adil."
+  },
+  {
+    "id": 36,
+    "kategori": "Isu Sosial & Komunitas Warga",
+    "judul": "Menghormati Pepatah Tepa Selira",
+    "kasus": "Memutar musik dengan pengeras suara bervolume maksimal di malam hari saat tetangga sebelah rumah sedang sakit parah, lalu marah saat ditegur.",
+    "jawaban": ["Kearifan Tradisi", "Kemanusiaan"],
+    "penjelasan": "Menghayati nilai tenggang rasa (tepa selira) dan empati dalam tata pergaulan hidup bermasyarakat."
+  },
+  {
+    "id": 37,
+    "kategori": "Toleransi Beragama",
+    "judul": "Teman Sedang Berpuasa",
+    "kasus": "Saat jam istirahat, seorang siswa sengaja makan camilan dan minum es tepat di depan wajah temannya yang sedang menjalankan ibadah puasa sambil menggodanya agar batal.",
+    "jawaban": ["Ketauhidan", "Kemanusiaan"],
+    "penjelasan": "Menghargai ketaatan ibadah teman kepada Tuhan serta menunjukkan empati dan rasa hormat antarsesama manusia."
+  },
+  {
+    "id": 38,
+    "kategori": "Toleransi Beragama",
+    "judul": "Menolak Mengucapkan Selamat Hari Raya",
+    "kasus": "Di grup obrolan kelas, beberapa anak memarahi teman-temannya yang memberi ucapan selamat dan doa damai kepada murid yang sedang merayakan hari raya agamanya.",
+    "jawaban": ["Persaudaraan", "Kesetaraan"],
+    "penjelasan": "Merawat tali persaudaraan kebangsaan dan menghormati hak setiap warga sekolah untuk bergembira di hari rayanya secara setara."
+  },
+  {
+    "id": 39,
+    "kategori": "Toleransi Beragama",
+    "judul": "Pemilihan Jadwal Belajar Kelompok di Hari Ibadah",
+    "kasus": "Ketua kelompok sengaja menentukan jadwal kerja kelompok wajib tepat pada waktu ibadah mingguan teman yang beragama lain, dan mengancam mencoret namanya jika tidak hadir.",
+    "jawaban": ["Keadilan", "Ketauhidan"],
+    "penjelasan": "Membagi jadwal secara adil tanpa mengorbankan hak beribadah orang lain kepada Sang Pencipta."
+  },
+  {
+    "id": 40,
+    "kategori": "Toleransi Beragama",
+    "judul": "Penolakan Ruang Doa Bersama di Sekolah",
+    "kasus": "Sebagian siswa menolak usulan pihak sekolah yang ingin menyediakan satu ruangan bersih khusus untuk kegiatan doa teman-teman kelompok minoritas.",
+    "jawaban": ["Kesetaraan", "Pembebasan"],
+    "penjelasan": "Menjamin fasilitas yang setara dan membebaskan kelompok minoritas dari diskriminasi ruang ibadah."
+  },
+  {
+    "id": 41,
+    "kategori": "Toleransi Beragama",
+    "judul": "Menyebarkan Olokan Terhadap Cara Ibadah",
+    "kasus": "Seorang murid merekam teman yang sedang mempraktikkan tata cara sembahyang/doa agamanya saat jam istirahat, lalu menjadikannya bahan lelucon di media sosial.",
+    "jawaban": ["Ksatriaan", "Ketauhidan"],
+    "penjelasan": "Berani menentang tindakan pelecehan terhadap kesucian ritual ibadah agama mana pun."
+  },
+  {
+    "id": 42,
+    "kategori": "Toleransi Beragama",
+    "judul": "Memaksa Ikut Ritual Agama Lain",
+    "kasus": "Saat perayaan pentas seni, panitia memaksa semua murid lintas agama untuk ikut membaca doa dari satu agama tertentu sebagai syarat kelulusan kegiatan.",
+    "jawaban": ["Pembebasan", "Keadilan"],
+    "penjelasan": "Menjamin kemerdekaan keyakinan setiap individu dan tidak memaksakan dogma agama kepada pihak lain."
+  },
+  {
+    "id": 43,
+    "kategori": "Toleransi Beragama",
+    "judul": "Menjaga Keamanan Ibadah Tetangga",
+    "kasus": "Pemuda desa berinisiatif membantu mengatur parkir dan menjaga ketenangan di sekitar rumah ibadah agama tetangga saat mereka sedang melangsungkan kebaktian/upacara besar.",
+    "jawaban": ["Persaudaraan", "Kearifan Tradisi"],
+    "penjelasan": "Mengamalkan nilai persaudaraan lintas iman serta merawat tradisi luhur tolong-menolong (gotong royong) warga Nusantara."
+  },
+  {
+    "id": 44,
+    "kategori": "Toleransi Beragama",
+    "judul": "Memilah Teman Duduk Berdasarkan Agama",
+    "kasus": "Seorang siswa menolak duduk sebangku dengan murid baru hanya karena murid tersebut memakai simbol/atribut keagamaan yang berbeda dari mayoritas kelas.",
+    "jawaban": ["Kesetaraan", "Kemanusiaan"],
+    "penjelasan": "Memperlakukan setiap orang setara sebagai sesama manusia tanpa membedakan identitas keyakinan."
+  },
+  {
+    "id": 45,
+    "kategori": "Toleransi Beragama",
+    "judul": "Berbagi Makanan Sesuai Pantangan Agama",
+    "kasus": "Saat membawa oleh-oleh syukuran ke kelas, seorang murid memastikan teman-temannya mendapat makanan yang sesuai dengan aturan pantangan agamanya masing-masing (halal/vegetarian).",
+    "jawaban": ["Ketauhidan", "Kemanusiaan"],
+    "penjelasan": "Menghormati aturan hukum agama teman dan mengedepankan kepedulian yang tulus."
+  },
+  {
+    "id": 46,
+    "kategori": "Toleransi Beragama",
+    "judul": "Tuduhan Fanatik pada Teman yang Taat",
+    "kasus": "Seorang murid yang selalu izin ke mushola/ruang doa tepat waktu setiap jam istirahat dijuluki 'sok suci' dan disindir oleh teman-teman tongkrongannya.",
+    "jawaban": ["Ketauhidan", "Ksatriaan"],
+    "penjelasan": "Menghargai komitmen seseorang dalam menjalankan ajaran Tuhan dan berani membelanya dari cibiran sosial."
+  }
+]

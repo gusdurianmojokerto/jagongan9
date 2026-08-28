@@ -9,7 +9,6 @@
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Poppins',sans-serif;background:linear-gradient(160deg,#0d7a3f 0%,#10b94e 30%,#34d058 60%,#e8f5e9 85%,#ffffff 100%);min-height:100vh;color:#1a2e1a;overflow-x:hidden;position:relative}
 
-/* FLOATING CIRCLES */
 .bg-circle{position:fixed;border-radius:50%;pointer-events:none;z-index:0;opacity:.12}
 .bg-circle-1{width:340px;height:340px;background:radial-gradient(circle,#34d058,transparent);top:-80px;left:-100px;animation:floatA 18s ease-in-out infinite}
 .bg-circle-2{width:260px;height:260px;background:radial-gradient(circle,#f5c518,transparent);bottom:-60px;right:-80px;animation:floatB 22s ease-in-out infinite}
@@ -21,7 +20,6 @@ body{font-family:'Poppins',sans-serif;background:linear-gradient(160deg,#0d7a3f 
 @keyframes floatB{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-30px,-40px) scale(1.1)}}
 @keyframes floatC{0%,100%{transform:translate(0,0)}50%{transform:translate(25px,35px)}}
 
-/* START SCREEN */
 #startScreen{position:fixed;inset:0;z-index:1000;background:linear-gradient(160deg,#0a5c30 0%,#0d7a3f 25%,#10b94e 55%,#34d058 80%,#b8e8c6 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity .8s,visibility .8s;overflow:hidden}
 #startScreen::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 30% 20%,rgba(255,255,255,.15) 0%,transparent 60%);pointer-events:none}
 #startScreen.hidden{opacity:0;visibility:hidden;pointer-events:none}
@@ -41,47 +39,61 @@ body{font-family:'Poppins',sans-serif;background:linear-gradient(160deg,#0d7a3f 
 #startBtn::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.3),transparent);border-radius:50px;pointer-events:none}
 #startBtn:hover{transform:scale(1.06) translateY(-2px);box-shadow:0 10px 45px rgba(245,197,24,.55)}
 #startBtn:active{transform:scale(1.02)}
-@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
 
-/* HEADER */
 .header{position:sticky;top:0;z-index:100;text-align:center;padding:12px 10px;background:rgba(255,255,255,.72);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(13,122,63,.12);box-shadow:0 2px 20px rgba(13,122,63,.08)}
 .header-inner{display:flex;align-items:center;justify-content:center;gap:12px;max-width:700px;margin:0 auto}
 .header img.logo{width:min(50px,10vw);filter:drop-shadow(0 1px 4px rgba(13,122,63,.3))}
 .header .title-group{text-align:left}
 .header h1{font-size:clamp(1rem,3vw,1.5rem);color:#0d7a3f;font-weight:800;line-height:1.2}
 .header .subtitle{font-size:.75rem;color:#5a8a6a;font-weight:500;margin-top:1px}
+.header-nilai-btn{background:linear-gradient(135deg,#f5c518,#e6a817);border:none;color:#0d4a20;font-size:.75rem;font-weight:800;padding:8px 16px;border-radius:20px;cursor:pointer;transition:transform .2s,box-shadow .2s;margin-left:auto;flex-shrink:0;box-shadow:0 2px 10px rgba(245,197,24,.35);letter-spacing:.3px}
+.header-nilai-btn:hover{transform:scale(1.05);box-shadow:0 4px 16px rgba(245,197,24,.5)}
 
-/* GAME AREA */
 .game-container{max-width:900px;margin:0 auto;padding:18px 15px 40px;position:relative;z-index:1}
-.selected-info{text-align:center;margin-bottom:18px;font-size:.9rem;color:#2a5a3a;min-height:28px;background:rgba(255,255,255,.65);backdrop-filter:blur(8px);border-radius:12px;padding:10px 16px;border:1px solid rgba(13,122,63,.1)}
-.selected-info .val{color:#c8870a;font-weight:700}
 
-/* CARDS GRID */
+.game-view{position:relative;width:100%;transition:opacity .45s ease,transform .45s ease}
+.game-view.hidden-left{opacity:0;transform:translateX(-60px);pointer-events:none;position:absolute;top:0;left:0}
+.game-view.hidden-right{opacity:0;transform:translateX(60px);pointer-events:none;position:absolute;top:0;left:0}
+
+.issue-panel{background:rgba(255,255,255,.85);backdrop-filter:blur(12px);border-radius:24px;padding:32px 36px;border:1px solid rgba(13,122,63,.1);box-shadow:0 6px 30px rgba(13,122,63,.08)}
+.issue-panel.show{animation:slideUp .5s cubic-bezier(.4,0,.2,1)}
+@keyframes slideUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.issue-kategori{font-size:.82rem;text-transform:uppercase;letter-spacing:1.8px;color:#0d7a3f;font-weight:700;margin-bottom:8px}
+.issue-kasus{font-size:1.15rem;color:#2a4a3a;line-height:1.9;background:linear-gradient(135deg,#e8f5e9,#f0faf2);border-radius:14px;padding:22px 24px;border-left:5px solid #10b94e}
+.issue-judul{font-size:1.45rem;font-weight:800;color:#0d7a3f;margin-bottom:12px}
+.timer-wrap{display:flex;align-items:center;gap:14px;margin-top:18px}
+.timer-bar-bg{flex:1;height:14px;background:rgba(13,122,63,.1);border-radius:14px;overflow:hidden}
+.timer-bar{height:100%;background:linear-gradient(90deg,#10b94e,#34d058);border-radius:14px;transition:width 1s linear;width:100%}
+.timer-bar.urgent{background:linear-gradient(90deg,#e53935,#f5c518)}
+.timer-text{font-size:1.6rem;font-weight:800;color:#0d7a3f;min-width:56px;text-align:center;font-variant-numeric:tabular-nums}
+
+.reveal-btn{display:none;margin:20px auto 0;padding:16px 48px;font-size:1.1rem;font-weight:700;border:none;border-radius:30px;background:linear-gradient(135deg,#f5c518,#e6a817);color:#0d4a20;cursor:pointer;box-shadow:0 4px 20px rgba(245,197,24,.4);transition:transform .2s,box-shadow .2s}
+.reveal-btn.show{display:block;animation:popIn .4s cubic-bezier(.4,0,.2,1)}
+.reveal-btn:hover{transform:scale(1.05);box-shadow:0 6px 28px rgba(245,197,24,.55)}
+@keyframes popIn{from{opacity:0;transform:scale(.7)}to{opacity:1;transform:scale(1)}}
+
 .cards-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;max-width:700px;margin:0 auto 22px}
 .cards-grid .card-wrapper{width:calc((100% - 64px) / 5);aspect-ratio:3/4}
 
-/* CARD */
 .card-wrapper{perspective:1000px;aspect-ratio:3/4;cursor:pointer;transition:transform .45s cubic-bezier(.4,0,.2,1),opacity .5s ease,filter .5s ease;position:relative;border-radius:16px}
-.card-wrapper:hover{transform:translateY(-6px) scale(1.03)}
-.card-wrapper.selected{transform:scale(1.06);z-index:2}
-.card-wrapper.selected::after{content:'';position:absolute;inset:-5px;border:3px solid #f5c518;border-radius:20px;z-index:5;animation:glow 1.5s infinite;pointer-events:none;box-shadow:0 0 18px rgba(245,197,24,.35)}
-@keyframes glow{0%,100%{box-shadow:0 0 12px rgba(245,197,24,.35)}50%{box-shadow:0 0 28px rgba(245,197,24,.7)}}
-
 .card{width:100%;height:100%;position:relative;transform-style:preserve-3d;transition:transform .7s cubic-bezier(.4,0,.2,1)}
 .card-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:16px;overflow:hidden}
 .card-face img{width:100%;height:100%;object-fit:contain;display:block}
 .card-front{transform:rotateY(180deg)}
-
 .card.show-front{transform:rotateY(180deg)}
 
-/* MERGE ANIMATION */
-.card-wrapper.fade-out{opacity:0;transform:scale(.7);pointer-events:none;transition:opacity .5s ease,transform .5s ease}
+.card-wrapper.highlight{animation:cardGlow 1.2s ease-in-out infinite;z-index:3}
+.card-wrapper.highlight::after{content:'';position:absolute;inset:-6px;border:3px solid #f5c518;border-radius:20px;z-index:5;animation:glow 1.5s infinite;pointer-events:none;box-shadow:0 0 20px rgba(245,197,24,.5)}
+@keyframes cardGlow{0%,100%{transform:scale(1.04)}50%{transform:scale(1.08)}}
+@keyframes glow{0%,100%{box-shadow:0 0 12px rgba(245,197,24,.35)}50%{box-shadow:0 0 28px rgba(245,197,24,.7)}}
 
-/* MERGE FLASH */
-.merge-flash{position:fixed;inset:0;z-index:100;background:radial-gradient(circle,rgba(245,197,24,.5) 0%,rgba(16,185,78,.3) 40%,transparent 70%);opacity:0;pointer-events:none;animation:flashIn .6s .5s forwards}
-@keyframes flashIn{0%{opacity:0}40%{opacity:1}100%{opacity:0}}
+.card-wrapper.scanning{animation:scanPulse .15s ease;z-index:2}
+.card-wrapper.scanning::after{content:'';position:absolute;inset:-4px;border:3px solid rgba(255,255,255,.8);border-radius:20px;z-index:5;pointer-events:none;box-shadow:0 0 16px rgba(255,255,255,.5),0 0 30px rgba(245,197,24,.3)}
+@keyframes scanPulse{0%{transform:scale(1)}50%{transform:scale(1.06)}100%{transform:scale(1)}}
 
-/* MODAL */
+.status-info{text-align:center;margin-bottom:18px;font-size:.9rem;color:#2a5a3a;min-height:28px;background:rgba(255,255,255,.65);backdrop-filter:blur(8px);border-radius:12px;padding:10px 16px;border:1px solid rgba(13,122,63,.1)}
+.status-info .val{color:#c8870a;font-weight:700}
+
 .modal-overlay{position:fixed;inset:0;z-index:200;background:rgba(5,40,20,.55);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:opacity .4s,visibility .4s;padding:20px}
 .modal-overlay.show{opacity:1;visibility:visible}
 .modal{background:#fff;border-radius:22px;max-width:560px;width:100%;max-height:85vh;overflow:hidden;display:flex;flex-direction:column;transform:scale(.85);transition:transform .4s cubic-bezier(.4,0,.2,1);box-shadow:0 24px 70px rgba(5,40,20,.3);border:1px solid rgba(13,122,63,.1)}
@@ -94,13 +106,24 @@ body{font-family:'Poppins',sans-serif;background:linear-gradient(160deg,#0d7a3f 
 .modal-body{padding:22px 24px;overflow-y:auto;flex:1;line-height:1.75}
 .modal-body .issue-label{font-size:.72rem;text-transform:uppercase;letter-spacing:1.2px;color:#0d7a3f;margin-bottom:8px;font-weight:700}
 .modal-body .issue-text{font-size:.92rem;color:#2a4a3a;background:linear-gradient(135deg,#e8f5e9,#f0faf2);border-radius:12px;padding:16px 18px;border-left:4px solid #10b94e}
-.modal-close{display:block;margin:18px auto 22px;padding:13px 44px;border:none;border-radius:30px;background:linear-gradient(135deg,#0d7a3f,#10b94e);color:#fff;font-weight:700;font-size:1rem;cursor:pointer;transition:transform .2s,box-shadow .2s;box-shadow:0 4px 18px rgba(13,122,63,.25);flex-shrink:0}
-.modal-close:hover{transform:scale(1.05);box-shadow:0 6px 24px rgba(13,122,63,.35)}
+.modal-body .penjelasan-label{font-size:.72rem;text-transform:uppercase;letter-spacing:1.2px;color:#0d7a3f;margin:16px 0 8px;font-weight:700}
+.modal-body .penjelasan-text{font-size:.92rem;color:#2a4a3a;line-height:1.8}
+.modal-buttons{display:flex;gap:12px;padding:18px 24px 22px;justify-content:center;flex-shrink:0;flex-wrap:wrap}
+.modal-btn{padding:12px 32px;border:none;border-radius:30px;font-weight:700;font-size:.95rem;cursor:pointer;transition:transform .2s,box-shadow .2s;flex:1;min-width:140px;max-width:220px;text-align:center}
+.modal-btn:hover{transform:scale(1.04)}
+.modal-btn-next{background:linear-gradient(135deg,#0d7a3f,#10b94e);color:#fff;box-shadow:0 4px 18px rgba(13,122,63,.25)}
+.modal-btn-next:hover{box-shadow:0 6px 24px rgba(13,122,63,.35)}
+.modal-btn-explain{background:linear-gradient(135deg,#f5c518,#e6a817);color:#0d4a20;box-shadow:0 4px 18px rgba(245,197,24,.3)}
+.modal-btn-explain:hover{box-shadow:0 6px 24px rgba(245,197,24,.45)}
+.modal-close-btn{display:block;margin:0 auto 0;padding:12px 40px;border:none;border-radius:30px;background:linear-gradient(135deg,#0d7a3f,#10b94e);color:#fff;font-weight:700;font-size:1rem;cursor:pointer;transition:transform .2s,box-shadow .2s;box-shadow:0 4px 18px rgba(13,122,63,.25);flex-shrink:0}
+.modal-close-btn:hover{transform:scale(1.05);box-shadow:0 6px 24px rgba(13,122,63,.35)}
 
-/* COMBO COUNTER */
-.combo-info{text-align:center;font-size:.8rem;color:#5a8a6a;margin-top:12px;background:rgba(255,255,255,.5);backdrop-filter:blur(6px);padding:8px 16px;border-radius:10px;display:inline-block;margin-left:auto;margin-right:auto;width:fit-content}
+.merge-flash{position:fixed;inset:0;z-index:100;background:radial-gradient(circle,rgba(245,197,24,.5) 0%,rgba(16,185,78,.3) 40%,transparent 70%);opacity:0;pointer-events:none;animation:flashIn .6s .5s forwards}
+@keyframes flashIn{0%{opacity:0}40%{opacity:1}100%{opacity:0}}
 
-/* 9 NILAI PAGE */
+.particle{position:fixed;width:8px;height:8px;border-radius:50%;pointer-events:none;z-index:150;animation:particleFly 1s forwards}
+@keyframes particleFly{0%{opacity:1;transform:translate(0,0) scale(1)}100%{opacity:0;transform:translate(var(--tx),var(--ty)) scale(0)}}
+
 .nilai-page{position:fixed;inset:0;z-index:900;background:#fff;overflow-y:auto;opacity:0;visibility:hidden;transition:opacity .4s,visibility .4s}
 .nilai-page.show{opacity:1;visibility:visible}
 .nilai-page-header{position:sticky;top:0;z-index:10;background:linear-gradient(135deg,#0d7a3f,#10b94e,#34d058);padding:16px 20px;display:flex;align-items:center;gap:14px;box-shadow:0 2px 16px rgba(13,122,63,.2)}
@@ -115,10 +138,7 @@ body{font-family:'Poppins',sans-serif;background:linear-gradient(160deg,#0d7a3f 
 .nilai-card p{font-size:.88rem;color:#333;line-height:1.75}
 .nilai-card p em{color:#0d7a3f;font-style:italic}
 .nilai-card ul{margin:8px 0 0 18px;font-size:.85rem;color:#444;line-height:1.8}
-.header-nilai-btn{background:linear-gradient(135deg,#f5c518,#e6a817);border:none;color:#0d4a20;font-size:.75rem;font-weight:800;padding:8px 16px;border-radius:20px;cursor:pointer;transition:transform .2s,box-shadow .2s;margin-left:auto;flex-shrink:0;box-shadow:0 2px 10px rgba(245,197,24,.35);letter-spacing:.3px}
-.header-nilai-btn:hover{transform:scale(1.05);box-shadow:0 4px 16px rgba(245,197,24,.5)}
 
-/* LOADING SCREEN */
 #loadingScreen{position:fixed;inset:0;z-index:2000;background:linear-gradient(160deg,#0a5c30 0%,#0d7a3f 25%,#10b94e 55%,#34d058 80%,#b8e8c6 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;transition:opacity .6s,visibility .6s}
 #loadingScreen.hidden{opacity:0;visibility:hidden;pointer-events:none}
 .loading-text{position:absolute;font-size:clamp(1.4rem,4vw,2.2rem);font-weight:800;color:#fff;text-shadow:0 3px 20px rgba(0,0,0,.3);opacity:0;transform:scale(.5);pointer-events:none}
@@ -130,11 +150,8 @@ body{font-family:'Poppins',sans-serif;background:linear-gradient(160deg,#0d7a3f 
 .loading-dots span:nth-child(3){animation-delay:.4s}
 @keyframes dotPulse{0%,80%,100%{transform:scale(.6);opacity:.4}40%{transform:scale(1.2);opacity:1}}
 
-/* PARTICLES */
-.particle{position:fixed;width:8px;height:8px;border-radius:50%;pointer-events:none;z-index:150;animation:particleFly 1s forwards}
-@keyframes particleFly{0%{opacity:1;transform:translate(0,0) scale(1)}100%{opacity:0;transform:translate(var(--tx),var(--ty)) scale(0)}}
+.counter-info{text-align:center;font-size:.8rem;color:#5a8a6a;margin-top:12px;background:rgba(255,255,255,.5);backdrop-filter:blur(6px);padding:8px 16px;border-radius:10px;display:inline-block;width:fit-content}
 
-/* MOBILE */
 @media(max-width:600px){
   .cards-grid{gap:10px;max-width:380px}
   .cards-grid .card-wrapper{width:calc((100% - 20px) / 3)}
@@ -145,6 +162,12 @@ body{font-family:'Poppins',sans-serif;background:linear-gradient(160deg,#0d7a3f 
   .start-feature{min-width:120px;padding:14px 14px}
   .start-feature .feat-text{font-size:.7rem}
   .header h1{font-size:1.1rem}
+  .issue-panel{padding:22px 24px}
+  .issue-judul{font-size:1.25rem}
+  .issue-kasus{font-size:1.05rem;padding:18px 20px}
+  .timer-text{font-size:1.4rem}
+  .modal-buttons{padding:14px 16px 18px}
+  .game-view.hidden-left,.game-view.hidden-right{position:absolute;width:100%}
 }
 @media(max-width:380px){
   .cards-grid{max-width:300px;gap:8px}
@@ -154,7 +177,6 @@ body{font-family:'Poppins',sans-serif;background:linear-gradient(160deg,#0d7a3f 
 </head>
 <body>
 
-<!-- FLOATING CIRCLES -->
 <div class="bg-circle bg-circle-1"></div>
 <div class="bg-circle bg-circle-2"></div>
 <div class="bg-circle bg-circle-3"></div>
@@ -162,17 +184,13 @@ body{font-family:'Poppins',sans-serif;background:linear-gradient(160deg,#0d7a3f 
 <div class="bg-circle bg-circle-5"></div>
 <div class="bg-circle bg-circle-6"></div>
 
-<!-- LOADING SCREEN -->
 <div id="loadingScreen">
   <div class="loading-text" id="loadText1">Pahami Masalahnya</div>
   <div class="loading-text" id="loadText2">Gas Solusinya</div>
   <div class="loading-text" id="loadText3">Gitu saja kok repot!</div>
-  <div class="loading-dots">
-    <span></span><span></span><span></span>
-  </div>
+  <div class="loading-dots"><span></span><span></span><span></span></div>
 </div>
 
-<!-- START SCREEN -->
 <div id="startScreen">
   <div class="logo-wrap">
     <div class="logo-flipper">
@@ -181,404 +199,389 @@ body{font-family:'Poppins',sans-serif;background:linear-gradient(160deg,#0d7a3f 
     </div>
   </div>
   <h1>Jagongan 9</h1>
-  <p class="tagline">Pilih 2 kartu nilai untuk mengungkap isu sosial yang terkait. Temukan keterkaitan antar nilai Gusdurian!</p>
-    <div class="start-features">
-    <div class="start-feature">
-      <div class="feat-text">Mengenal 9 Nilai<br>Dasar Gusdurian</div>
-    </div>
-    <div class="start-feature">
-      <div class="feat-text">Melatih Sikap<br>Kritis & Empati</div>
-    </div>
-    <div class="start-feature">
-      <div class="feat-text">Mengenali Isu Sosial<br>di Lingkungan</div>
-    </div>
+  <p class="tagline">Baca isu, pahami masalahnya, lalu temukan 2 nilai Gusdurian yang paling tepat untuk menyelesaikannya!</p>
+  <div class="start-features">
+    <div class="start-feature"><div class="feat-text">Mengenal 9 Nilai<br>Dasar Gusdurian</div></div>
+    <div class="start-feature"><div class="feat-text">Melatih Sikap<br>Kritis & Empati</div></div>
+    <div class="start-feature"><div class="feat-text">Mengenali Isu Sosial<br>di Lingkungan</div></div>
   </div>
   <button id="startBtn">Mulai Bermain</button>
 </div>
 
-<!-- HEADER -->
 <div class="header">
   <div class="header-inner">
     <img class="logo" src="gusdurian.webp" alt="Gusdurian">
     <div class="title-group">
       <h1>9 Nilai Gusdur</h1>
-      <div class="subtitle">Pilih 2 kartu untuk mengungkap isu</div>
+      <div class="subtitle" id="headerSubtitle">Pilih 2 kartu untuk mengungkap isu</div>
     </div>
     <button class="header-nilai-btn" id="openNilai">9 Nilai</button>
   </div>
 </div>
 
-<!-- GAME -->
 <div class="game-container">
-  <div class="selected-info" id="selectedInfo">Klik kartu untuk memilih nilai pertama</div>
-  <div class="cards-grid" id="cardsGrid"></div>
-  <div style="text-align:center"><div class="combo-info" id="comboInfo"></div></div>
-</div>
-
-<!-- MODAL -->
-<div class="modal-overlay" id="modal">
-  <div class="modal">
-    <div class="modal-header">
-      <div class="values">
-        <span class="val-badge" id="val1"></span>
-        <span class="plus">+</span>
-        <span class="val-badge" id="val2"></span>
+  <!-- PAGE 1: ISSUE VIEW -->
+  <div class="game-view" id="issueView">
+    <div class="issue-panel show" id="issuePanel">
+      <div class="issue-judul" id="issueJudul"></div>
+      <div class="issue-kategori" id="issueKategori"></div>
+      <div class="issue-kasus" id="issueKasus"></div>
+      <div class="timer-wrap">
+        <div class="timer-bar-bg"><div class="timer-bar" id="timerBar"></div></div>
+        <div class="timer-text" id="timerText">0:30</div>
       </div>
-      <h2>Isu yang Muncul</h2>
+      <button class="reveal-btn" id="revealBtn">Lihat Jawaban</button>
     </div>
-    <div class="modal-body">
-      <div class="issue-label">Pernyataan Isu</div>
-      <div class="issue-text" id="issueText"></div>
-    </div>
-    <button class="modal-close" id="modalClose">Pilih Kartu Lagi</button>
+    <div style="text-align:center"><div class="counter-info" id="counterInfo"></div></div>
+  </div>
+
+  <!-- PAGE 2: CARDS VIEW -->
+  <div class="game-view hidden-right" id="cardsView">
+    <div class="status-info" id="statusInfo">Membalik kartu...</div>
+    <div class="cards-grid" id="cardsGrid"></div>
   </div>
 </div>
 
-<!-- 9 NILAI PAGE -->
+<div class="modal-overlay" id="explainModal">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="values">
+        <span class="val-badge" id="expVal1"></span>
+        <span class="plus">+</span>
+        <span class="val-badge" id="expVal2"></span>
+      </div>
+      <h2 id="expTitle">Jawaban & Penjelasan</h2>
+    </div>
+    <div class="modal-body">
+      <div class="issue-label">Isu</div>
+      <div class="issue-text" id="expIssue"></div>
+      <div class="penjelasan-label">Penjelasan</div>
+      <div class="penjelasan-text" id="expPenjelasan"></div>
+    </div>
+    <div class="modal-buttons">
+      <button class="modal-btn modal-btn-explain" id="expCloseBtn">Tutup</button>
+      <button class="modal-btn modal-btn-next" id="expNextBtn">Next Isu &rarr;</button>
+    </div>
+  </div>
+</div>
+
 <div class="nilai-page" id="nilaiPage">
   <div class="nilai-page-header">
     <button class="back-btn" id="closeNilai">&larr;</button>
     <h2>9 Nilai Gusdur</h2>
   </div>
   <div class="nilai-page-body">
-    <div class="nilai-card">
-      <div class="num">1</div>
-      <h3>Ketauhidan</h3>
-      <p>Landasan spiritual tertinggi bahwa segala sesuatu bersumber dan bermuara kepada Tuhan Yang Maha Esa. Pemahaman tauhid yang benar tidak melahirkan kesombongan atau fanatisme sempit, melainkan menumbuhkan kesadaran untuk mengabdi kepada-Nya dengan cara menebar kebaikan, welas asih, dan memuliakan sesama ciptaan-Nya.</p>
-    </div>
-    <div class="nilai-card">
-      <div class="num">2</div>
-      <h3>Kemanusiaan</h3>
-      <p>Prinsip dasar bahwa martabat manusia adalah suci dan harus dijunjung tinggi tanpa memandang suku, agama, ras, gender, maupun status sosial. Mengutip adagium terkenal Gus Dur: <em>"Yang lebih penting dari politik adalah kemanusiaan."</em> Nilai ini menentang segala bentuk kekerasan, diskriminasi, dan perendahan harkat manusia.</p>
-    </div>
-    <div class="nilai-card">
-      <div class="num">3</div>
-      <h3>Keadilan</h3>
-      <p>Komitmen untuk menempatkan segala sesuatu pada tempatnya secara proporsional serta memberikan hak kepada yang berhak menerimanya. Keadilan Gus Dur bukan sekadar kepatuhan formal pada teks hukum, melainkan keberpihakan nyata pada mereka yang lemah, tertindas, dan termarjinalkan dari sistem sosial-politik.</p>
-    </div>
-    <div class="nilai-card">
-      <div class="num">4</div>
-      <h3>Kesetaraan</h3>
-      <p>Keyakinan bahwa setiap manusia memiliki hak, derajat, dan kedudukan yang setara di hadapan Tuhan, hukum, dan kehidupan bermasyarakat. Nilai ini menolak hierarki kasta, feodalisme, dominasi kelompok mayoritas atas minoritas, serta diskriminasi gender.</p>
-    </div>
-    <div class="nilai-card">
-      <div class="num">5</div>
-      <h3>Pembebasan</h3>
-      <p>Gerakan aktif untuk mengangkat harkat manusia dari belenggu penindasan, kemiskinan struktural, pembodohan, dan hegemoni kekuasaan yang otoriter. Pembebasan bertujuan memampukan kelompok yang rentan agar menjadi subjek yang mandiri dan berdaya atas kehidupannya sendiri.</p>
-    </div>
-    <div class="nilai-card">
-      <div class="num">6</div>
-      <h3>Persaudaraan</h3>
-      <p>Sikap saling merangkul, mengasihi, dan merasa senasib sepenanggungan antarmanusia. Nilai ini mencakup tiga pilar persaudaraan khas Gus Dur:</p>
-      <ul>
-        <li><strong>Ukhuwah Islamiyah</strong> — Persaudaraan sesama umat Islam</li>
-        <li><strong>Ukhuwah Wathaniyah</strong> — Persaudaraan sesama anak bangsa</li>
-        <li><strong>Ukhuwah Basyariyah / Insaniyah</strong> — Persaudaraan universal sesama umat manusia</li>
-      </ul>
-    </div>
-    <div class="nilai-card">
-      <div class="num">7</div>
-      <h3>Kesederhanaan</h3>
-      <p>Sikap hidup yang wajar, bersahaja, proporsional, dan menolak kerakusan serta budaya materialistis/konsumtif. Kesederhanaan juga mencerminkan kerendahhatian intelektual dan spiritual—tidak silau oleh jabatan, kekayaan, atau kemewahan duniawi.</p>
-    </div>
-    <div class="nilai-card">
-      <div class="num">8</div>
-      <h3>Kesatriaan</h3>
-      <p>Keberanian moral untuk menegakkan kebenaran, membela yang tertindas, mengakui kesalahan secara jujur, dan bertanggung jawab atas setiap konsekuensi keputusan. Sikap ini berani melawan arus ketidakadilan meski harus menanggung risiko besar bagi diri sendiri.</p>
-    </div>
-    <div class="nilai-card">
-      <div class="num">9</div>
-      <h3>Kearifan Tradisi / Lokal</h3>
-      <p>Penghormatan dan penerimaan kritis terhadap nilai-nilai luhur, adat istiadat, dan kebudayaan lokal nusantara. Gus Dur memandang bahwa agama harus berakar dan berdialog secara harmonis dengan tradisi lokal (Pribumisasi Islam), bukan malah menghancurkan warisan budaya luhur yang merekatkan masyarakat.</p>
-    </div>
+    <div class="nilai-card"><div class="num">1</div><h3>Ketauhidan</h3><p>Landasan spiritual tertinggi bahwa segala sesuatu bersumber dan bermuara kepada Tuhan Yang Maha Esa. Pemahaman tauhid yang benar tidak melahirkan kesombongan atau fanatisme sempit, melainkan menumbuhkan kesadaran untuk mengabdi kepada-Nya dengan cara menebar kebaikan, welas asih, dan memuliakan sesama ciptaan-Nya.</p></div>
+    <div class="nilai-card"><div class="num">2</div><h3>Kemanusiaan</h3><p>Prinsip dasar bahwa martabat manusia adalah suci dan harus dijunjung tinggi tanpa memandang suku, agama, ras, gender, maupun status sosial. Mengutip adagium terkenal Gus Dur: <em>"Yang lebih penting dari politik adalah kemanusiaan."</em> Nilai ini menentang segala bentuk kekerasan, diskriminasi, dan perendahan harkat manusia.</p></div>
+    <div class="nilai-card"><div class="num">3</div><h3>Keadilan</h3><p>Komitmen untuk menempatkan segala sesuatu pada tempatnya secara proporsional serta memberikan hak kepada yang berhak menerimanya. Keadilan Gus Dur bukan sekadar kepatuhan formal pada teks hukum, melainkan keberpihakan nyata pada mereka yang lemah, tertindas, dan termarjinalkan dari sistem sosial-politik.</p></div>
+    <div class="nilai-card"><div class="num">4</div><h3>Kesetaraan</h3><p>Keyakinan bahwa setiap manusia memiliki hak, derajat, dan kedudukan yang setara di hadapan Tuhan, hukum, dan kehidupan bermasyarakat. Nilai ini menolak hierarki kasta, feodalisme, dominasi kelompok mayoritas atas minoritas, serta diskriminasi gender.</p></div>
+    <div class="nilai-card"><div class="num">5</div><h3>Pembebasan</h3><p>Gerakan aktif untuk mengangkat harkat manusia dari belenggu penindasan, kemiskinan struktural, pembodohan, dan hegemoni kekuasaan yang otoriter. Pembebasan bertujuan memampukan kelompok yang rentan agar menjadi subjek yang mandiri dan berdaya atas kehidupannya sendiri.</p></div>
+    <div class="nilai-card"><div class="num">6</div><h3>Persaudaraan</h3><p>Sikap saling merangkul, mengasihi, dan merasa senasib sepenanggungan antarmanusia. Nilai ini mencakup tiga pilar persaudaraan khas Gus Dur:</p><ul><li><strong>Ukhuwah Islamiyah</strong> — Persaudaraan sesama umat Islam</li><li><strong>Ukhuwah Wathaniyah</strong> — Persaudaraan sesama anak bangsa</li><li><strong>Ukhuwah Basyariyah / Insaniyah</strong> — Persaudaraan universal sesama umat manusia</li></ul></div>
+    <div class="nilai-card"><div class="num">7</div><h3>Kesederhanaan</h3><p>Sikap hidup yang wajar, bersahaja, proporsional, dan menolak kerakusan serta budaya materialistis/konsumtif. Kesederhanaan juga mencerminkan kerendahhatian intelektual dan spiritual—tidak silau oleh jabatan, kekayaan, atau kemewahan duniawi.</p></div>
+    <div class="nilai-card"><div class="num">8</div><h3>Kesatriaan</h3><p>Keberanian moral untuk menegakkan kebenaran, membela yang tertindas, mengakui kesalahan secara jujur, dan bertanggung jawab atas setiap konsekuensi keputusan. Sikap ini berani melawan arus ketidakadilan meski harus menanggung risiko besar bagi diri sendiri.</p></div>
+    <div class="nilai-card"><div class="num">9</div><h3>Kearifan Tradisi / Lokal</h3><p>Penghormatan dan penerimaan kritis terhadap nilai-nilai luhur, adat istiadat, dan kebudayaan lokal nusantara. Gus Dur memandang bahwa agama harus berakar dan berdialog secara harmonis dengan tradisi lokal (Pribumisasi Islam), bukan malah menghancurkan warisan budaya luhur yang merekatkan masyarakat.</p></div>
   </div>
 </div>
 
 <script>
-// Loading animation sequence
-(function() {
-  const loadText1 = document.getElementById('loadText1');
-  const loadText2 = document.getElementById('loadText2');
-  const loadText3 = document.getElementById('loadText3');
-  const loadingScreen = document.getElementById('loadingScreen');
-  
-  const texts = [loadText1, loadText2, loadText3];
-  let current = 0;
-  
-  function showNextText() {
-    if (current < texts.length) {
-      texts[current].classList.add('active');
-      current++;
-      setTimeout(showNextText, 1300);
-    } else {
-      setTimeout(() => {
-        loadingScreen.classList.add('hidden');
-      }, 800);
-    }
+(function(){
+  const loadText1=document.getElementById('loadText1');
+  const loadText2=document.getElementById('loadText2');
+  const loadText3=document.getElementById('loadText3');
+  const loadingScreen=document.getElementById('loadingScreen');
+  const texts=[loadText1,loadText2,loadText3];
+  let current=0;
+  function showNextText(){
+    if(current<texts.length){texts[current].classList.add('active');current++;setTimeout(showNextText,1300)}
+    else{setTimeout(()=>loadingScreen.classList.add('hidden'),800)}
   }
-  
-  setTimeout(showNextText, 500);
+  setTimeout(showNextText,500);
 })();
 
-const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-
-function playTone(freq, duration, type, vol) {
-  const osc = audioCtx.createOscillator();
-  const gain = audioCtx.createGain();
-  osc.type = type || 'sine';
-  osc.frequency.value = freq;
-  gain.gain.setValueAtTime(vol || 0.15, audioCtx.currentTime);
-  gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + duration);
+const audioCtx=new(window.AudioContext||window.webkitAudioContext)();
+function playTone(freq,duration,type,vol){
+  const osc=audioCtx.createOscillator();
+  const gain=audioCtx.createGain();
+  osc.type=type||'sine';
+  osc.frequency.value=freq;
+  gain.gain.setValueAtTime(vol||0.15,audioCtx.currentTime);
+  gain.gain.exponentialRampToValueAtTime(0.001,audioCtx.currentTime+duration);
   osc.connect(gain);
   gain.connect(audioCtx.destination);
   osc.start();
-  osc.stop(audioCtx.currentTime + duration);
+  osc.stop(audioCtx.currentTime+duration);
 }
+function playFlip(){playTone(800,0.12,'sine',0.1);setTimeout(()=>playTone(1200,0.08,'sine',0.08),60)}
+function playSelect(){playTone(600,0.15,'sine',0.12);setTimeout(()=>playTone(900,0.12,'sine',0.1),80)}
+function playPopup(){playTone(500,0.2,'sine',0.1);setTimeout(()=>playTone(700,0.2,'sine',0.1),120);setTimeout(()=>playTone(900,0.25,'sine',0.12),240)}
+function playClick(){playTone(1000,0.06,'square',0.05)}
+function playReveal(){playTone(400,0.3,'sine',0.12);setTimeout(()=>playTone(600,0.25,'sine',0.1),100);setTimeout(()=>playTone(800,0.3,'sine',0.12),200)}
+function playScan(){playTone(1200,0.05,'square',0.04)}
 
-function playFlip() { playTone(800, 0.12, 'sine', 0.1); setTimeout(() => playTone(1200, 0.08, 'sine', 0.08), 60); }
-function playSelect() { playTone(600, 0.15, 'sine', 0.12); setTimeout(() => playTone(900, 0.12, 'sine', 0.1), 80); }
-function playMerge() { playTone(400, 0.3, 'sine', 0.12); setTimeout(() => playTone(600, 0.25, 'sine', 0.1), 100); setTimeout(() => playTone(800, 0.3, 'sine', 0.12), 200); }
-function playPopup() { playTone(500, 0.2, 'sine', 0.1); setTimeout(() => playTone(700, 0.2, 'sine', 0.1), 120); setTimeout(() => playTone(900, 0.25, 'sine', 0.12), 240); }
-function playClick() { playTone(1000, 0.06, 'square', 0.05); }
-const VALUES = [
-  {name:'Ketauhidan', img:'ketauhidan.webp'},
-  {name:'Kemanusiaan', img:'kemanusiaan.webp'},
-  {name:'Keadilan', img:'keadilan.webp'},
-  {name:'Kesetaraan', img:'kesetaraan.webp'},
-  {name:'Persaudaraan', img:'persaudaraan.webp'},
-  {name:'Kesederhanaan', img:'kesederhanaan.webp'},
-  {name:'Kesatriaan', img:'kesatriaan.webp'},
-  {name:'Pembebasan', img:'pembebasan.webp'},
-  {name:'Kearifan Lokal', img:'kearifan lokal.webp'}
+const VALUES=[
+  {name:'Ketauhidan',img:'ketauhidan.webp'},
+  {name:'Kemanusiaan',img:'kemanusiaan.webp'},
+  {name:'Keadilan',img:'keadilan.webp'},
+  {name:'Kesetaraan',img:'kesetaraan.webp'},
+  {name:'Persaudaraan',img:'persaudaraan.webp'},
+  {name:'Kesederhanaan',img:'kesederhanaan.webp'},
+  {name:'Kesatriaan',img:'kesatriaan.webp'},
+  {name:'Pembebasan',img:'pembebasan.webp'},
+  {name:'Kearifan Lokal',img:'kearifan lokal.webp'}
 ];
 
-const ISSUES = [
-  {kombinasi:["Ketauhidan","Kemanusiaan"],daftar_isu:["Sekelompok warga menolak pemakaman jenazah warga yang terpapar wabah penyakit atau warga beda aliran di TPU desa setempat karena alasan takut tertular dan beda keyakinan."]},
-  {kombinasi:["Ketauhidan","Keadilan"],daftar_isu:["Seorang guru honorer yang sudah mengabdi belasan tahun hanya digaji Rp300.000 per bulan, lalu diminta oleh pengurus yayasan untuk ikhlas karena mengajar adalah ladang pahala akhirat."]},
-  {kombinasi:["Ketauhidan","Kesetaraan"],daftar_isu:["Siswa dari kelompok agama minoritas di sekolah negeri diwajibkan mengikuti kegiatan keagamaan mayoritas dan dipaksa memakai atribut keagamaan tertentu sebagai syarat kelulusan."]},
-  {kombinasi:["Ketauhidan","Pembebasan"],daftar_isu:["Seorang anak perempuan dipaksa putus sekolah dan dinikahkan di usia dini oleh orang tuanya dengan dalih menjalankan kewajiban agama semata untuk menghindari fitnah, tanpa mempertimbangkan masa depan dan kesiapan sang anak."]},
-  {kombinasi:["Ketauhidan","Persaudaraan"],daftar_isu:["Beredar pesan berantai di grup WhatsApp warga komplek yang melarang warganya membeli dagangan di warung tetangga sebelah hanya karena pemilik warung berbeda pilihan calon kepala desa dan beda pengajian."]},
-  {kombinasi:["Ketauhidan","Kesederhanaan"],daftar_isu:["Pengurus tempat ibadah membangun pagar dan menara megah senilai ratusan juta rupiah, padahal jalanan depan tempat ibadah becek berlubang dan tetangga sampingnya hidup kekurangan."]},
-  {kombinasi:["Ketauhidan","Kesatriaan"],daftar_isu:["Guru di sekolah melihat kepala sekolah memotong dana Program Indonesia Pintar (PIP) milik siswa miskin, namun guru tersebut memilih diam karena takut dipindahkan ke pelosok."]},
-  {kombinasi:["Ketauhidan","Kearifan Lokal"],daftar_isu:["Tradisi seni tutur kidung doa dan ritual sedekah bumi yang memuat nilai syukur kepada Tuhan dituduh syirik serta dibubarkan paksa oleh sekelompok pendatang tanpa dialog kultural."]},
-  {kombinasi:["Kemanusiaan","Keadilan"],daftar_isu:["Warga bantaran sungai digusur paksa oleh aparat satpol PP menggunakan alat berat tanpa diberikan uang ganti rugi atau tempat relokasi yang layak huni."]},
-  {kombinasi:["Kemanusiaan","Kesetaraan"],daftar_isu:["Di sebuah puskesmas daerah, pasien pengguna BPJS Kesehatan kelas bawah sering diabaikan dan disuruh menunggu seharian, sedangkan pasien umum berbayar langsung dilayani di ruang dokter."]},
-  {kombinasi:["Kemanusiaan","Pembebasan"],daftar_isu:["Remaja dari keluarga miskin putus sekolah dan dipaksa menjadi pengamen atau manusia perak di lampu merah oleh sindikat demi menyetor uang setiap hari."]},
-  {kombinasi:["Kemanusiaan","Persaudaraan"],daftar_isu:["Seorang mahasiswa dari luar pulau sulit mendapatkan kamar indekos karena pemilik kos secara terang-terangan menulis aturan menolak suku tertentu akibat stereotip negatif."]},
-  {kombinasi:["Kemanusiaan","Kesederhanaan"],daftar_isu:["Dalam acara hajatan pernikahan mewah di desa, makanan katering tersisa sangat banyak dan dibuang langsung ke tong sampah, sementara banyak buruh tani di sekitar gedung kelaparan karena paceklik."]},
-  {kombinasi:["Kemanusiaan","Kesatriaan"],daftar_isu:["Seorang siswa kelas 7 dipalak dan diancam di toilet sekolah setiap jam istirahat oleh seniornya, namun teman-teman sekelas yang mengetahui kejadian itu memilih bungkam karena takut dipukuli."]},
-  {kombinasi:["Kemanusiaan","Kearifan Lokal"],daftar_isu:["Tata krama bertutur kata sopan (unggah-ungguh), etika lisan, dan nilai empati (tepa salira) mulai hilang, digantikan oleh budaya saling merundung serta memaki dengan kata-kata kasar di media sosial."]},
-  {kombinasi:["Keadilan","Kesetaraan"],daftar_isu:["Penerimaan pegawai honorer di kantor dinas kelurahan diisi oleh anak dan keponakan kepala desa tanpa seleksi terbuka, mengabaikan pelamar lain yang lebih berkompeten."]},
-  {kombinasi:["Keadilan","Pembebasan"],daftar_isu:["Petani kecil penyewa lahan terlilit utang ijon dengan tengkulak karena harga pupuk dimainkan, sehingga hasil panen habis disita tanpa sisa untuk makan keluarga."]},
-  {kombinasi:["Keadilan","Persaudaraan"],daftar_isu:["Penyaluran bantuan beras dari pemerintah (Bansos) dibagikan ketua RT hanya kepada tetangga yang mendukungnya saat pemilihan RT, sementara warga miskin lain yang tidak memilihnya dicoret dari daftar penerima."]},
-  {kombinasi:["Keadilan","Kesederhanaan"],daftar_isu:["Anggaran desa yang seharusnya dipakai untuk menambal jalan rusak penghubung sawah justru dihabiskan kades untuk membeli mobil dinas baru dan merenovasi ruang kerjanya."]},
-  {kombinasi:["Keadilan","Kesatriaan"],daftar_isu:["Pengendara motor menabrak gerobak pedagang bakso hingga kuah panas tumpah dan gerobak rusak, lalu pelaku langsung tancap gas melarikan diri tanpa mengganti rugi."]},
-  {kombinasi:["Keadilan","Kearifan Lokal"],daftar_isu:["Aturan adat takbenda tentang hukum giliran pembagian air sawah (ulu-ulu/mitra cai) dilanggar secara sepihak oleh pemilik tanah luas dengan menjebol pintu air pada malam hari."]},
-  {kombinasi:["Kesetaraan","Pembebasan"],daftar_isu:["Di sebuah desa, anak perempuan dilarang melanjutkan sekolah ke jenjang SMA/kuliah oleh orang tuanya karena dianggap ujung-ujungnya hanya akan bekerja di dapur."]},
-  {kombinasi:["Kesetaraan","Persaudaraan"],daftar_isu:["Siswa di sekolah mengelompokkan diri dalam geng-geng tertentu; anak yang memakai sepatu murah dan membawa bekal nasi tidak diajak mengobrol oleh anak-anak yang jajan di kafe mahal."]},
-  {kombinasi:["Kesetaraan","Kesederhanaan"],daftar_isu:["Tamu undangan hajatan kampung yang datang naik sepeda motor ditempatkan di teras luar dan disajikan snack biasa, sedangkan tamu yang naik mobil pejabat dipersilakan duduk di sofa dalam dan dilayani prasmanan khusus."]},
-  {kombinasi:["Kesetaraan","Kesatriaan"],daftar_isu:["Ketua organisasi siswa menolak saran perbaikan teknis dari adik kelas saat acara pensi mengalami kendala kelistrikan hanya karena gengsi dianggap kalah pintar oleh junior."]},
-  {kombinasi:["Kesetaraan","Kearifan Lokal"],daftar_isu:["Forum musyawarah rembuk warga desa melarang kaum perempuan dan pemuda menyampaikan pendapat karena dianggap menyalahi kebiasaan lama yang hanya memberi panggung kepada laki-laki tua."]},
-  {kombinasi:["Pembebasan","Persaudaraan"],daftar_isu:["Menjelang pemilihan kades, beredar selebaran fitnah isu SARA bahwa calon nomor urut 1 bersekutu dengan kelompok agama lain untuk menggusur pasar tradisional, hingga warga dua kubu saling melempar batu."]},
-  {kombinasi:["Pembebasan","Kesederhanaan"],daftar_isu:["Seorang mahasiswa terjerat 5 aplikasi pinjaman online (pinjol) ilegal dengan bunga mencekik karena memaksakan diri membeli ponsel pintar terbaru dan sering nongkrong di kafe mahal demi konten media sosial."]},
-  {kombinasi:["Pembebasan","Kesatriaan"],daftar_isu:["Seorang bendahara panitia pembangunan tempat ibadah berani menegur dan menolak perintah ketua panitia yang ingin memakai uang infak kas warga untuk keperluan dana kampanye pribadi."]},
-  {kombinasi:["Pembebasan","Kearifan Lokal"],daftar_isu:["Falsafah leluhur memayu hayuning bawana (kewajiban etis menjaga keharmonisan alam) ditinggalkan demi keserakahan ekonomi, mengakibatkan bukit resapan air ditebang liar hingga memicu longsor."]},
-  {kombinasi:["Persaudaraan","Kesederhanaan"],daftar_isu:["Pertemuan arisan keluarga besar atau reuni sekolah berubah menjadi ajang saling pamer tas bermerek, jabatan pasangan, dan capaian materi, sehingga saudara yang miskin merasa malu dan memilih tidak pernah datang lagi."]},
-  {kombinasi:["Persaudaraan","Kesatriaan"],daftar_isu:["Terjadi saling ejek antarsuporter futsal antarsekolah di Instagram hingga berujung tawuran di jalan raya, lalu kapten kedua tim berani saling bersalaman dan memimpin suporternya meminta maaf kepada warga yang terganggu."]},
-  {kombinasi:["Persaudaraan","Kearifan Lokal"],daftar_isu:["Budaya tolong-menolong takbenda saat hajatan warga (sinoman/sambatan) dan tembang dolanan anak yang merekatkan empati ditinggalkan, digantikan oleh pola hidup individualis yang acuh tak acuh."]},
-  {kombinasi:["Kesederhanaan","Kesatriaan"],daftar_isu:["Pemilik bengkel motor membuang puluhan liter oli bekas ke saluran selokan umum tengah malam agar tidak membayar retribusi limbah B3, lalu mengelak dan marah saat warga menegurnya karena sumur mereka tercemar bau oli."]},
-  {kombinasi:["Kesederhanaan","Kearifan Lokal"],daftar_isu:["Falsafah hidup bersahaja nrimo ing pandum (keikhlasan batin dan rasa cukup) ditinggalkan, sehingga warga memaksakan diri berutang ke rentenir demi gengsi menggelar pesta hajatan mewah berhari-hari."]},
-  {kombinasi:["Kesatriaan","Kearifan Lokal"],daftar_isu:["Dua perguruan silat lokal yang memiliki ajaran budi pekerti luhur terlibat gesekan di jalan raya; alih-alih menyelesaikan perselisihan secara terhormat lewat mediasi sesepuh pendekar, oknum anggota justru mengeroyok warga yang melintas."]}
-];
+const NAME_MAP={
+  'Ksatriaan':'Kesatriaan',
+  'Kearifan Tradisi':'Kearifan Lokal'
+};
 
-let selected = [];
-let locked = false;
-let usedCombos = new Set();
+function mapName(n){return NAME_MAP[n]||n}
 
-const grid = document.getElementById('cardsGrid');
-const info = document.getElementById('selectedInfo');
-const modal = document.getElementById('modal');
-const comboInfo = document.getElementById('comboInfo');
+function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
 
-function shuffle(arr) {
-  for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [arr[i], arr[j]] = [arr[j], arr[i]];
-  }
-  return arr;
-}
-
-function findIssue(a, b) {
-  const nameA = VALUES[a].name;
-  const nameB = VALUES[b].name;
-  const issue = ISSUES.find(isu => {
-    const k = isu.kombinasi;
-    return (k[0]===nameA && k[1]===nameB) || (k[0]===nameB && k[1]===nameA);
-  });
-  if (!issue) return null;
-  const randomIdx = Math.floor(Math.random() * issue.daftar_isu.length);
-  return { pernyataan_isu: issue.daftar_isu[randomIdx] };
-}
-
-function spawnParticles(x, y) {
-  const colors = ['#f5c518','#0d7a3f','#10b94e','#34d058','#e6a817'];
-  for (let i = 0; i < 20; i++) {
-    const p = document.createElement('div');
-    p.className = 'particle';
-    p.style.left = x + 'px';
-    p.style.top = y + 'px';
-    p.style.background = colors[Math.floor(Math.random()*colors.length)];
-    p.style.setProperty('--tx', (Math.random()-0.5)*300 + 'px');
-    p.style.setProperty('--ty', (Math.random()-0.5)*300 + 'px');
+function spawnParticles(x,y){
+  const colors=['#f5c518','#0d7a3f','#10b94e','#34d058','#e6a817'];
+  for(let i=0;i<15;i++){
+    const p=document.createElement('div');
+    p.className='particle';
+    p.style.left=x+'px';p.style.top=y+'px';
+    p.style.background=colors[Math.floor(Math.random()*colors.length)];
+    p.style.setProperty('--tx',(Math.random()-0.5)*300+'px');
+    p.style.setProperty('--ty',(Math.random()-0.5)*300+'px');
     document.body.appendChild(p);
-    setTimeout(() => p.remove(), 1000);
+    setTimeout(()=>p.remove(),1000);
   }
 }
 
-function renderCards() {
-  grid.innerHTML = '';
-  const indices = shuffle([...Array(9).keys()]);
-  indices.forEach((idx, i) => {
-    const wrapper = document.createElement('div');
-    wrapper.className = 'card-wrapper';
-    wrapper.dataset.idx = idx;
-    wrapper.innerHTML = `
-      <div class="card">
-        <div class="card-face card-back"><img src="back.webp" alt="Back"></div>
-        <div class="card-face card-front"><img src="${VALUES[idx].img}" alt="${VALUES[idx].name}"></div>
-      </div>`;
-    wrapper.addEventListener('click', () => onCardClick(wrapper, idx));
-    grid.appendChild(wrapper);
+const grid=document.getElementById('cardsGrid');
+const statusInfo=document.getElementById('statusInfo');
+const issuePanel=document.getElementById('issuePanel');
+const revealBtn=document.getElementById('revealBtn');
+const explainModal=document.getElementById('explainModal');
+const counterInfo=document.getElementById('counterInfo');
+const issueView=document.getElementById('issueView');
+const cardsView=document.getElementById('cardsView');
+const timerBar=document.getElementById('timerBar');
+const timerText=document.getElementById('timerText');
 
-    // Staggered entrance: flip from back to front
-    setTimeout(() => {
-      wrapper.querySelector('.card').classList.add('show-front');
-      playFlip();
-    }, 200 + i * 120);
-  });
+let allIssues=[];
+let currentIssueIdx=0;
+let timerInterval=null;
+let timeLeft=30;
+let gamePhase='idle';
+let answeredCount=0;
+
+function showCardsView(){
+  issueView.classList.add('hidden-right');
+  issueView.classList.remove('hidden-left');
+  cardsView.classList.remove('hidden-left','hidden-right');
+}
+function showIssueView(){
+  cardsView.classList.add('hidden-right');
+  cardsView.classList.remove('hidden-left');
+  issueView.classList.remove('hidden-left','hidden-right');
 }
 
-function onCardClick(wrapper, idx) {
-  if (locked) return;
-  if (wrapper.classList.contains('selected')) {
-    wrapper.classList.remove('selected');
-    selected = selected.filter(s => s.wrapper !== wrapper);
-    if (selected.length === 0) {
-      info.textContent = 'Klik kartu untuk memilih nilai pertama';
-    } else {
-      info.innerHTML = `Nilai pertama: <span class="val">${VALUES[selected[0].idx].name}</span> — pilih nilai kedua`;
-    }
+async function loadIssues(){
+  try{
+    const resp=await fetch('isu new concept.json');
+    allIssues=await resp.json();
+    shuffle(allIssues);
+  }catch(e){
+    console.error('Gagal load isu:',e);
+    allIssues=[];
+  }
+}
+
+function showIssue(){
+  if(currentIssueIdx>=allIssues.length){
+    issueView.classList.remove('hidden-right','hidden-left');
+    cardsView.classList.add('hidden-right');
+    issuePanel.innerHTML='<div style="text-align:center;padding:40px 20px"><div class="issue-judul" style="font-size:1.3rem;margin-bottom:10px">Semua isu sudah selesai!</div><div class="issue-kasus" style="border:none;background:none;padding:0">Total isu yang dijawab: '+answeredCount+'</div></div>';
+    issuePanel.classList.add('show');
+    counterInfo.textContent='';
     return;
   }
-
-  wrapper.classList.add('selected');
-  selected.push({wrapper, idx});
-  playSelect();
-
-  if (selected.length === 1) {
-    info.innerHTML = `Nilai pertama: <span class="val">${VALUES[idx].name}</span> — pilih nilai kedua`;
-  } else if (selected.length === 2) {
-    locked = true;
-    const [a, b] = selected;
-    info.innerHTML = `<span class="val">${VALUES[a.idx].name}</span> + <span class="val">${VALUES[b.idx].name}</span> — mengungkap isu...`;
-
-    // Phase 1: fade out all unselected cards
-    document.querySelectorAll('.card-wrapper').forEach(w => {
-      if (w !== a.wrapper && w !== b.wrapper) {
-        w.classList.add('fade-out');
-      }
-    });
-
-    // Phase 2: after others disappear, merge the 2 selected
-    setTimeout(() => {
-      const rA = a.wrapper.getBoundingClientRect();
-      const rB = b.wrapper.getBoundingClientRect();
-
-      // Calculate midpoint between the two cards
-      const midX = (rA.left + rA.right + rB.left + rB.right) / 4;
-      const midY = (rA.top + rA.bottom + rB.top + rB.bottom) / 4;
-
-      // Calculate offset each card needs to move to meet at midpoint
-      const offAx = midX - (rA.left + rA.width / 2);
-      const offAy = midY - (rA.top + rA.height / 2);
-      const offBx = midX - (rB.left + rB.width / 2);
-      const offBy = midY - (rB.top + rB.height / 2);
-
-      // Apply merge transform via JS
-      a.wrapper.style.transition = 'transform .8s cubic-bezier(.4,0,.2,1), opacity .8s ease, filter .8s ease';
-      b.wrapper.style.transition = 'transform .8s cubic-bezier(.4,0,.2,1), opacity .8s ease, filter .8s ease';
-
-      a.wrapper.style.filter = 'brightness(1.5)';
-      b.wrapper.style.filter = 'brightness(1.5)';
-
-      requestAnimationFrame(() => {
-        a.wrapper.style.transform = `translate(${offAx}px, ${offAy}px) scale(.3) rotate(-10deg)`;
-        a.wrapper.style.opacity = '0';
-        b.wrapper.style.transform = `translate(${offBx}px, ${offBy}px) scale(.3) rotate(10deg)`;
-        b.wrapper.style.opacity = '0';
-      });
-
-      spawnParticles(midX, midY);
-      playMerge();
-
-      const flash = document.createElement('div');
-      flash.className = 'merge-flash';
-      document.body.appendChild(flash);
-      setTimeout(() => flash.remove(), 1200);
-
-      setTimeout(() => showIssue(a.idx, b.idx), 900);
-    }, 600);
-  }
+  showIssueView();
+  const issue=allIssues[currentIssueIdx];
+  document.getElementById('issueJudul').textContent=issue.judul;
+  document.getElementById('issueKategori').textContent=issue.kategori;
+  document.getElementById('issueKasus').textContent=issue.kasus;
+  issuePanel.classList.add('show');
+  counterInfo.textContent='Isu '+ (currentIssueIdx+1)+' / '+allIssues.length;
+  startTimer();
 }
 
-function showIssue(idxA, idxB) {
-  const issue = findIssue(idxA, idxB);
-  document.getElementById('val1').textContent = VALUES[idxA].name;
-  document.getElementById('val2').textContent = VALUES[idxB].name;
-  document.getElementById('issueText').textContent = issue ? issue.pernyataan_isu : 'Isu tidak ditemukan.';
-
-  const key = [VALUES[idxA].name, VALUES[idxB].name].sort().join('+');
-  usedCombos.add(key);
-  comboInfo.textContent = `Kombinasi sudah digunakan: ${usedCombos.size} / 36`;
-
-  modal.classList.add('show');
-  playPopup();
+function startTimer(){
+  clearInterval(timerInterval);
+  timeLeft=30;
+  timerBar.style.width='100%';
+  timerBar.classList.remove('urgent');
+  timerText.textContent='0:30';
+  gamePhase='timer';
+  timerInterval=setInterval(()=>{
+    timeLeft--;
+    const pct=(timeLeft/30)*100;
+    timerBar.style.width=pct+'%';
+    const m=Math.floor(timeLeft/60);
+    const s=timeLeft%60;
+    timerText.textContent=m+':'+(s<10?'0':'')+s;
+    if(timeLeft<=10)timerBar.classList.add('urgent');
+    if(timeLeft<=0){
+      clearInterval(timerInterval);
+      timerBar.style.width='0%';
+      timerText.textContent='0:00';
+      gamePhase='reveal';
+      revealBtn.classList.add('show');
+    }
+  },1000);
 }
 
-function resetGame() {
-  modal.classList.remove('show');
-  selected = [];
-  locked = false;
-  info.textContent = 'Klik kartu untuk memilih nilai pertama';
+function renderCards(){
+  grid.innerHTML='';
+  const indices=shuffle([...Array(9).keys()]);
+  indices.forEach((idx,i)=>{
+    const wrapper=document.createElement('div');
+    wrapper.className='card-wrapper';
+    wrapper.dataset.idx=idx;
+    wrapper.innerHTML=`<div class="card"><div class="card-face card-back"><img src="back.webp" alt="Back"></div><div class="card-face card-front"><img src="${VALUES[idx].img}" alt="${VALUES[idx].name}"></div></div>`;
+    grid.appendChild(wrapper);
+  });
+}
 
-  document.querySelectorAll('.card-wrapper').forEach(w => {
-    w.classList.remove('selected', 'fade-out');
-    w.style.cssText = 'transition:none';
-    const card = w.querySelector('.card');
-    card.classList.remove('show-front');
-    card.style.transition = 'none';
+function flipAllCards(callback){
+  const wrappers=grid.querySelectorAll('.card-wrapper');
+  wrappers.forEach((w,i)=>{
+    setTimeout(()=>{
+      w.querySelector('.card').classList.add('show-front');
+      playFlip();
+    },100+i*150);
+  });
+  setTimeout(callback,100+wrappers.length*150+200);
+}
+
+function highlightAnswerCards(answerNames){
+  const mappedNames=answerNames.map(mapName);
+  const wrappers=Array.from(grid.querySelectorAll('.card-wrapper'));
+  const correctWrappers=wrappers.filter(w=>{
+    const idx=parseInt(w.dataset.idx);
+    return mappedNames.includes(VALUES[idx].name);
   });
 
-  // Force reflow then re-render
-  void document.body.offsetHeight;
-  setTimeout(() => renderCards(), 50);
+  let scanCount=0;
+  const totalScans=28;
+  let prevScanned=null;
+  let interval=150;
+
+  function scanStep(){
+    if(prevScanned)prevScanned.classList.remove('scanning');
+    const randIdx=Math.floor(Math.random()*wrappers.length);
+    const randWrapper=wrappers[randIdx];
+    randWrapper.classList.add('scanning');
+    prevScanned=randWrapper;
+    scanCount++;
+    playScan();
+
+    if(scanCount<totalScans){
+      interval=Math.max(55,150-scanCount*4);
+      setTimeout(scanStep,interval);
+    }else{
+      if(prevScanned)prevScanned.classList.remove('scanning');
+      statusInfo.innerHTML='Jawaban: <span class="val">'+answerNames.join(' & ')+'</span>';
+      let hlCount=0;
+      correctWrappers.forEach((w,i)=>{
+        setTimeout(()=>{
+          w.classList.add('highlight');
+          spawnParticles(
+            w.getBoundingClientRect().left+w.getBoundingClientRect().width/2,
+            w.getBoundingClientRect().top+w.getBoundingClientRect().height/2
+          );
+          playSelect();
+        },i*400);
+      });
+      hlCount=correctWrappers.length;
+      setTimeout(()=>{
+        showExplainModal(allIssues[currentIssueIdx]);
+      },hlCount*400+1200);
+    }
+  }
+  statusInfo.innerHTML='Mencari jawaban...';
+  scanStep();
 }
 
-document.getElementById('startBtn').addEventListener('click', () => {
+revealBtn.addEventListener('click',()=>{
+  if(gamePhase!=='reveal')return;
   playClick();
-  document.getElementById('startScreen').classList.add('hidden');
+  gamePhase='flip';
+  revealBtn.classList.remove('show');
+  issuePanel.classList.remove('show');
+
   renderCards();
-  comboInfo.textContent = `Kombinasi sudah digunakan: ${usedCombos.size} / 36`;
+  showCardsView();
+  statusInfo.innerHTML='Membalik kartu...';
+
+  setTimeout(()=>{
+    flipAllCards(()=>{
+      const issue=allIssues[currentIssueIdx];
+      highlightAnswerCards(issue.jawaban);
+    });
+  },500);
 });
 
-document.getElementById('modalClose').addEventListener('click', () => { playClick(); resetGame(); });
-modal.addEventListener('click', e => { if (e.target === modal) resetGame(); });
+function showExplainModal(issue){
+  const mapped=issue.jawaban.map(mapName);
+  document.getElementById('expVal1').textContent=mapped[0]||'';
+  document.getElementById('expVal2').textContent=mapped[1]||'';
+  document.getElementById('expTitle').textContent=issue.judul;
+  document.getElementById('expIssue').textContent=issue.kasus;
+  document.getElementById('expPenjelasan').textContent=issue.penjelasan;
 
-document.getElementById('openNilai').addEventListener('click', () => {
+  const plusEl=explainModal.querySelector('.plus');
+  if(mapped.length<2){plusEl.style.display='none';document.getElementById('expVal2').style.display='none'}
+  else{plusEl.style.display='';document.getElementById('expVal2').style.display=''}
+
+  explainModal.classList.add('show');
+  playPopup();
+  gamePhase='explain';
+  answeredCount++;
+}
+
+document.getElementById('expCloseBtn').addEventListener('click',()=>{
+  playClick();
+  explainModal.classList.remove('show');
+  currentIssueIdx++;
+  gamePhase='idle';
+  setTimeout(()=>showIssue(),300);
+});
+
+document.getElementById('expNextBtn').addEventListener('click',()=>{
+  playClick();
+  explainModal.classList.remove('show');
+  currentIssueIdx++;
+  gamePhase='idle';
+  setTimeout(()=>showIssue(),300);
+});
+
+explainModal.addEventListener('click',e=>{
+  if(e.target===explainModal){
+    explainModal.classList.remove('show');
+    currentIssueIdx++;
+    gamePhase='idle';
+    setTimeout(()=>showIssue(),300);
+  }
+});
+
+document.getElementById('startBtn').addEventListener('click',()=>{
+  playClick();
+  document.getElementById('startScreen').classList.add('hidden');
+  loadIssues().then(()=>showIssue());
+});
+
+document.getElementById('openNilai').addEventListener('click',()=>{
   playClick();
   document.getElementById('nilaiPage').classList.add('show');
 });
-document.getElementById('closeNilai').addEventListener('click', () => {
+document.getElementById('closeNilai').addEventListener('click',()=>{
   playClick();
   document.getElementById('nilaiPage').classList.remove('show');
 });
