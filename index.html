@@ -62,11 +62,6 @@ body{font-family:'Poppins',sans-serif;background:linear-gradient(160deg,#0d7a3f 
 .issue-kategori{font-size:clamp(.68rem,2.5vw,.82rem);text-transform:uppercase;letter-spacing:1.5px;color:#0d7a3f;font-weight:700;margin-bottom:8px;word-wrap:break-word}
 .issue-kasus{font-size:clamp(.92rem,3.6vw,1.15rem);color:#2a4a3a;line-height:1.8;background:linear-gradient(135deg,#e8f5e9,#f0faf2);border-radius:14px;padding:clamp(14px,3.5vw,22px) clamp(14px,3.5vw,24px);border-left:5px solid #10b94e;word-wrap:break-word;overflow-wrap:break-word}
 .issue-judul{font-size:clamp(1.1rem,4.5vw,1.45rem);font-weight:800;color:#0d7a3f;margin-bottom:10px;line-height:1.3;word-wrap:break-word}
-.timer-wrap{display:flex;align-items:center;gap:clamp(8px,2vw,14px);margin-top:clamp(14px,3vw,18px);flex-wrap:nowrap}
-.timer-bar-bg{flex:1;height:clamp(10px,2.5vw,14px);background:rgba(13,122,63,.1);border-radius:14px;overflow:hidden;min-width:0}
-.timer-bar{height:100%;background:linear-gradient(90deg,#10b94e,#34d058);border-radius:14px;transition:width 1s linear;width:100%}
-.timer-bar.urgent{background:linear-gradient(90deg,#e53935,#f5c518)}
-.timer-text{font-size:clamp(1.15rem,4vw,1.6rem);font-weight:800;color:#0d7a3f;min-width:48px;text-align:center;font-variant-numeric:tabular-nums;flex-shrink:0}
 
 .reveal-btn{display:none;margin:clamp(16px,3vw,20px) auto 0;padding:clamp(12px,3vw,16px) clamp(28px,6vw,48px);font-size:clamp(.95rem,3.5vw,1.1rem);font-weight:700;border:none;border-radius:30px;background:linear-gradient(135deg,#f5c518,#e6a817);color:#0d4a20;cursor:pointer;box-shadow:0 4px 20px rgba(245,197,24,.4);transition:transform .2s,box-shadow .2s;max-width:100%;white-space:nowrap}
 .reveal-btn.show{display:block;animation:popIn .4s cubic-bezier(.4,0,.2,1)}
@@ -125,7 +120,7 @@ body{font-family:'Poppins',sans-serif;background:linear-gradient(160deg,#0d7a3f 
 .particle{position:fixed;width:8px;height:8px;border-radius:50%;pointer-events:none;z-index:150;animation:particleFly 1s forwards}
 @keyframes particleFly{0%{opacity:1;transform:translate(0,0) scale(1)}100%{opacity:0;transform:translate(var(--tx),var(--ty)) scale(0)}}
 
-.nilai-page{position:fixed;inset:0;z-index:900;background:#fff;overflow-y:auto;opacity:0;visibility:hidden;transition:opacity .4s,visibility .4s}
+.nilai-page{position:fixed;inset:0;z-index:1100;background:#fff;overflow-y:auto;opacity:0;visibility:hidden;transition:opacity .4s,visibility .4s}
 .nilai-page.show{opacity:1;visibility:visible}
 .nilai-page-header{position:sticky;top:0;z-index:10;background:linear-gradient(135deg,#0d7a3f,#10b94e,#34d058);padding:16px 20px;display:flex;align-items:center;gap:14px;box-shadow:0 2px 16px rgba(13,122,63,.2)}
 .nilai-page-header .back-btn{background:rgba(255,255,255,.2);border:none;color:#fff;width:40px;height:40px;border-radius:12px;font-size:1.2rem;cursor:pointer;transition:background .2s;flex-shrink:0}
@@ -152,6 +147,53 @@ body{font-family:'Poppins',sans-serif;background:linear-gradient(160deg,#0d7a3f 
 @keyframes dotPulse{0%,80%,100%{transform:scale(.6);opacity:.4}40%{transform:scale(1.2);opacity:1}}
 
 .counter-info{text-align:center;font-size:.8rem;color:#5a8a6a;margin-top:12px;background:rgba(255,255,255,.5);backdrop-filter:blur(6px);padding:8px 16px;border-radius:10px;display:inline-block;width:fit-content}
+
+/* === ACTION CALL PAGE === */
+.action-call-panel{background:rgba(255,255,255,.88);backdrop-filter:blur(14px);border-radius:24px;padding:clamp(20px,5vw,36px) clamp(16px,4vw,32px);border:1px solid rgba(13,122,63,.12);box-shadow:0 6px 30px rgba(13,122,63,.09);text-align:center;animation:slideUp .5s cubic-bezier(.4,0,.2,1)}
+.action-badge{display:inline-block;background:linear-gradient(135deg,#e53935,#b71c1c);color:#fff;font-weight:800;font-size:.78rem;letter-spacing:1.2px;padding:7px 16px;border-radius:20px;margin-bottom:12px;box-shadow:0 3px 12px rgba(229,57,53,.35)}
+.action-title{font-size:clamp(1.4rem,5vw,1.9rem);font-weight:800;color:#0d7a3f;margin-bottom:8px}
+.action-desc{font-size:clamp(.85rem,3vw,.95rem);color:#2a4a3a;line-height:1.7;margin-bottom:20px;background:linear-gradient(135deg,#fff3e0,#fff8e1);border-radius:12px;padding:12px 16px;border:1px solid rgba(245,197,24,.25)}
+.action-desc strong{color:#c8870a}
+.action-cards{display:flex;gap:clamp(14px,4vw,28px);justify-content:center;align-items:flex-start;flex-wrap:wrap;margin-bottom:18px}
+.action-card-wrap{perspective:1200px;width:clamp(140px,38vw,200px);cursor:pointer;transition:transform .3s,opacity .3s,filter .3s;flex-shrink:0}
+.action-card-wrap:hover{transform:translateY(-4px)}
+.action-card-wrap.used{opacity:.42;pointer-events:none;filter:grayscale(.6)}
+.action-card-wrap.disabled{opacity:.42;pointer-events:none;filter:grayscale(.4)}
+.action-card-wrap.selected{opacity:1;filter:none;pointer-events:none}
+.action-card-wrap.selected .action-card{animation:none !important;transform:rotateY(180deg) !important}
+.action-card-wrap.selected::after{content:'\2714 TERPILIH';position:absolute;bottom:38px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,#0d7a3f,#10b94e);color:#fff;font-size:.72rem;font-weight:800;padding:5px 12px;border-radius:20px;white-space:nowrap;box-shadow:0 3px 12px rgba(13,122,63,.35);z-index:5}
+.action-card-wrap.used::after{content:'SUDAH DIPAKAI';position:absolute;bottom:38px;left:50%;transform:translateX(-50%);background:#9e9e9e;color:#fff;font-size:.68rem;font-weight:700;padding:4px 10px;border-radius:20px;white-space:nowrap;z-index:5}
+.action-card{width:100%;aspect-ratio:3/4;position:relative;transform-style:preserve-3d;transition:transform .7s cubic-bezier(.4,0,.2,1);animation:slowFlip 3.8s ease-in-out infinite}
+.action-card-wrap:nth-child(2) .action-card{animation-delay:.6s}
+.action-card .card-face{position:absolute;inset:0;backface-visibility:hidden;border-radius:16px;overflow:hidden;box-shadow:0 4px 18px rgba(0,0,0,.12);border:2px solid rgba(13,122,63,.08)}
+.action-card .card-face img{width:100%;height:100%;object-fit:contain;display:block}
+.action-card .card-front{transform:rotateY(180deg)}
+.action-label{margin-top:10px;font-weight:800;font-size:1rem;color:#0d7a3f;letter-spacing:.5px}
+.action-sublabel{font-size:.75rem;color:#6a8a6a;font-weight:600}
+.action-note{min-height:22px;font-size:.88rem;color:#2a5a3a;margin-top:6px;font-weight:600}
+.action-note.warn{color:#b71c1c}
+@keyframes slowFlip{0%,100%{transform:rotateY(0deg)}50%{transform:rotateY(180deg)}}
+.action-card-wrap.selected.highlight-action{animation:cardGlow 1.2s ease-in-out infinite;z-index:3}
+.action-continue-btn{margin:18px auto 0;padding:14px 36px;font-size:1rem;font-weight:800;border:none;border-radius:30px;background:linear-gradient(135deg,#0d7a3f,#10b94e);color:#fff;cursor:pointer;box-shadow:0 4px 20px rgba(13,122,63,.25);transition:transform .2s,box-shadow .2s;display:block}
+.action-continue-btn:hover{transform:scale(1.05);box-shadow:0 6px 28px rgba(13,122,63,.35)}
+.action-continue-btn.secondary{background:linear-gradient(135deg,#9e9e9e,#757575)}
+.start-menu-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.start-menu-btn{background:rgba(255,255,255,.18);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.28);color:#fff;font-weight:700;font-size:.85rem;padding:10px 18px;border-radius:22px;cursor:pointer;transition:transform .2s,background .2s,box-shadow .2s}
+.start-menu-btn:hover{transform:translateY(-2px);background:rgba(255,255,255,.28);box-shadow:0 4px 16px rgba(0,0,0,.12)}
+.poin-rule-grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:8px}
+.poin-rule-item{background:linear-gradient(135deg,#f0faf4,#fff);border:1px solid rgba(13,122,63,.1);border-radius:16px;padding:14px 16px;display:flex;gap:14px;align-items:center;box-shadow:0 2px 10px rgba(13,122,63,.05)}
+.poin-visual{display:flex;gap:6px;align-items:center;flex-shrink:0}
+.poin-visual img{width:52px;height:70px;object-fit:contain;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.1);border:1px solid rgba(13,122,63,.08);background:#fff}
+.poin-visual .poin-multi{font-weight:800;color:#0d7a3f;font-size:.9rem}
+.poin-badge{font-weight:800;font-size:.85rem;padding:6px 10px;border-radius:20px;color:#fff;flex-shrink:0;min-width:56px;text-align:center}
+.poin-badge.pos{background:linear-gradient(135deg,#0d7a3f,#10b94e)}
+.poin-badge.neg{background:linear-gradient(135deg,#e53935,#b71c1c)}
+.poin-badge.zero{background:linear-gradient(135deg,#9e9e9e,#757575)}
+.poin-rule-item h4{font-size:.95rem;color:#0d7a3f;font-weight:800;margin-bottom:2px}
+.poin-rule-item p{font-size:.82rem;color:#333;line-height:1.6;margin:0}
+.poin-rule-item .check{color:#0d7a3f;font-weight:800}
+.poin-rule-item .cross{color:#b71c1c;font-weight:800}
+.poin-note{margin-top:16px;background:linear-gradient(135deg,#fff3e0,#fff8e1);border:1px solid rgba(245,197,24,.25);border-radius:12px;padding:12px 14px;font-size:.82rem;color:#5a4a1a;line-height:1.6;text-align:center}
 
 @media(max-width:600px){
   html,body{overflow-x:hidden;max-width:100vw}
@@ -245,6 +287,10 @@ body{font-family:'Poppins',sans-serif;background:linear-gradient(160deg,#0d7a3f 
     <div class="start-feature"><div class="feat-text">Mengenali Isu Sosial<br>di Lingkungan</div></div>
   </div>
   <button id="startBtn">Mulai Bermain</button>
+  <div class="start-menu-actions">
+    <button class="start-menu-btn" id="openNilai">9 Nilai</button>
+    <button class="start-menu-btn" id="openPoin">Aturan Poin</button>
+  </div>
 </div>
 
 <div class="header">
@@ -254,7 +300,6 @@ body{font-family:'Poppins',sans-serif;background:linear-gradient(160deg,#0d7a3f 
       <h1>9 Nilai Gusdur</h1>
       <div class="subtitle" id="headerSubtitle">Pilih 2 kartu untuk mengungkap isu</div>
     </div>
-    <button class="header-nilai-btn" id="openNilai">9 Nilai</button>
   </div>
 </div>
 
@@ -265,11 +310,7 @@ body{font-family:'Poppins',sans-serif;background:linear-gradient(160deg,#0d7a3f 
       <div class="issue-judul" id="issueJudul"></div>
       <div class="issue-kategori" id="issueKategori"></div>
       <div class="issue-kasus" id="issueKasus"></div>
-      <div class="timer-wrap">
-        <div class="timer-bar-bg"><div class="timer-bar" id="timerBar"></div></div>
-        <div class="timer-text" id="timerText">0:30</div>
-      </div>
-      <button class="reveal-btn" id="revealBtn">Lihat Jawaban</button>
+      <button class="reveal-btn show" id="revealBtn">Lihat Jawaban</button>
     </div>
     <div style="text-align:center"><div class="counter-info" id="counterInfo"></div></div>
   </div>
@@ -278,6 +319,40 @@ body{font-family:'Poppins',sans-serif;background:linear-gradient(160deg,#0d7a3f 
   <div class="game-view hidden-right" id="cardsView">
     <div class="status-info" id="statusInfo">Membalik kartu...</div>
     <div class="cards-grid" id="cardsGrid"></div>
+  </div>
+
+  <!-- PAGE 3: ACTION CALL VIEW (every 2 issues) -->
+  <div class="game-view hidden-right" id="actionView">
+    <div class="action-call-panel">
+      <div class="action-badge">ACTION CALL</div>
+      <h2 class="action-title">Sesi Action Call</h2>
+      <p class="action-desc">
+        Masing-masing pemain <strong>hanya bisa menggunakan sekali</strong> dalam permainan.<br>
+        Pilih <strong>salah satu kartu</strong> pada sesi ini — <em>EX (Exchange — Tukar Kartu)</em> atau <em>STOP</em> — untuk dipakai di momen krusial!
+      </p>
+      <div class="action-cards">
+        <div class="action-card-wrap" data-action="ex" id="cardEx">
+          <div class="action-card">
+            <div class="card-face card-back"><img src="back.webp" alt="Back"></div>
+            <div class="card-face card-front"><img src="ex.webp" alt="EX Card"></div>
+          </div>
+          <div class="action-label">EX</div>
+          <div class="action-sublabel">Exchange — Tukar Kartu</div>
+        </div>
+        <div class="action-card-wrap" data-action="stop" id="cardStop">
+          <div class="action-card">
+            <div class="card-face card-back"><img src="back.webp" alt="Back"></div>
+            <div class="card-face card-front"><img src="stop.webp" alt="STOP Card"></div>
+          </div>
+          <div class="action-label">STOP</div>
+          <div class="action-sublabel">Hentikan Lawan</div>
+        </div>
+      </div>
+      <div class="action-note" id="actionNote">Pilih salah satu kartu untuk sesi ini. Kartu yang sudah dipakai tidak bisa dipakai lagi!</div>
+      <button class="action-continue-btn" id="actionContinueBtn">Lanjut ke Isu Berikutnya &rarr;</button>
+      <button class="action-continue-btn secondary" id="actionSkipBtn" style="margin-top:10px;padding:10px 28px;font-size:.9rem;display:none">Lewati tanpa aksi</button>
+    </div>
+    <div style="text-align:center"><div class="counter-info" id="actionCounter"></div></div>
   </div>
 </div>
 
@@ -322,6 +397,47 @@ body{font-family:'Poppins',sans-serif;background:linear-gradient(160deg,#0d7a3f 
   </div>
 </div>
 
+<div class="nilai-page" id="poinPage">
+  <div class="nilai-page-header">
+    <button class="back-btn" id="closePoin">&larr;</button>
+    <h2>Aturan Poin</h2>
+  </div>
+  <div class="nilai-page-body">
+    <div style="text-align:center;margin-bottom:18px">
+      <div style="display:inline-block;background:linear-gradient(135deg,#0d7a3f,#10b94e);color:#fff;padding:8px 16px;border-radius:20px;font-weight:800;font-size:.85rem">Gunakan Gambar Kartu — Angkat &amp; Cocokkan Nilai</div>
+      <p style="font-size:.82rem;color:#5a8a6a;margin-top:8px;line-height:1.6">Pilih 0, 1, atau 2 kartu di setiap isu. Skor ditentukan dari kecocokan jawaban.</p>
+    </div>
+    <div class="poin-rule-grid">
+      <div class="poin-rule-item">
+        <div class="poin-visual"><img src="ketauhidan.webp" alt="Kartu"><span class="poin-multi">x1</span></div>
+        <div style="flex:1"><h4>Angkat 1 Kartu — Benar <span class="check">✔</span></h4><p>Kartu yang diangkat sesuai salah satu jawaban isu.</p></div>
+        <div class="poin-badge pos">+10</div>
+      </div>
+      <div class="poin-rule-item">
+        <div class="poin-visual"><img src="back.webp" alt="Kartu"><span class="poin-multi">x1</span></div>
+        <div style="flex:1"><h4>Angkat 1 Kartu — Salah <span class="cross">✘</span></h4><p>Kartu yang diangkat tidak ada di jawaban isu.</p></div>
+        <div class="poin-badge neg">-10</div>
+      </div>
+      <div class="poin-rule-item">
+        <div class="poin-visual"><img src="keadilan.webp" alt="Kartu"><img src="kemanusiaan.webp" alt="Kartu"><span class="poin-multi">x2</span></div>
+        <div style="flex:1"><h4>Angkat 2 Kartu — Benar Semua <span class="check">✔✔</span></h4><p>Kedua kartu tepat sesuai jawaban isu (urutan bebas).</p></div>
+        <div class="poin-badge pos">+25</div>
+      </div>
+      <div class="poin-rule-item">
+        <div class="poin-visual"><img src="kesetaraan.webp" alt="Kartu"><img src="back.webp" alt="Kartu"><span class="poin-multi">x2</span></div>
+        <div style="flex:1"><h4>Angkat 2 Kartu — Benar 1 <span class="check">✔</span><span class="cross">✘</span></h4><p>Satu kartu benar, satu kartu salah.</p></div>
+        <div class="poin-badge pos">+5</div>
+      </div>
+      <div class="poin-rule-item" style="opacity:.9">
+        <div class="poin-visual"><span style="font-size:.9rem;font-weight:800;color:#757575">TIDAK ANGKAT</span></div>
+        <div style="flex:1"><h4>Tidak Mengangkat Kartu</h4><p>Pemain memilih tidak mengangkat kartu di isu tersebut.</p></div>
+        <div class="poin-badge zero">0</div>
+      </div>
+    </div>
+    <div class="poin-note"><strong>Tips:</strong> Jika ragu, angkat 1 kartu paling yakin untuk aman +10 — atau berani ambil risiko 2 kartu demi +25! Jika salah semua saat angkat 2 kartu, tidak ada pengurangan tambahan (tetap 0).</div>
+  </div>
+</div>
+
 <script>
 (function(){
   const loadText1=document.getElementById('loadText1');
@@ -337,18 +453,23 @@ body{font-family:'Poppins',sans-serif;background:linear-gradient(160deg,#0d7a3f 
   setTimeout(showNextText,500);
 })();
 
-const audioCtx=new(window.AudioContext||window.webkitAudioContext)();
+let audioCtx=null;
+try{audioCtx=new(window.AudioContext||window.webkitAudioContext)();}catch(e){}
 function playTone(freq,duration,type,vol){
-  const osc=audioCtx.createOscillator();
-  const gain=audioCtx.createGain();
-  osc.type=type||'sine';
-  osc.frequency.value=freq;
-  gain.gain.setValueAtTime(vol||0.15,audioCtx.currentTime);
-  gain.gain.exponentialRampToValueAtTime(0.001,audioCtx.currentTime+duration);
-  osc.connect(gain);
-  gain.connect(audioCtx.destination);
-  osc.start();
-  osc.stop(audioCtx.currentTime+duration);
+  try{
+    if(!audioCtx) return;
+    if(audioCtx.state==='suspended') audioCtx.resume();
+    const osc=audioCtx.createOscillator();
+    const gain=audioCtx.createGain();
+    osc.type=type||'sine';
+    osc.frequency.value=freq;
+    gain.gain.setValueAtTime(vol||0.15,audioCtx.currentTime);
+    gain.gain.exponentialRampToValueAtTime(0.001,audioCtx.currentTime+duration);
+    osc.connect(gain);
+    gain.connect(audioCtx.destination);
+    osc.start();
+    osc.stop(audioCtx.currentTime+duration);
+  }catch(e){}
 }
 function playFlip(){playTone(800,0.12,'sine',0.1);setTimeout(()=>playTone(1200,0.08,'sine',0.08),60)}
 function playSelect(){playTone(600,0.15,'sine',0.12);setTimeout(()=>playTone(900,0.12,'sine',0.1),80)}
@@ -400,25 +521,36 @@ const explainModal=document.getElementById('explainModal');
 const counterInfo=document.getElementById('counterInfo');
 const issueView=document.getElementById('issueView');
 const cardsView=document.getElementById('cardsView');
-const timerBar=document.getElementById('timerBar');
-const timerText=document.getElementById('timerText');
+const actionView=document.getElementById('actionView');
 
 let allIssues=[];
 let currentIssueIdx=0;
-let timerInterval=null;
-let timeLeft=30;
 let gamePhase='idle';
 let answeredCount=0;
+let actionExUsed=false;
+let actionStopUsed=false;
+let actionSelectionThisRound=null;
 
 function showCardsView(){
   issueView.classList.add('hidden-right');
   issueView.classList.remove('hidden-left');
   cardsView.classList.remove('hidden-left','hidden-right');
+  actionView.classList.add('hidden-right');
+  actionView.classList.remove('hidden-left');
 }
 function showIssueView(){
   cardsView.classList.add('hidden-right');
   cardsView.classList.remove('hidden-left');
+  actionView.classList.add('hidden-right');
+  actionView.classList.remove('hidden-left');
   issueView.classList.remove('hidden-left','hidden-right');
+}
+function showActionView(){
+  issueView.classList.add('hidden-right');
+  issueView.classList.remove('hidden-left');
+  cardsView.classList.add('hidden-right');
+  cardsView.classList.remove('hidden-left');
+  actionView.classList.remove('hidden-left','hidden-right');
 }
 
 async function loadIssues(){
@@ -436,6 +568,7 @@ function showIssue(){
   if(currentIssueIdx>=allIssues.length){
     issueView.classList.remove('hidden-right','hidden-left');
     cardsView.classList.add('hidden-right');
+    actionView.classList.add('hidden-right');
     issuePanel.innerHTML='<div style="text-align:center;padding:40px 20px"><div class="issue-judul" style="font-size:1.3rem;margin-bottom:10px">Semua isu sudah selesai!</div><div class="issue-kasus" style="border:none;background:none;padding:0">Total isu yang dijawab: '+answeredCount+'</div></div>';
     issuePanel.classList.add('show');
     counterInfo.textContent='';
@@ -447,33 +580,81 @@ function showIssue(){
   document.getElementById('issueKategori').textContent=issue.kategori;
   document.getElementById('issueKasus').textContent=issue.kasus;
   issuePanel.classList.add('show');
-  counterInfo.textContent='Isu '+ (currentIssueIdx+1)+' / '+allIssues.length;
-  startTimer();
+  revealBtn.classList.add('show');
+  gamePhase='reveal';
+  counterInfo.textContent='Round ' + (currentIssueIdx+1);
 }
 
-function startTimer(){
-  clearInterval(timerInterval);
-  timeLeft=30;
-  timerBar.style.width='100%';
-  timerBar.classList.remove('urgent');
-  timerText.textContent='0:30';
-  gamePhase='timer';
-  timerInterval=setInterval(()=>{
-    timeLeft--;
-    const pct=(timeLeft/30)*100;
-    timerBar.style.width=pct+'%';
-    const m=Math.floor(timeLeft/60);
-    const s=timeLeft%60;
-    timerText.textContent=m+':'+(s<10?'0':'')+s;
-    if(timeLeft<=10)timerBar.classList.add('urgent');
-    if(timeLeft<=0){
-      clearInterval(timerInterval);
-      timerBar.style.width='0%';
-      timerText.textContent='0:00';
-      gamePhase='reveal';
-      revealBtn.classList.add('show');
-    }
-  },1000);
+function showActionCall(){
+  showActionView();
+  gamePhase='action';
+  actionSelectionThisRound=null;
+  const exWrap=document.getElementById('cardEx');
+  const stopWrap=document.getElementById('cardStop');
+  const note=document.getElementById('actionNote');
+  const contBtn=document.getElementById('actionContinueBtn');
+  const skipBtn=document.getElementById('actionSkipBtn');
+  exWrap.classList.remove('selected','highlight-action');
+  stopWrap.classList.remove('selected','highlight-action');
+  // reset used/disabled state based on global usage
+  exWrap.classList.toggle('used', actionExUsed);
+  stopWrap.classList.toggle('used', actionStopUsed);
+  exWrap.classList.remove('disabled');
+  stopWrap.classList.remove('disabled');
+  if(actionExUsed && actionStopUsed){
+    note.textContent='Kedua kartu EX & STOP sudah pernah dipakai — tidak bisa dipakai lagi di sisa permainan.';
+    note.classList.add('warn');
+    contBtn.textContent='Lanjut ke Isu Berikutnya \u2192';
+    skipBtn.style.display='none';
+  } else {
+    note.textContent='Pilih salah satu kartu untuk sesi ini. Kartu yang sudah dipakai tidak bisa dipakai lagi!';
+    note.classList.remove('warn');
+    // if one already used, still allow picking the other
+    if(actionExUsed) note.textContent='Kartu EX sudah dipakai sebelumnya. Kamu masih bisa memilih STOP di sesi ini.';
+    if(actionStopUsed) note.textContent='Kartu STOP sudah dipakai sebelumnya. Kamu masih bisa memilih EX di sesi ini.';
+    contBtn.textContent='Lanjut tanpa aksi \u2192';
+    skipBtn.style.display='none';
+  }
+  document.getElementById('actionCounter').textContent='Action Call setelah '+answeredCount+' isu  \u2022  Round berikutnya: '+ (currentIssueIdx+1);
+  // allow continue even without selection (skip), but update button after selection
+}
+
+function handleActionPick(action){
+  if(gamePhase!=='action') return;
+  if(action==='ex' && actionExUsed) return;
+  if(action==='stop' && actionStopUsed) return;
+  if(actionSelectionThisRound) return; // already picked one this round
+  actionSelectionThisRound=action;
+  if(action==='ex') actionExUsed=true;
+  if(action==='stop') actionStopUsed=true;
+  const exWrap=document.getElementById('cardEx');
+  const stopWrap=document.getElementById('cardStop');
+  const pickedWrap= action==='ex'?exWrap:stopWrap;
+  const otherWrap= action==='ex'?stopWrap:exWrap;
+  pickedWrap.classList.add('selected','highlight-action');
+  pickedWrap.classList.remove('used','disabled');
+  otherWrap.classList.add('disabled');
+  otherWrap.classList.remove('selected','highlight-action');
+  const note=document.getElementById('actionNote');
+  note.classList.remove('warn');
+  if(action==='ex'){
+    note.textContent='Kamu memilih kartu EX (Exchange — Tukar Kartu)! Kartu ini tidak bisa dipakai lagi di sisa permainan.';
+    spawnParticles(pickedWrap.getBoundingClientRect().left+pickedWrap.getBoundingClientRect().width/2, pickedWrap.getBoundingClientRect().top+pickedWrap.getBoundingClientRect().height/2);
+  } else {
+    note.textContent='Kamu memilih kartu STOP! Kartu ini tidak bisa dipakai lagi di sisa permainan.';
+    spawnParticles(pickedWrap.getBoundingClientRect().left+pickedWrap.getBoundingClientRect().width/2, pickedWrap.getBoundingClientRect().top+pickedWrap.getBoundingClientRect().height/2);
+  }
+  document.getElementById('actionContinueBtn').textContent='Lanjut ke Isu Berikutnya \u2192';
+  playSelect();
+}
+
+function maybeShowActionOrNextIssue(){
+  // called after an issue is answered; every 2 issues show action call
+  if(answeredCount>0 && answeredCount%2===0 && currentIssueIdx < allIssues.length){
+    setTimeout(()=>showActionCall(),300);
+  } else {
+    setTimeout(()=>showIssue(),300);
+  }
 }
 
 function renderCards(){
@@ -590,7 +771,7 @@ document.getElementById('expCloseBtn').addEventListener('click',()=>{
   explainModal.classList.remove('show');
   currentIssueIdx++;
   gamePhase='idle';
-  setTimeout(()=>showIssue(),300);
+  maybeShowActionOrNextIssue();
 });
 
 document.getElementById('expNextBtn').addEventListener('click',()=>{
@@ -598,7 +779,7 @@ document.getElementById('expNextBtn').addEventListener('click',()=>{
   explainModal.classList.remove('show');
   currentIssueIdx++;
   gamePhase='idle';
-  setTimeout(()=>showIssue(),300);
+  maybeShowActionOrNextIssue();
 });
 
 explainModal.addEventListener('click',e=>{
@@ -606,8 +787,22 @@ explainModal.addEventListener('click',e=>{
     explainModal.classList.remove('show');
     currentIssueIdx++;
     gamePhase='idle';
-    setTimeout(()=>showIssue(),300);
+    maybeShowActionOrNextIssue();
   }
+});
+
+// Action Call card clicks
+document.getElementById('cardEx').addEventListener('click',()=>handleActionPick('ex'));
+document.getElementById('cardStop').addEventListener('click',()=>handleActionPick('stop'));
+document.getElementById('actionContinueBtn').addEventListener('click',()=>{
+  playClick();
+  gamePhase='idle';
+  showIssue();
+});
+document.getElementById('actionSkipBtn').addEventListener('click',()=>{
+  playClick();
+  gamePhase='idle';
+  showIssue();
 });
 
 document.getElementById('startBtn').addEventListener('click',()=>{
@@ -617,12 +812,20 @@ document.getElementById('startBtn').addEventListener('click',()=>{
 });
 
 document.getElementById('openNilai').addEventListener('click',()=>{
-  playClick();
+  try{playClick();}catch(e){}
   document.getElementById('nilaiPage').classList.add('show');
 });
 document.getElementById('closeNilai').addEventListener('click',()=>{
-  playClick();
+  try{playClick();}catch(e){}
   document.getElementById('nilaiPage').classList.remove('show');
+});
+document.getElementById('openPoin').addEventListener('click',()=>{
+  try{playClick();}catch(e){}
+  document.getElementById('poinPage').classList.add('show');
+});
+document.getElementById('closePoin').addEventListener('click',()=>{
+  try{playClick();}catch(e){}
+  document.getElementById('poinPage').classList.remove('show');
 });
 </script>
 </body>
